@@ -38,16 +38,16 @@ where Usuario=@Usuario or Email=@Email"
                 Dim reader As SqlDataReader = command.ExecuteReader()
 
                 If reader.Read() = True Then
-                    Dim userName As String = reader.GetString(1) & ", " + reader.GetString(3)
+                    Dim userName As String = reader.GetString(1) & " " + reader.GetString(3)
                     Dim userMail As String = reader.GetString(5)
                     Dim accountPassword As String = reader.GetString(7)
 
                     Dim systemSupport = New SupportDeEmail()
                     systemSupport.sendMail(
-          subject:="SISTEMA: Recupar Contraseña.",
-          body:="Hola " & userName & vbLf & "Solicitaste Recupar tú contraseña." & vbLf &
-          "Tú contraseña es: " & accountPassword & vbLf &
-          "Sin embargo, Entrando nuevamente al sistema, puedes cambiar tu contraseña.",
+          subject:="SISTEMA: Recuperar Contraseña.",
+          body:="¡Hola," & userName & "!" & vbLf & "Solicitaste a medio de esta petición la recuperación de tu contraseña." & vbLf &
+          "Tu contraseña es: " & accountPassword & "." & vbLf &
+          "Sin embargo, entrando nuevamente al sistema puedes cambiar tu clave de usuario.",
           receiverMail:=New List(Of String) From {userMail}
           )
 
@@ -56,7 +56,7 @@ where Usuario=@Usuario or Email=@Email"
 
 
                 Else
-                    Return "Losiento, No existe una cuenta con este Nombre de usuario O Correo Electronico."
+                    Return "Losiento, No existe una cuenta con este" & vbLf & " Nombre de usuario O Correo Electronico."
                 End If
 
             End Using
