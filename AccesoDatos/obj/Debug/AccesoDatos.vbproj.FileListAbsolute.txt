@@ -11,4 +11,4 @@ C:\Users\estor\source\repos\ProyectoD\AccesoDatos\obj\Debug\AccesoDatos.vbproj.C
 C:\Users\estor\source\repos\ProyectoD\AccesoDatos\obj\Debug\AccesoDatos.dll
 C:\Users\estor\source\repos\ProyectoD\AccesoDatos\obj\Debug\AccesoDatos.xml
 C:\Users\estor\source\repos\ProyectoD\AccesoDatos\obj\Debug\AccesoDatos.pdb
-C:\Users\estor\source\repos\ProyectoD\AccesoDatos\obj\Debug\AccesoDatos.vbproj.AssemblyReference.cache
+C:\Users\estor\source\repos\ProyectoD\AccesoDatos\obj\Debug\AccesoDatos.vbprojAssemblyReference.cache
