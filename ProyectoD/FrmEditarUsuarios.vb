@@ -124,7 +124,7 @@ Public Class FrmEditarUsuarios
 
     Private Sub LinkLabelEditar_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabelEditar.LinkClicked
         Panel1.Visible = True
-        loadUserData()
+        LoadUserData()
     End Sub
 
     Private Sub ButtonAceptar_Click(sender As Object, e As EventArgs) Handles ButtonAceptar.Click
@@ -155,5 +155,10 @@ Public Class FrmEditarUsuarios
     Private Sub ButtonCancelar_Click(sender As Object, e As EventArgs) Handles ButtonCancelar.Click
         Panel1.Visible = False
         reset()
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        Panel1.Visible = True
+        LoadUserData()
     End Sub
 End Class

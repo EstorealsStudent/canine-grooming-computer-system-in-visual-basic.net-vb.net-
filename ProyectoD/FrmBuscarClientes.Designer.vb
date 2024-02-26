@@ -23,13 +23,13 @@ Partial Class FrmBuscarClientes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.MaterialListView1 = New MaterialSkin.Controls.MaterialListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -44,6 +44,22 @@ Partial Class FrmBuscarClientes
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(894, 57)
         Me.Panel1.TabIndex = 0
+        '
+        'IconButton1
+        '
+        Me.IconButton1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.IconButton1.ForeColor = System.Drawing.SystemColors.Control
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.MailReply
+        Me.IconButton1.IconColor = System.Drawing.Color.Yellow
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.Location = New System.Drawing.Point(0, 0)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(95, 57)
+        Me.IconButton1.TabIndex = 2
+        Me.IconButton1.Text = "Regresar"
+        Me.IconButton1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.IconButton1.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -70,15 +86,17 @@ Partial Class FrmBuscarClientes
         Me.MaterialListView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.MaterialListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
         Me.MaterialListView1.Depth = 0
-        Me.MaterialListView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MaterialListView1.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MaterialListView1.ForeColor = System.Drawing.SystemColors.WindowText
         Me.MaterialListView1.FullRowSelect = True
+        Me.MaterialListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.MaterialListView1.HideSelection = False
+        Me.MaterialListView1.LabelEdit = True
         Me.MaterialListView1.Location = New System.Drawing.Point(0, 57)
         Me.MaterialListView1.MinimumSize = New System.Drawing.Size(200, 100)
         Me.MaterialListView1.MouseLocation = New System.Drawing.Point(-1, -1)
         Me.MaterialListView1.MouseState = MaterialSkin.MouseState.OUT
+        Me.MaterialListView1.MultiSelect = False
         Me.MaterialListView1.Name = "MaterialListView1"
         Me.MaterialListView1.OwnerDraw = True
         Me.MaterialListView1.Size = New System.Drawing.Size(894, 450)
@@ -100,22 +118,6 @@ Partial Class FrmBuscarClientes
         '
         Me.ColumnHeader3.Text = "Celular"
         Me.ColumnHeader3.Width = 200
-        '
-        'IconButton1
-        '
-        Me.IconButton1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.IconButton1.ForeColor = System.Drawing.SystemColors.Control
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.MailReply
-        Me.IconButton1.IconColor = System.Drawing.Color.Yellow
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.Location = New System.Drawing.Point(0, 0)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(95, 57)
-        Me.IconButton1.TabIndex = 2
-        Me.IconButton1.Text = "Regresar"
-        Me.IconButton1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.IconButton1.UseVisualStyleBackColor = True
         '
         'FrmBuscarClientes
         '

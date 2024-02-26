@@ -5,6 +5,8 @@ Imports Común
 Public Class ModelosMascotas
     Dim userDao As New UsuarioDAO
 
+    Private IDUsuarioCrea
+    Private IDUsuarioModifica
     Private IDMascota
     Private IDCliente
     Private IDRMascota
@@ -18,7 +20,12 @@ Public Class ModelosMascotas
     Private Foto
     Private falleció
 
-    Public Sub New(iDCliente As Object, iDRMascota As Object, iDSeMascota As Object, nombre As Object, peso As Object, color As Object, esvacunado As Object, vacuna As Object, vigVacuna As Object, foto As Object, falleció As Object)
+    'para usar en razamascota
+    Private idRmascotas
+    Private idTMascota
+    Private nombreraza
+
+    Public Sub New(iDCliente As Object, iDRMascota As Object, iDSeMascota As Object, nombre As Object, peso As Object, color As Object, esvacunado As Object, vacuna As Object, vigVacuna As Object, foto As Object, falleció As Object, IDUsuarioCrea As Object)
         Me.IDCliente1 = iDCliente
         Me.IDRMascota1 = iDRMascota
         Me.IDSeMascota1 = iDSeMascota
@@ -30,6 +37,7 @@ Public Class ModelosMascotas
         Me.VigVacuna1 = vigVacuna
         Me.Foto1 = foto
         Me.Falleció1 = falleció
+        Me.IDUsuarioCrea1 = IDUsuarioCrea
     End Sub
 
     Public Property IDCliente1 As Object
@@ -131,6 +139,33 @@ Public Class ModelosMascotas
         End Set
     End Property
 
+    Public Property IdTMascota1 As Object
+        Get
+            Return idTMascota
+        End Get
+        Set(value As Object)
+            idTMascota = value
+        End Set
+    End Property
+
+    Public Property Nombreraza1 As Object
+        Get
+            Return nombreraza
+        End Get
+        Set(value As Object)
+            nombreraza = value
+        End Set
+    End Property
+
+    Public Property IdRmascotas1 As Object
+        Get
+            Return idRmascotas
+        End Get
+        Set(value As Object)
+            idRmascotas = value
+        End Set
+    End Property
+
     Public Property IDMascota1 As Object
         Get
             Return IDMascota
@@ -140,12 +175,30 @@ Public Class ModelosMascotas
         End Set
     End Property
 
+    Public Property IDUsuarioCrea1 As Object
+        Get
+            Return IDUsuarioCrea
+        End Get
+        Set(value As Object)
+            IDUsuarioCrea = value
+        End Set
+    End Property
+
+    Public Property IDUsuarioModifica1 As Object
+        Get
+            Return IDUsuarioModifica
+        End Get
+        Set(value As Object)
+            IDUsuarioModifica = value
+        End Set
+    End Property
+
     Public Sub New()
 
     End Sub
 
 
-    Public Sub New(iDMascota As Object, IDCliente As Object, iDRMascota As Object, iDSeMascota As Object, nombre As Object, peso As Object, color As Object, esvacunado As Object, vacuna As Object, vigVacuna As Object, foto As Object, falleció As Object)
+    Public Sub New(iDMascota As Object, IDCliente As Object, iDRMascota As Object, iDSeMascota As Object, nombre As Object, peso As Object, color As Object, esvacunado As Object, vacuna As Object, vigVacuna As Object, foto As Object, falleció As Object, IDUsuarioModifica As Object)
         Me.IDMascota = iDMascota
         Me.IDCliente = IDCliente
         Me.IDRMascota = iDRMascota
@@ -158,6 +211,20 @@ Public Class ModelosMascotas
         Me.VigVacuna = vigVacuna
         Me.Foto = foto
         Me.falleció = falleció
+        Me.IDUsuarioModifica = IDUsuarioModifica
+    End Sub
+
+    Public Sub New(idTMascota As Object, nombreraza As Object, IDUsuarioCrea As Object)
+        Me.idTMascota = idTMascota
+        Me.nombreraza = nombreraza
+        Me.IDUsuarioCrea = IDUsuarioCrea
+    End Sub
+
+    Public Sub New(idRmascotas As Object, idTMascota As Object, nombreraza As Object, IDUsuarioModifica As Object)
+        Me.idRmascotas = idRmascotas
+        Me.idTMascota = idTMascota
+        Me.nombreraza = nombreraza
+        Me.IDUsuarioModifica = IDUsuarioModifica
     End Sub
 
     Public Function modelousuariomostrarmascotas(idCliente As Integer) As DataTable
@@ -183,7 +250,7 @@ Public Class ModelosMascotas
 
     Public Function modelousuariomostrarTIPOSMASCOTAS() As List(Of Mascotas)
         Try
-            Return userDao.obtenerlistipomascota()
+            Return userDao.Obtenerlistipomascota()
         Catch ex As Exception
             ' Manejar la excepción según tus necesidades
             Return Nothing
@@ -193,7 +260,7 @@ Public Class ModelosMascotas
 
     Public Function modelousuariomostrarSEXOSMASCOTAS() As List(Of Mascotas)
         Try
-            Return userDao.obtenerlistsexomascota()
+            Return userDao.Obtenerlistsexomascota()
         Catch ex As Exception
             ' Manejar la excepción según tus necesidades
             Return Nothing
@@ -202,7 +269,7 @@ Public Class ModelosMascotas
 
     Public Function modelousuariomostrarRAZAMASCOTAS(Razaseleccionada As Integer) As List(Of Mascotas)
         Try
-            Return userDao.obtenerrazamascotas(Razaseleccionada)
+            Return userDao.Obtenerrazamascotas(Razaseleccionada)
         Catch ex As Exception
             ' Manejar la excepción según tus necesidades
             Return Nothing
@@ -211,7 +278,7 @@ Public Class ModelosMascotas
 
     Public Function modelousuariomostrarEDITARMASCOTAS(Razaseleccionada As Integer) As List(Of Mascotas)
         Try
-            Return userDao.obtenerrazaEDITARmascotas(Razaseleccionada)
+            Return userDao.ObtenerrazaEDITARmascotas(Razaseleccionada)
         Catch ex As Exception
             ' Manejar la excepción según tus necesidades
             Return Nothing
@@ -220,24 +287,77 @@ Public Class ModelosMascotas
 
     Public Function modeloinsertarMascotas() As String
         Try
-            userDao.insertarmascotas(IDCliente, IDRMascota, IDSeMascota, Nombre, Peso, Color, Esvacunado, Vacuna, VigVacuna, Foto, falleció)
+            userDao.Insertarmascotas(IDCliente, IDRMascota, IDSeMascota, Nombre, Peso, Color, Esvacunado, Vacuna, VigVacuna, Foto, falleció, IDUsuarioCrea)
             Return "Registro exitoso."
         Catch ex As Exception
             ' Capturar la excepción y retornar un mensaje de error
-            Return "No se Registró Corrrectamente. Error: "
+            Return "No se Registró Corrrectamente. "
         End Try
 
     End Function
 
     Public Function EditarMascotasModelo() As String
         Try
-            userDao.Editarrmascotas(IDMascota, IDCliente, IDRMascota, IDSeMascota, Nombre, Peso, Color, Esvacunado, Vacuna, VigVacuna, Foto, falleció)
+            userDao.Editarrmascotas(IDMascota, IDCliente, IDRMascota, IDSeMascota, Nombre, Peso, Color, Esvacunado, Vacuna, VigVacuna, Foto, falleció, IDUsuarioModifica)
             Return "Mascota Editada Corrrectamente."
         Catch ex As Exception
 
             Return "error"
         End Try
     End Function
+
+    Public Function Modelouusuariocargarmascotasparacitasclientes(idcliente) As List(Of Mascotas)
+        Try
+            Return userDao.Mascotasparacitasdeclientes(idcliente)
+        Catch ex As Exception
+            ' Manejar la excepción según tus necesidades
+            Return Nothing
+        End Try
+    End Function
+
+
+    'registrar tipo de mascota
+    Public Function modeloinsertarrazamascotas() As String
+        Try
+            userDao.InsertarRazaMascota(idTMascota, nombreraza, IDUsuarioCrea)
+            Return "Registro exitoso."
+        Catch ex As Exception
+            ' Capturar la excepción y retornar un mensaje de error
+            Return "No se Registró Corrrectamente. "
+        End Try
+
+    End Function
+
+    Public Function ModelousuariomostrarRazaytipoMascotas() As List(Of Mascotas)
+        Try
+            Return userDao.BuscarRazayTipoDeMascotas()
+        Catch ex As Exception
+            ' Manejar la excepción según tus necesidades
+            Return Nothing
+        End Try
+    End Function
+
+
+
+    Public Function ModelomostrarRazayTipodeMascotasFRM(idrmasccota As Integer) As Mascotas
+        Try
+            Return userDao.MostrarRaza(idrmasccota)
+        Catch ex As Exception
+            ' Manejar la excepción según tus necesidades
+            Return Nothing
+        End Try
+    End Function
+
+    Public Function ModeloEditarRazayTipoMascota() As String
+        Try
+            userDao.EditarRaza(idRmascotas, idTMascota, nombreraza, IDUsuarioModifica)
+            Return "Se acutalizó correctamente."
+        Catch ex As Exception
+            ' Capturar la excepción y retornar un mensaje de error
+            Return "No se acutalizó Corrrectamente. "
+        End Try
+    End Function
+
 
 
 

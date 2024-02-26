@@ -70,7 +70,7 @@ Partial Class FrmRecuperarContraseña
         Me.TextboxMail.BackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(81, Byte), Integer))
         Me.TextboxMail.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextboxMail.Depth = 0
-        Me.TextboxMail.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.TextboxMail.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.TextboxMail.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(137, Byte), Integer))
         Me.TextboxMail.Hint = "Usuario o Correo"
         Me.TextboxMail.LeadingIcon = CType(resources.GetObject("TextboxMail.LeadingIcon"), System.Drawing.Image)
@@ -137,6 +137,7 @@ Partial Class FrmRecuperarContraseña
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(376, 310)
         Me.Controls.Add(Me.MaterialCheckbox1)
         Me.Controls.Add(Me.Button1)
@@ -144,7 +145,9 @@ Partial Class FrmRecuperarContraseña
         Me.Controls.Add(Me.TextboxMail)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.LabelResultado)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmRecuperarContraseña"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmRecuperarContraseña"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

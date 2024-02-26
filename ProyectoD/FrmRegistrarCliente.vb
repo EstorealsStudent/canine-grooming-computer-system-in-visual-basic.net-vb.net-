@@ -4,10 +4,9 @@ Imports Dominio
 Public Class FrmRegistrarCliente
     Dim userDao As New ModeloUsuario()
     Private Sub FrmRegistrarCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         RoundButton(ButtonAceptar)
         RoundButton2(ButtonCancelar)
-        MaterialComboBox1.DataSource = userDao.modelousuariomostrargeneros()
+        MaterialComboBox1.DataSource = userDao.Modelousuariomostrargeneros()
         MaterialComboBox1.DisplayMember = "NombreGenero"
         MaterialComboBox1.ValueMember = "IDGenero"
     End Sub
@@ -96,7 +95,7 @@ Public Class FrmRegistrarCliente
             municipio:=MaterialTextBoxMunicipio.Text,
             codigoPostal:=MaterialTextBoxCodigoPostal.Text,
             estado:=MaterialTextBoxEstado.Text,
-            descripcion:=MaterialMultiLineTextBoxDescripcion.Text)
+            descripcion:=MaterialMultiLineTextBoxDescripcion.Text, IDUsuarioCrea:=UsuarioActivo.idUser)
                 Dim result = userModel.insertarclientesmodelo()
                 MessageBox.Show(result)
 

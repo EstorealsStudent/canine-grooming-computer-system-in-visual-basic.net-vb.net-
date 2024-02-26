@@ -9,7 +9,9 @@ Public Class ModeloUsuario
     Private loginName
     Private password
     Private firstName
+    Private secondNmae
     Private lastName
+    Private apellidoMaterno
     Private position
     Private email
 
@@ -86,7 +88,36 @@ Public Class ModeloUsuario
         End Set
     End Property
 
+    Public Property ApellidoMaterno1 As Object
+        Get
+            Return apellidoMaterno
+        End Get
+        Set(value As Object)
+            apellidoMaterno = value
+        End Set
+    End Property
+
+    Public Property SecondNmae1 As Object
+        Get
+            Return secondNmae
+        End Get
+        Set(value As Object)
+            secondNmae = value
+        End Set
+    End Property
+
     Public Sub New()
+    End Sub
+
+    Public Sub New(loginName As Object, password As Object, firstName As Object, secondNmae As Object, lastName As Object, apellidoMaterno As Object, position As Object, email As Object)
+        Me.loginName = loginName
+        Me.password = password
+        Me.firstName = firstName
+        Me.secondNmae = secondNmae
+        Me.lastName = lastName
+        Me.apellidoMaterno = apellidoMaterno
+        Me.position = position
+        Me.email = email
     End Sub
 
 
@@ -153,6 +184,28 @@ Public Class ModeloUsuario
             Return Nothing
         End Try
     End Function
+
+
+
+    Public Function ObtenerListaRolesCliente() As List(Of Roles)
+        Try
+            Return userDao.ObtenerRolesUsuarios()
+        Catch ex As Exception
+            ' Manejar la excepción según tus necesidades
+            Return Nothing
+        End Try
+    End Function
+
+
+    Public Function InsertarUsuarios() As String
+        Try
+            userDao.InsertarUsuario(firstName, secondNmae, lastName, apellidoMaterno, email, loginName, password, position)
+            Return "Tú perfil ha sido creado correctamente"
+        Catch ex As Exception
+            Return ("No te registraste Correctamente")
+        End Try
+    End Function
+
 
 
 End Class

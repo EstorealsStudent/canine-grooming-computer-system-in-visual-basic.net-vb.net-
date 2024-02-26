@@ -15,4 +15,15 @@
     Public Property IdTipoServicio
     Public Property NombreTIPOServicio
 
+
+
+    'Nombredeserviciosdependiendodeltipo
+    Public Property IDServicioTIPO
+    Public Property IDTServicioTipo
+    Public Property NombreServicio
+    'Costo del Servicio
+    Public Property CostoServicio
+    'costo
+    Public Property CostoTOTAL
+
 End Class

@@ -27,12 +27,32 @@ ProyectoD
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:ProyectoD.My.Resources.Resources.appointment">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ProyectoD.My.Resources.Resources.comb">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:ProyectoD.My.Resources.Resources.edit_info">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoD.My.Resources.Resources.edit_user_48">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ProyectoD.My.Resources.Resources.hairdressing">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoD.My.Resources.Resources.labrador_retriever">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -43,6 +63,11 @@ ProyectoD
 </summary>
 </member>
 <member name="P:ProyectoD.My.Resources.Resources.RefreshPivotTable_16x16">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoD.My.Resources.Resources.yorkshire_terrier">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

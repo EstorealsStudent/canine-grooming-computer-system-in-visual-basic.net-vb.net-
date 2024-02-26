@@ -8,36 +8,47 @@ Public Class FrmBuscarServicio
 
 
 
-    Private Sub MostrarClientesEnListView()
-        Dim servicio As List(Of Servicios) = userDaoservicio.modelousuariomostrarservicios
+    Private Sub MostrarServiciosEnListView()
+        Dim servicios As List(Of Servicios) = userDaoservicio.Modelousuariomostrarservicios
 
-        If servicio IsNot Nothing AndAlso servicio.Count > 0 Then
+        If servicios IsNot Nothing AndAlso servicios.Count > 0 Then
+            ' Desactivar repintado del control
+            MaterialListView1.BeginUpdate()
+
+            ' Limpiar elementos existentes
             MaterialListView1.Items.Clear()
 
-            For Each Servicios In servicio
-                Dim item As New ListViewItem(Servicios.IDServicio.ToString())
+            For Each servicio In servicios
+                Dim nombreTipoServicio As String = If(servicio.NombreTIPOServicio, String.Empty)
+                Dim nombreServicio As String = If(servicio.Nombre, String.Empty)
+                Dim costoServicio As String = If(servicio.Costo, String.Empty)
 
-                ' Manejar valores nulos en el cliente
-                Dim subItems() As String = {
-                If(Servicios.NombreTIPOServicio IsNot Nothing, Servicios.NombreTIPOServicio.ToString(), String.Empty),
-                 If(Servicios.Nombre IsNot Nothing, Servicios.Nombre.ToString(), String.Empty),
-                 If(Servicios.Costo IsNot Nothing, Servicios.Costo.ToString(), String.Empty)
-                 }
-
-                item.SubItems.AddRange(subItems)
+                Dim item As New ListViewItem(servicio.IDServicio.ToString())
+                item.SubItems.AddRange({nombreTipoServicio, nombreServicio, costoServicio})
 
                 MaterialListView1.Items.Add(item)
             Next
+
+            ' Reactivar repintado del control
+            MaterialListView1.EndUpdate()
         Else
-            ' Manejar el caso en que no hay clientes
-            MessageBox.Show("No se encontraron clientes.")
+            ' En caso de que no haya servicios
+            MessageBox.Show("No se encontraron Servicios.")
         End If
     End Sub
 
+
+
+
     Private Sub FrmBuscarServicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MostrarClientesEnListView()
+        MostrarServiciosEnListView()
         Me.DoubleBuffered = True
         Me.Visible = True
+
+        MaterialListView1.MultiSelect = False
+        MaterialListView1.FullRowSelect = True
+        MaterialListView1.GridLines = False
+        MaterialListView1.View = View.Details
 
     End Sub
 
@@ -66,4 +77,6 @@ Public Class FrmBuscarServicio
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
         Me.Close()
     End Sub
+
+
 End Class

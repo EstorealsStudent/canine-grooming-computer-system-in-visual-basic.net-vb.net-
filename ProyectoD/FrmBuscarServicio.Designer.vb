@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmBuscarServicio
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,60 +20,17 @@ Partial Class FrmBuscarServicio
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.MaterialListView1 = New MaterialSkin.Controls.MaterialListView()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.MaterialListView1 = New MaterialSkin.Controls.MaterialListView()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'MaterialListView1
-        '
-        Me.MaterialListView1.AutoSizeTable = False
-        Me.MaterialListView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MaterialListView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.MaterialListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
-        Me.MaterialListView1.Depth = 0
-        Me.MaterialListView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MaterialListView1.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaterialListView1.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.MaterialListView1.FullRowSelect = True
-        Me.MaterialListView1.HideSelection = False
-        Me.MaterialListView1.Location = New System.Drawing.Point(0, 57)
-        Me.MaterialListView1.MinimumSize = New System.Drawing.Size(200, 100)
-        Me.MaterialListView1.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.MaterialListView1.MouseState = MaterialSkin.MouseState.OUT
-        Me.MaterialListView1.Name = "MaterialListView1"
-        Me.MaterialListView1.OwnerDraw = True
-        Me.MaterialListView1.Size = New System.Drawing.Size(878, 411)
-        Me.MaterialListView1.TabIndex = 3
-        Me.MaterialListView1.UseCompatibleStateImageBehavior = False
-        Me.MaterialListView1.View = System.Windows.Forms.View.Details
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Text = "IdServicio"
-        Me.ColumnHeader1.Width = 150
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "Tipo de Servicio"
-        Me.ColumnHeader2.Width = 200
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "Nombre"
-        Me.ColumnHeader3.Width = 300
-        '
-        'ColumnHeader4
-        '
-        Me.ColumnHeader4.Text = "Costo"
-        Me.ColumnHeader4.Width = 300
         '
         'Panel1
         '
@@ -101,6 +58,49 @@ Partial Class FrmBuscarServicio
         Me.IconButton1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         Me.IconButton1.UseVisualStyleBackColor = True
         '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "IdServicio"
+        Me.ColumnHeader1.Width = 150
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Tipo de Servicio"
+        Me.ColumnHeader2.Width = 200
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Nombre"
+        Me.ColumnHeader3.Width = 300
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Costo"
+        Me.ColumnHeader4.Width = 300
+        '
+        'MaterialListView1
+        '
+        Me.MaterialListView1.AutoSizeTable = False
+        Me.MaterialListView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MaterialListView1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.MaterialListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
+        Me.MaterialListView1.Depth = 0
+        Me.MaterialListView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MaterialListView1.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MaterialListView1.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.MaterialListView1.FullRowSelect = True
+        Me.MaterialListView1.HideSelection = False
+        Me.MaterialListView1.Location = New System.Drawing.Point(0, 57)
+        Me.MaterialListView1.MinimumSize = New System.Drawing.Size(200, 100)
+        Me.MaterialListView1.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.MaterialListView1.MouseState = MaterialSkin.MouseState.OUT
+        Me.MaterialListView1.Name = "MaterialListView1"
+        Me.MaterialListView1.OwnerDraw = True
+        Me.MaterialListView1.Size = New System.Drawing.Size(878, 411)
+        Me.MaterialListView1.TabIndex = 3
+        Me.MaterialListView1.UseCompatibleStateImageBehavior = False
+        Me.MaterialListView1.View = System.Windows.Forms.View.Details
+        '
         'FrmBuscarServicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -116,12 +116,11 @@ Partial Class FrmBuscarServicio
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents MaterialListView1 As MaterialSkin.Controls.MaterialListView
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents ColumnHeader1 As ColumnHeader
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents ColumnHeader3 As ColumnHeader
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents MaterialListView1 As MaterialSkin.Controls.MaterialListView
 End Class

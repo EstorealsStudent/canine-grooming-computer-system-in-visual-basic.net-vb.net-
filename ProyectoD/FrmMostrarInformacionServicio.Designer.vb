@@ -42,7 +42,7 @@ Partial Class FrmMostrarInformacionServicio
         Me.ButtonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonCerrar.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonCerrar.ForeColor = System.Drawing.Color.White
-        Me.ButtonCerrar.Location = New System.Drawing.Point(635, 167)
+        Me.ButtonCerrar.Location = New System.Drawing.Point(575, 174)
         Me.ButtonCerrar.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
         Me.ButtonCerrar.Name = "ButtonCerrar"
         Me.ButtonCerrar.Size = New System.Drawing.Size(90, 42)
@@ -58,7 +58,7 @@ Partial Class FrmMostrarInformacionServicio
         Me.ButtonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonAceptar.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonAceptar.ForeColor = System.Drawing.Color.White
-        Me.ButtonAceptar.Location = New System.Drawing.Point(635, 63)
+        Me.ButtonAceptar.Location = New System.Drawing.Point(575, 70)
         Me.ButtonAceptar.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
         Me.ButtonAceptar.Name = "ButtonAceptar"
         Me.ButtonAceptar.Size = New System.Drawing.Size(90, 42)
@@ -77,7 +77,7 @@ Partial Class FrmMostrarInformacionServicio
         Me.MaterialTextBox21.Hint = "Costo"
         Me.MaterialTextBox21.LeadingIcon = Nothing
         Me.MaterialTextBox21.LeaveOnEnterKey = True
-        Me.MaterialTextBox21.Location = New System.Drawing.Point(25, 167)
+        Me.MaterialTextBox21.Location = New System.Drawing.Point(21, 172)
         Me.MaterialTextBox21.MaxLength = 32767
         Me.MaterialTextBox21.MouseState = MaterialSkin.MouseState.OUT
         Me.MaterialTextBox21.Name = "MaterialTextBox21"
@@ -111,7 +111,7 @@ Partial Class FrmMostrarInformacionServicio
         Me.MaterialComboBoxTServicio.Hint = "Tipo de Servicio"
         Me.MaterialComboBoxTServicio.IntegralHeight = False
         Me.MaterialComboBoxTServicio.ItemHeight = 43
-        Me.MaterialComboBoxTServicio.Location = New System.Drawing.Point(25, 58)
+        Me.MaterialComboBoxTServicio.Location = New System.Drawing.Point(21, 63)
         Me.MaterialComboBoxTServicio.MaxDropDownItems = 4
         Me.MaterialComboBoxTServicio.MouseState = MaterialSkin.MouseState.OUT
         Me.MaterialComboBoxTServicio.Name = "MaterialComboBoxTServicio"
@@ -130,7 +130,7 @@ Partial Class FrmMostrarInformacionServicio
         Me.MaterialTextBoxPrimerNombre.Hint = "Nombre del servicio"
         Me.MaterialTextBoxPrimerNombre.LeadingIcon = Nothing
         Me.MaterialTextBoxPrimerNombre.LeaveOnEnterKey = True
-        Me.MaterialTextBoxPrimerNombre.Location = New System.Drawing.Point(25, 113)
+        Me.MaterialTextBoxPrimerNombre.Location = New System.Drawing.Point(21, 118)
         Me.MaterialTextBoxPrimerNombre.MaxLength = 32767
         Me.MaterialTextBoxPrimerNombre.MouseState = MaterialSkin.MouseState.OUT
         Me.MaterialTextBoxPrimerNombre.Name = "MaterialTextBoxPrimerNombre"
@@ -195,7 +195,7 @@ Partial Class FrmMostrarInformacionServicio
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(503, 113)
+        Me.Button1.Location = New System.Drawing.Point(443, 120)
         Me.Button1.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(90, 42)

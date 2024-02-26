@@ -118,22 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="labrador-retriever" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\labrador-retriever.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hairdressing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hairdressing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yorkshire-terrier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yorkshire-terrier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RefreshPivotTable_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RefreshPivotTable_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="petpalacelogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\petpalacelogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="comb" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\comb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hairdressing" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hairdressing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="RefreshPivotTable_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RefreshPivotTable_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="appointment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appointment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AddItem_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddItem_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="appointment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appointment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="edit-user-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit-user-48.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit-info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit-info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

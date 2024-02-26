@@ -6,7 +6,7 @@ Imports Común
 Public Class ModeloClientes
     Dim userDao As New UsuarioDAO
 
-
+    Private IDUsuarioCrea
     Private IDCliente
     Private IDGenero
     Private PrimerNombre
@@ -27,7 +27,7 @@ Public Class ModeloClientes
     Private CodigoPostal
     Private Estado
     Private Descripcion
-    Private FCreacion
+    Private IDUsuarioActualiza
 
     Public Property IDGenero1 As Object
         Get
@@ -209,7 +209,25 @@ Public Class ModeloClientes
         End Set
     End Property
 
-    Public Sub New(iDGenero As Object, primerNombre As Object, segundoNombre As Object, apellidoPaterno As Object, apellidoMaterno As Object, rFC As Object, cURP As Object, celular As Object, telCasa As Object, telTrabajo As Object, telExterno As Object, email As Object, calle As Object, numeroExt As Object, colonia As Object, municipio As Object, codigoPostal As Object, estado As Object, descripcion As Object)
+    Public Property IDUsuarioCrea1 As Object
+        Get
+            Return IDUsuarioCrea
+        End Get
+        Set(value As Object)
+            IDUsuarioCrea = value
+        End Set
+    End Property
+
+    Public Property IDUsuarioActualiza1 As Object
+        Get
+            Return IDUsuarioActualiza
+        End Get
+        Set(value As Object)
+            IDUsuarioActualiza = value
+        End Set
+    End Property
+
+    Public Sub New(iDGenero As Object, primerNombre As Object, segundoNombre As Object, apellidoPaterno As Object, apellidoMaterno As Object, rFC As Object, cURP As Object, celular As Object, telCasa As Object, telTrabajo As Object, telExterno As Object, email As Object, calle As Object, numeroExt As Object, colonia As Object, municipio As Object, codigoPostal As Object, estado As Object, descripcion As Object, IDUsuarioCrea As Object)
 
         Me.IDGenero1 = iDGenero
         Me.PrimerNombre1 = primerNombre
@@ -230,14 +248,14 @@ Public Class ModeloClientes
         Me.CodigoPostal1 = codigoPostal
         Me.Estado1 = estado
         Me.Descripcion1 = descripcion
-
+        Me.IDUsuarioCrea1 = IDUsuarioCrea
     End Sub
 
 
     Public Sub New()
     End Sub
 
-    Public Sub New(iDCliente As Object, iDGenero As Object, primerNombre As Object, segundoNombre As Object, apellidoPaterno As Object, apellidoMaterno As Object, rFC As Object, cURP As Object, celular As Object, telCasa As Object, telTrabajo As Object, telExterno As Object, email As Object, calle As Object, numeroExt As Object, colonia As Object, municipio As Object, codigoPostal As Object, estado As Object, descripcion As Object)
+    Public Sub New(iDCliente As Object, iDGenero As Object, primerNombre As Object, segundoNombre As Object, apellidoPaterno As Object, apellidoMaterno As Object, rFC As Object, cURP As Object, celular As Object, telCasa As Object, telTrabajo As Object, telExterno As Object, email As Object, calle As Object, numeroExt As Object, colonia As Object, municipio As Object, codigoPostal As Object, estado As Object, descripcion As Object, IDUsuarioActualiza As Object)
         Me.IDCliente = iDCliente
         Me.IDGenero = iDGenero
         Me.PrimerNombre = primerNombre
@@ -258,11 +276,12 @@ Public Class ModeloClientes
         Me.CodigoPostal = codigoPostal
         Me.Estado = estado
         Me.Descripcion = descripcion
+        Me.IDUsuarioActualiza = IDUsuarioActualiza
     End Sub
 
     Public Function Insertarclientesmodelo() As String
         Try
-            userDao.InsertarCliente(IDGenero, PrimerNombre, SegundoNombre, ApellidoPaterno, ApellidoMaterno, RFC, CURP, Celular, TelCasa, TelTrabajo, TelExterno, Email, Calle, NumeroExt, Colonia, Municipio, CodigoPostal, Estado, Descripcion)
+            userDao.InsertarCliente(IDGenero, PrimerNombre, SegundoNombre, ApellidoPaterno, ApellidoMaterno, RFC, CURP, Celular, TelCasa, TelTrabajo, TelExterno, Email, Calle, NumeroExt, Colonia, Municipio, CodigoPostal, Estado, Descripcion, IDUsuarioCrea)
             Return "Cliente Registrado Corrrectamente."
         Catch ex As Exception
 
@@ -272,7 +291,7 @@ Public Class ModeloClientes
 
     Public Function EditarClientesModelo() As String
         Try
-            userDao.EditarClientes(IDCliente, IDGenero, PrimerNombre, SegundoNombre, ApellidoPaterno, ApellidoMaterno, RFC, CURP, Celular, TelCasa, TelTrabajo, TelExterno, Email, Calle, NumeroExt, Colonia, Municipio, CodigoPostal, Estado, Descripcion)
+            userDao.EditarClientes(IDCliente, IDGenero, PrimerNombre, SegundoNombre, ApellidoPaterno, ApellidoMaterno, RFC, CURP, Celular, TelCasa, TelTrabajo, TelExterno, Email, Calle, NumeroExt, Colonia, Municipio, CodigoPostal, Estado, Descripcion, IDUsuarioActualiza)
             Return "Cliente Editado Corrrectamente."
         Catch ex As Exception
 

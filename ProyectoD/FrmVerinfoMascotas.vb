@@ -7,7 +7,6 @@ Imports Dominio
 Public Class FrmVerinfoMascotas
     Inherits Form
     Dim userDaomasc As New ModelosMascotas()
-    Dim banderacomboboxraza = 0
     Private ReadOnly idMascota As Integer
 
     ' Constructor que acepta el ID de la mascota como parámetro
@@ -227,7 +226,7 @@ Public Class FrmVerinfoMascotas
         Dim fechaHoy As DateTime = DateTime.Today
 
         ' Verificar si el CheckBox está activado y la fecha de fin ha pasado
-        If MaterialCheckboxVACUNADOSI.Checked AndAlso fechaFin < fechaHoy Then
+        If MaterialCheckboxVACUNADOSI.Checked AndAlso fechaFin <= fechaHoy Then
             ' Cambiar el color a rojo
             Panel3.BackColor = Color.Red
         Else
@@ -235,5 +234,4 @@ Public Class FrmVerinfoMascotas
             Panel3.BackColor = Color.ForestGreen
         End If
     End Sub
-
 End Class

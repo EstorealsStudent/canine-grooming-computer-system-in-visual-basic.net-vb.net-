@@ -49,11 +49,11 @@ Partial Class FrmElegirCliente
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Quicksand", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(64, 14)
+        Me.Label2.Location = New System.Drawing.Point(19, 14)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(121, 28)
+        Me.Label2.Size = New System.Drawing.Size(218, 28)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Ver citas"
+        Me.Label2.Text = "Cliente Existente"
         '
         'Panel1
         '

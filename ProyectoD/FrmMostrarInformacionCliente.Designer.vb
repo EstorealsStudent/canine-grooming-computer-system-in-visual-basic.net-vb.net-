@@ -66,9 +66,11 @@ Partial Class FrmMostrarInformacionCliente
         Me.ButtonguardarInformacion = New System.Windows.Forms.Button()
         Me.Buttoncancelar = New System.Windows.Forms.Button()
         Me.ButtonVermascotas = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ButtonEditar = New System.Windows.Forms.Button()
+        Me.ButtonAgendar = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.ButtonHistorai = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -85,7 +87,7 @@ Partial Class FrmMostrarInformacionCliente
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1233, 56)
+        Me.Panel1.Size = New System.Drawing.Size(1235, 56)
         Me.Panel1.TabIndex = 0
         '
         'IconButton1
@@ -120,7 +122,7 @@ Partial Class FrmMostrarInformacionCliente
         Me.FlowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.FlowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.FlowLayoutPanel1.Controls.Add(Me.labelDatosgenerales)
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(19, 61)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(21, 61)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(0, 0)
         Me.FlowLayoutPanel1.TabIndex = 1
@@ -147,7 +149,7 @@ Partial Class FrmMostrarInformacionCliente
         Me.Panel2.Controls.Add(Me.MaterialTextBoxSegundoNombre)
         Me.Panel2.Controls.Add(Me.MaterialTextBoxPrimerNombre)
         Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Location = New System.Drawing.Point(12, 62)
+        Me.Panel2.Location = New System.Drawing.Point(14, 62)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(340, 479)
         Me.Panel2.TabIndex = 2
@@ -270,7 +272,7 @@ Partial Class FrmMostrarInformacionCliente
         Me.MaterialTextBoxSegundoNombre.HideSelection = True
         Me.MaterialTextBoxSegundoNombre.Hint = "Segundo nombre"
         Me.MaterialTextBoxSegundoNombre.LeadingIcon = Nothing
-        Me.MaterialTextBoxSegundoNombre.Location = New System.Drawing.Point(16, 147)
+        Me.MaterialTextBoxSegundoNombre.Location = New System.Drawing.Point(16, 160)
         Me.MaterialTextBoxSegundoNombre.MaxLength = 32767
         Me.MaterialTextBoxSegundoNombre.MouseState = MaterialSkin.MouseState.OUT
         Me.MaterialTextBoxSegundoNombre.Name = "MaterialTextBoxSegundoNombre"
@@ -341,7 +343,7 @@ Partial Class FrmMostrarInformacionCliente
         Me.Panel3.Controls.Add(Me.MaterialTextBoxMunicipio)
         Me.Panel3.Controls.Add(Me.MaterialTextBoxCalle)
         Me.Panel3.Controls.Add(Me.MaterialTextBoxNumero)
-        Me.Panel3.Location = New System.Drawing.Point(358, 62)
+        Me.Panel3.Location = New System.Drawing.Point(360, 62)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(340, 479)
         Me.Panel3.TabIndex = 3
@@ -600,7 +602,7 @@ Partial Class FrmMostrarInformacionCliente
         Me.Panel4.Controls.Add(Me.MaterialTextBoxCelular)
         Me.Panel4.Controls.Add(Me.Label7)
         Me.Panel4.Controls.Add(Me.Label6)
-        Me.Panel4.Location = New System.Drawing.Point(704, 62)
+        Me.Panel4.Location = New System.Drawing.Point(706, 62)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(340, 479)
         Me.Panel4.TabIndex = 3
@@ -795,7 +797,7 @@ Partial Class FrmMostrarInformacionCliente
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Quicksand", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(3, 1)
+        Me.Label6.Location = New System.Drawing.Point(-1, 1)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(70, 22)
         Me.Label6.TabIndex = 25
@@ -822,7 +824,7 @@ Partial Class FrmMostrarInformacionCliente
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.GridColor = System.Drawing.Color.SteelBlue
-        Me.DataGridView1.Location = New System.Drawing.Point(20, 573)
+        Me.DataGridView1.Location = New System.Drawing.Point(22, 573)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -847,7 +849,7 @@ Partial Class FrmMostrarInformacionCliente
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Quicksand", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(16, 548)
+        Me.Label9.Location = New System.Drawing.Point(18, 548)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(206, 22)
         Me.Label9.TabIndex = 18
@@ -861,7 +863,7 @@ Partial Class FrmMostrarInformacionCliente
         Me.ButtonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonAceptar.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonAceptar.ForeColor = System.Drawing.Color.White
-        Me.ButtonAceptar.Location = New System.Drawing.Point(1053, 66)
+        Me.ButtonAceptar.Location = New System.Drawing.Point(1055, 66)
         Me.ButtonAceptar.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
         Me.ButtonAceptar.Name = "ButtonAceptar"
         Me.ButtonAceptar.Size = New System.Drawing.Size(85, 42)
@@ -877,7 +879,7 @@ Partial Class FrmMostrarInformacionCliente
         Me.ButtonguardarInformacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonguardarInformacion.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonguardarInformacion.ForeColor = System.Drawing.Color.White
-        Me.ButtonguardarInformacion.Location = New System.Drawing.Point(1148, 66)
+        Me.ButtonguardarInformacion.Location = New System.Drawing.Point(1150, 66)
         Me.ButtonguardarInformacion.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
         Me.ButtonguardarInformacion.Name = "ButtonguardarInformacion"
         Me.ButtonguardarInformacion.Size = New System.Drawing.Size(85, 42)
@@ -893,7 +895,7 @@ Partial Class FrmMostrarInformacionCliente
         Me.Buttoncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Buttoncancelar.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Buttoncancelar.ForeColor = System.Drawing.Color.White
-        Me.Buttoncancelar.Location = New System.Drawing.Point(1097, 111)
+        Me.Buttoncancelar.Location = New System.Drawing.Point(1099, 111)
         Me.Buttoncancelar.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
         Me.Buttoncancelar.Name = "Buttoncancelar"
         Me.Buttoncancelar.Size = New System.Drawing.Size(90, 42)
@@ -909,7 +911,7 @@ Partial Class FrmMostrarInformacionCliente
         Me.ButtonVermascotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonVermascotas.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonVermascotas.ForeColor = System.Drawing.Color.White
-        Me.ButtonVermascotas.Location = New System.Drawing.Point(915, 573)
+        Me.ButtonVermascotas.Location = New System.Drawing.Point(880, 573)
         Me.ButtonVermascotas.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
         Me.ButtonVermascotas.Name = "ButtonVermascotas"
         Me.ButtonVermascotas.Size = New System.Drawing.Size(85, 42)
@@ -917,27 +919,43 @@ Partial Class FrmMostrarInformacionCliente
         Me.ButtonVermascotas.Text = "Ver"
         Me.ButtonVermascotas.UseVisualStyleBackColor = False
         '
-        'Button1
+        'ButtonEditar
         '
-        Me.Button1.BackColor = System.Drawing.Color.SteelBlue
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue
-        Me.Button1.FlatAppearance.BorderSize = 2
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(915, 668)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(85, 42)
-        Me.Button1.TabIndex = 32
-        Me.Button1.Text = "Editar"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.ButtonEditar.BackColor = System.Drawing.Color.SteelBlue
+        Me.ButtonEditar.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue
+        Me.ButtonEditar.FlatAppearance.BorderSize = 2
+        Me.ButtonEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonEditar.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonEditar.ForeColor = System.Drawing.Color.White
+        Me.ButtonEditar.Location = New System.Drawing.Point(880, 621)
+        Me.ButtonEditar.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
+        Me.ButtonEditar.Name = "ButtonEditar"
+        Me.ButtonEditar.Size = New System.Drawing.Size(85, 42)
+        Me.ButtonEditar.TabIndex = 32
+        Me.ButtonEditar.Text = "Editar"
+        Me.ButtonEditar.UseVisualStyleBackColor = False
+        '
+        'ButtonAgendar
+        '
+        Me.ButtonAgendar.BackColor = System.Drawing.Color.ForestGreen
+        Me.ButtonAgendar.FlatAppearance.BorderColor = System.Drawing.Color.ForestGreen
+        Me.ButtonAgendar.FlatAppearance.BorderSize = 2
+        Me.ButtonAgendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonAgendar.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonAgendar.ForeColor = System.Drawing.Color.White
+        Me.ButtonAgendar.Location = New System.Drawing.Point(1099, 673)
+        Me.ButtonAgendar.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
+        Me.ButtonAgendar.Name = "ButtonAgendar"
+        Me.ButtonAgendar.Size = New System.Drawing.Size(123, 42)
+        Me.ButtonAgendar.TabIndex = 33
+        Me.ButtonAgendar.Text = "Agendar Cita"
+        Me.ButtonAgendar.UseVisualStyleBackColor = False
         '
         'Button3
         '
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Image = Global.ProyectoD.My.Resources.Resources.AddItem_16x16
-        Me.Button3.Location = New System.Drawing.Point(218, 551)
+        Me.Button3.Location = New System.Drawing.Point(220, 551)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(22, 22)
         Me.Button3.TabIndex = 28
@@ -947,11 +965,27 @@ Partial Class FrmMostrarInformacionCliente
         '
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Image = Global.ProyectoD.My.Resources.Resources.RefreshPivotTable_16x16
-        Me.Button5.Location = New System.Drawing.Point(246, 551)
+        Me.Button5.Location = New System.Drawing.Point(248, 551)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(22, 22)
         Me.Button5.TabIndex = 31
         Me.Button5.UseVisualStyleBackColor = True
+        '
+        'ButtonHistorai
+        '
+        Me.ButtonHistorai.BackColor = System.Drawing.Color.SteelBlue
+        Me.ButtonHistorai.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue
+        Me.ButtonHistorai.FlatAppearance.BorderSize = 2
+        Me.ButtonHistorai.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonHistorai.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonHistorai.ForeColor = System.Drawing.Color.White
+        Me.ButtonHistorai.Location = New System.Drawing.Point(880, 669)
+        Me.ButtonHistorai.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
+        Me.ButtonHistorai.Name = "ButtonHistorai"
+        Me.ButtonHistorai.Size = New System.Drawing.Size(85, 42)
+        Me.ButtonHistorai.TabIndex = 34
+        Me.ButtonHistorai.Text = "Historial"
+        Me.ButtonHistorai.UseVisualStyleBackColor = False
         '
         'FrmMostrarInformacionCliente
         '
@@ -960,7 +994,9 @@ Partial Class FrmMostrarInformacionCliente
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1248, 727)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ButtonHistorai)
+        Me.Controls.Add(Me.ButtonAgendar)
+        Me.Controls.Add(Me.ButtonEditar)
         Me.Controls.Add(Me.ButtonVermascotas)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Buttoncancelar)
@@ -1036,5 +1072,7 @@ Partial Class FrmMostrarInformacionCliente
     Friend WithEvents ButtonVermascotas As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
-    Friend WithEvents Button1 As Button
+    Friend WithEvents ButtonEditar As Button
+    Friend WithEvents ButtonAgendar As Button
+    Friend WithEvents ButtonHistorai As Button
 End Class

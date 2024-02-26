@@ -735,7 +735,7 @@ Partial Class FrmRegistrarCliente
         Me.ButtonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonAceptar.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonAceptar.ForeColor = System.Drawing.Color.White
-        Me.ButtonAceptar.Location = New System.Drawing.Point(948, 639)
+        Me.ButtonAceptar.Location = New System.Drawing.Point(948, 566)
         Me.ButtonAceptar.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
         Me.ButtonAceptar.Name = "ButtonAceptar"
         Me.ButtonAceptar.Size = New System.Drawing.Size(104, 42)
@@ -751,7 +751,7 @@ Partial Class FrmRegistrarCliente
         Me.ButtonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonCancelar.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonCancelar.ForeColor = System.Drawing.Color.White
-        Me.ButtonCancelar.Location = New System.Drawing.Point(807, 639)
+        Me.ButtonCancelar.Location = New System.Drawing.Point(807, 566)
         Me.ButtonCancelar.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
         Me.ButtonCancelar.Name = "ButtonCancelar"
         Me.ButtonCancelar.Size = New System.Drawing.Size(104, 42)
@@ -764,13 +764,14 @@ Partial Class FrmRegistrarCliente
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1064, 693)
+        Me.ClientSize = New System.Drawing.Size(1064, 620)
         Me.Controls.Add(Me.ButtonAceptar)
         Me.Controls.Add(Me.ButtonCancelar)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmRegistrarCliente"
         Me.Text = "FrmRegistrarCliente"
         Me.Panel1.ResumeLayout(False)

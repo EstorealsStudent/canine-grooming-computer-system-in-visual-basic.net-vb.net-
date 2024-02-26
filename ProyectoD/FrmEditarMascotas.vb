@@ -23,6 +23,8 @@ Public Class FrmEditarMascotas
     Private Sub FrmEditarMascotas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarInformacionMascnte()
         pesoscombobox()
+        DateTimePickerInicio.MaxDate = DateTime.Today
+
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
@@ -152,6 +154,7 @@ Public Class FrmEditarMascotas
     Private Sub MaterialCheckboxVACUNADOSI_CheckedChanged(sender As Object, e As EventArgs) Handles MaterialCheckboxVACUNADOSI.CheckedChanged
         If MaterialCheckboxVACUNADOSI.Checked Then
             MaterialCheckboxVACUNADONO.Checked = False
+            DateTimePickerInicio.Enabled = True
             ActualizarColorDateTimePickerFin()
         End If
     End Sub
@@ -187,7 +190,7 @@ Public Class FrmEditarMascotas
         Dim fechaHoy As DateTime = DateTime.Today
 
         ' Verificar si el CheckBox está activado y la fecha de fin ha pasado
-        If MaterialCheckboxVACUNADOSI.Checked AndAlso fechaFin < fechaHoy Then
+        If MaterialCheckboxVACUNADOSI.Checked AndAlso fechaFin <= fechaHoy Then
             ' Cambiar el color a rojo
             Panel3.BackColor = Color.Red
         Else
@@ -260,7 +263,7 @@ Public Class FrmEditarMascotas
                                                  esvacunado:=valorVacunado,
                                                  vacuna:=DateTimePickerInicio.Value,
                                                  vigVacuna:=DateTimePickerFin.Value,
-                                                 foto:=eleccion, falleció:=valorFalleció)
+                                                 foto:=eleccion, falleció:=valorFalleció, IDUsuarioModifica:=UsuarioActivo.idUser)
 
 
 

@@ -25,19 +25,118 @@ Partial Class FrmLog
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLog))
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextboxContraseña = New MaterialSkin.Controls.MaterialTextBox()
-        Me.TextBoxUsuario = New MaterialSkin.Controls.MaterialTextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LabelRecuperarContraseña = New System.Windows.Forms.Label()
+        Me.TextboxContraseña = New MaterialSkin.Controls.MaterialTextBox()
+        Me.TextBoxUsuario = New MaterialSkin.Controls.MaterialTextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.Button1.FlatAppearance.BorderSize = 2
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(964, 317)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(104, 42)
+        Me.Button1.TabIndex = 3
+        Me.Button1.Text = "Aceptar"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.Button2.FlatAppearance.BorderSize = 2
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(794, 317)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(104, 42)
+        Me.Button2.TabIndex = 4
+        Me.Button2.Text = "Salir"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Quicksand", 47.99999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(749, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(381, 75)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Bienvenido"
+        '
+        'LabelRecuperarContraseña
+        '
+        Me.LabelRecuperarContraseña.AutoSize = True
+        Me.LabelRecuperarContraseña.BackColor = System.Drawing.Color.Transparent
+        Me.LabelRecuperarContraseña.Font = New System.Drawing.Font("Microsoft JhengHei", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelRecuperarContraseña.ForeColor = System.Drawing.Color.Black
+        Me.LabelRecuperarContraseña.Location = New System.Drawing.Point(816, 428)
+        Me.LabelRecuperarContraseña.Name = "LabelRecuperarContraseña"
+        Me.LabelRecuperarContraseña.Size = New System.Drawing.Size(246, 24)
+        Me.LabelRecuperarContraseña.TabIndex = 5
+        Me.LabelRecuperarContraseña.Text = "¿Olvidaste tu contraseña?"
+        '
+        'TextboxContraseña
+        '
+        Me.TextboxContraseña.AnimateReadOnly = True
+        Me.TextboxContraseña.BackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.TextboxContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextboxContraseña.Depth = 0
+        Me.TextboxContraseña.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.TextboxContraseña.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(137, Byte), Integer))
+        Me.TextboxContraseña.Hint = "Contraseña"
+        Me.TextboxContraseña.LeadingIcon = CType(resources.GetObject("TextboxContraseña.LeadingIcon"), System.Drawing.Image)
+        Me.TextboxContraseña.LeaveOnEnterKey = True
+        Me.TextboxContraseña.Location = New System.Drawing.Point(794, 217)
+        Me.TextboxContraseña.MaxLength = 50
+        Me.TextboxContraseña.MouseState = MaterialSkin.MouseState.OUT
+        Me.TextboxContraseña.Multiline = False
+        Me.TextboxContraseña.Name = "TextboxContraseña"
+        Me.TextboxContraseña.Password = True
+        Me.TextboxContraseña.Size = New System.Drawing.Size(274, 50)
+        Me.TextboxContraseña.TabIndex = 2
+        Me.TextboxContraseña.Text = ""
+        Me.TextboxContraseña.TrailingIcon = Nothing
+        '
+        'TextBoxUsuario
+        '
+        Me.TextBoxUsuario.AnimateReadOnly = True
+        Me.TextBoxUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.TextBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBoxUsuario.Depth = 0
+        Me.TextBoxUsuario.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.TextBoxUsuario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(137, Byte), Integer))
+        Me.TextBoxUsuario.Hint = "Usuario"
+        Me.TextBoxUsuario.LeadingIcon = CType(resources.GetObject("TextBoxUsuario.LeadingIcon"), System.Drawing.Image)
+        Me.TextBoxUsuario.LeaveOnEnterKey = True
+        Me.TextBoxUsuario.Location = New System.Drawing.Point(794, 133)
+        Me.TextBoxUsuario.MaxLength = 50
+        Me.TextBoxUsuario.MouseState = MaterialSkin.MouseState.OUT
+        Me.TextBoxUsuario.Multiline = False
+        Me.TextBoxUsuario.Name = "TextBoxUsuario"
+        Me.TextBoxUsuario.Size = New System.Drawing.Size(274, 50)
+        Me.TextBoxUsuario.TabIndex = 1
+        Me.TextBoxUsuario.Text = ""
+        Me.TextBoxUsuario.TrailingIcon = Nothing
         '
         'Panel1
         '
@@ -87,105 +186,6 @@ Partial Class FrmLog
         Me.Label2.Size = New System.Drawing.Size(307, 56)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "PET PALACE"
-        '
-        'TextboxContraseña
-        '
-        Me.TextboxContraseña.AnimateReadOnly = True
-        Me.TextboxContraseña.BackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.TextboxContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextboxContraseña.Depth = 0
-        Me.TextboxContraseña.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.TextboxContraseña.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(137, Byte), Integer))
-        Me.TextboxContraseña.Hint = "Contraseña"
-        Me.TextboxContraseña.LeadingIcon = CType(resources.GetObject("TextboxContraseña.LeadingIcon"), System.Drawing.Image)
-        Me.TextboxContraseña.LeaveOnEnterKey = True
-        Me.TextboxContraseña.Location = New System.Drawing.Point(794, 217)
-        Me.TextboxContraseña.MaxLength = 50
-        Me.TextboxContraseña.MouseState = MaterialSkin.MouseState.OUT
-        Me.TextboxContraseña.Multiline = False
-        Me.TextboxContraseña.Name = "TextboxContraseña"
-        Me.TextboxContraseña.Password = True
-        Me.TextboxContraseña.Size = New System.Drawing.Size(274, 50)
-        Me.TextboxContraseña.TabIndex = 2
-        Me.TextboxContraseña.Text = ""
-        Me.TextboxContraseña.TrailingIcon = Nothing
-        '
-        'TextBoxUsuario
-        '
-        Me.TextBoxUsuario.AnimateReadOnly = True
-        Me.TextBoxUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.TextBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBoxUsuario.Depth = 0
-        Me.TextBoxUsuario.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.TextBoxUsuario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(137, Byte), Integer))
-        Me.TextBoxUsuario.Hint = "Usuario"
-        Me.TextBoxUsuario.LeadingIcon = CType(resources.GetObject("TextBoxUsuario.LeadingIcon"), System.Drawing.Image)
-        Me.TextBoxUsuario.LeaveOnEnterKey = True
-        Me.TextBoxUsuario.Location = New System.Drawing.Point(794, 133)
-        Me.TextBoxUsuario.MaxLength = 50
-        Me.TextBoxUsuario.MouseState = MaterialSkin.MouseState.OUT
-        Me.TextBoxUsuario.Multiline = False
-        Me.TextBoxUsuario.Name = "TextBoxUsuario"
-        Me.TextBoxUsuario.Size = New System.Drawing.Size(274, 50)
-        Me.TextBoxUsuario.TabIndex = 1
-        Me.TextBoxUsuario.Text = ""
-        Me.TextBoxUsuario.TrailingIcon = Nothing
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderSize = 2
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(964, 317)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(104, 42)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Aceptar"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Button2.FlatAppearance.BorderSize = 2
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(794, 317)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(104, 42)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Salir"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Quicksand", 47.99999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(751, 31)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(381, 75)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Bienvenido"
-        '
-        'LabelRecuperarContraseña
-        '
-        Me.LabelRecuperarContraseña.AutoSize = True
-        Me.LabelRecuperarContraseña.BackColor = System.Drawing.Color.Transparent
-        Me.LabelRecuperarContraseña.Font = New System.Drawing.Font("Microsoft JhengHei", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelRecuperarContraseña.ForeColor = System.Drawing.Color.Black
-        Me.LabelRecuperarContraseña.Location = New System.Drawing.Point(816, 428)
-        Me.LabelRecuperarContraseña.Name = "LabelRecuperarContraseña"
-        Me.LabelRecuperarContraseña.Size = New System.Drawing.Size(246, 24)
-        Me.LabelRecuperarContraseña.TabIndex = 5
-        Me.LabelRecuperarContraseña.Text = "¿Olvidaste tu contraseña?"
         '
         'FrmLog
         '

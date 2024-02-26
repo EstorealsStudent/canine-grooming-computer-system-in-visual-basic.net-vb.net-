@@ -42,7 +42,9 @@
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>ProyectoD.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,7 +54,9 @@
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>ProyectoD.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -93,18 +97,6 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="Syncfusion.Core.WinForms, Version=22.1460.36.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-      <HintPath>..\packages\Syncfusion.Core.WinForms.22.1.36\lib\net46\Syncfusion.Core.WinForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.Licensing, Version=22.1460.36.0, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Syncfusion.Licensing.22.1.36\lib\net46\Syncfusion.Licensing.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfInput.WinForms, Version=22.1460.36.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-      <HintPath>..\packages\Syncfusion.SfInput.WinForms.22.1.36\lib\net46\Syncfusion.SfInput.WinForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.Shared.Base, Version=22.1460.36.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-      <HintPath>..\packages\Syncfusion.Shared.Base.22.1.36\lib\net46\Syncfusion.Shared.Base.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -145,11 +137,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conectionsql.vb" />
+    <Compile Include="FrmAgendarCita.Designer.vb">
+      <DependentUpon>FrmAgendarCita.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgendarCita.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmAgregarMascota.Designer.vb">
       <DependentUpon>FrmAgregarMascota.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmAgregarMascota.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarRazaMascota.Designer.vb">
+      <DependentUpon>FrmAgregarRazaMascota.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgregarRazaMascota.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmAgregarServiciovb.Designer.vb">
@@ -164,16 +167,40 @@
     <Compile Include="FrmBienvenida.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmBuscarCitaClientes.Designer.vb">
+      <DependentUpon>FrmBuscarCitaClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarCitaClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmBuscarClientes.Designer.vb">
       <DependentUpon>FrmBuscarClientes.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmBuscarClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmBuscarMascotaCitas.Designer.vb">
+      <DependentUpon>FrmBuscarMascotaCitas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarMascotaCitas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarRazaMascota.Designer.vb">
+      <DependentUpon>FrmBuscarRazaMascota.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarRazaMascota.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmBuscarServicio.Designer.vb">
       <DependentUpon>FrmBuscarServicio.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmBuscarServicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCitasPrincipal.Designer.vb">
+      <DependentUpon>FrmCitasPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCitasPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmEditarMascotas.Designer.vb">
@@ -194,6 +221,12 @@
     <Compile Include="FrmElegirCliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmElegirMascota.Designer.vb">
+      <DependentUpon>FrmElegirMascota.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmElegirMascota.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmElejirCita.Designer.vb">
       <DependentUpon>FrmElejirCita.vb</DependentUpon>
     </Compile>
@@ -206,6 +239,12 @@
     <Compile Include="FrmElejirServicio.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmHistorialCitas.Designer.vb">
+      <DependentUpon>FrmHistorialCitas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHistorialCitas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmLog.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -213,10 +252,22 @@
       <DependentUpon>FrmLog.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmMostrarInformacionCita.Designer.vb">
+      <DependentUpon>FrmMostrarInformacionCita.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMostrarInformacionCita.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmMostrarInformacionCliente.Designer.vb">
       <DependentUpon>FrmMostrarInformacionCliente.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmMostrarInformacionCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMostrarInformacionRaza.Designer.vb">
+      <DependentUpon>FrmMostrarInformacionRaza.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMostrarInformacionRaza.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMostrarInformacionServicio.Designer.vb">
@@ -235,6 +286,12 @@
       <DependentUpon>FrmRegistrarCliente.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmRegistrarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistrarte.Designer.vb">
+      <DependentUpon>FrmRegistrarte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistrarte.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmVerinfoMascotas.Designer.vb">
@@ -267,8 +324,14 @@
     <Compile Include="RGBColores.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmAgendarCita.resx">
+      <DependentUpon>FrmAgendarCita.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAgregarMascota.resx">
       <DependentUpon>FrmAgregarMascota.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarRazaMascota.resx">
+      <DependentUpon>FrmAgregarRazaMascota.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAgregarServiciovb.resx">
       <DependentUpon>FrmAgregarServiciovb.vb</DependentUpon>
@@ -276,11 +339,23 @@
     <EmbeddedResource Include="FrmBienvenida.resx">
       <DependentUpon>FrmBienvenida.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarCitaClientes.resx">
+      <DependentUpon>FrmBuscarCitaClientes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBuscarClientes.resx">
       <DependentUpon>FrmBuscarClientes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarMascotaCitas.resx">
+      <DependentUpon>FrmBuscarMascotaCitas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarRazaMascota.resx">
+      <DependentUpon>FrmBuscarRazaMascota.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBuscarServicio.resx">
       <DependentUpon>FrmBuscarServicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCitasPrincipal.resx">
+      <DependentUpon>FrmCitasPrincipal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEditarMascotas.resx">
       <DependentUpon>FrmEditarMascotas.vb</DependentUpon>
@@ -291,17 +366,29 @@
     <EmbeddedResource Include="FrmElegirCliente.resx">
       <DependentUpon>FrmElegirCliente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmElegirMascota.resx">
+      <DependentUpon>FrmElegirMascota.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmElejirCita.resx">
       <DependentUpon>FrmElejirCita.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmElejirServicio.resx">
       <DependentUpon>FrmElejirServicio.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmHistorialCitas.resx">
+      <DependentUpon>FrmHistorialCitas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLog.resx">
       <DependentUpon>FrmLog.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMostrarInformacionCita.resx">
+      <DependentUpon>FrmMostrarInformacionCita.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMostrarInformacionCliente.resx">
       <DependentUpon>FrmMostrarInformacionCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMostrarInformacionRaza.resx">
+      <DependentUpon>FrmMostrarInformacionRaza.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMostrarInformacionServicio.resx">
       <DependentUpon>FrmMostrarInformacionServicio.vb</DependentUpon>
@@ -314,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistrarCliente.resx">
       <DependentUpon>FrmRegistrarCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistrarte.resx">
+      <DependentUpon>FrmRegistrarte.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVerinfoMascotas.resx">
       <DependentUpon>FrmVerinfoMascotas.vb</DependentUpon>
@@ -350,6 +440,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Imagen-de-WhatsApp-2023-06-25-a-las-22.58.53.ico" />
+    <None Include="Resources\edit-info.png" />
+    <None Include="Resources\edit-user-48.gif" />
+    <None Include="Resources\labrador-retriever.png" />
+    <None Include="Resources\yorkshire-terrier.png" />
     <None Include="Resources\appointment.png" />
     <None Include="Resources\hairdressing.png" />
     <None Include="Resources\comb.png" />

@@ -25,14 +25,15 @@ Public Class FrmMostrarInformacionCliente
         ButtonguardarInformacion.Visible = False
         Buttoncancelar.Visible = False
         ButtonVermascotas.Enabled = False
+        ButtonEditar.Enabled = False
+        ButtonHistorai.Enabled = False
         DataGridView1.AllowUserToAddRows = False
 
 
         bloquearcajas()
-
+        Cargardatagrid()
         DataGridView1.ClearSelection()
 
-        cargardatagrid()
 
 
 
@@ -97,7 +98,6 @@ Public Class FrmMostrarInformacionCliente
             If MaterialComboBox1.Items.Cast(Of Clientes)().Any(Function(g) g.IDGenero = generoCliente) Then
                 MaterialComboBox1.SelectedValue = generoCliente
             Else
-                ' Puedes manejar el caso donde el género del cliente no está en la lista (por ejemplo, cargar el ComboBox con un valor predeterminado).
                 MaterialComboBox1.SelectedIndex = -1 ' O seleccionar un valor predeterminado 
             End If
         Catch ex As Exception
@@ -162,7 +162,7 @@ Public Class FrmMostrarInformacionCliente
             municipio:=MaterialTextBoxMunicipio.Text,
             codigoPostal:=MaterialTextBoxCodigoPostal.Text,
             estado:=MaterialTextBoxEstado.Text,
-            descripcion:=MaterialMultiLineTextBoxDescripcion.Text)
+            descripcion:=MaterialMultiLineTextBoxDescripcion.Text, IDUsuarioActualiza:=UsuarioActivo.idUser)
 
             Dim result = userModel.EditarClientesModelo()
             MessageBox.Show(result)
@@ -212,6 +212,8 @@ Public Class FrmMostrarInformacionCliente
         If e.RowIndex >= 0 Then
             ' Habilitar el botón al hacer clic en una fila
             ButtonVermascotas.Enabled = True
+            ButtonEditar.Enabled = True
+            ButtonHistorai.Enabled = True
         End If
     End Sub
 
@@ -228,7 +230,7 @@ Public Class FrmMostrarInformacionCliente
             Dim form2 As New FrmVerinfoMascotas(idMascota)
             form2.Show()
         Else
-            MessageBox.Show("Selecciona una fila antes de hacer clic en el botón.")
+            MessageBox.Show("Selecciona una Mascota antes de hacer clic en el botón.")
         End If
 
     End Sub
@@ -255,7 +257,7 @@ Public Class FrmMostrarInformacionCliente
         FrmBuscarClientes.Show()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ButtonEditar.Click
 
 
         ' Verificamos si hay al menos una fila seleccionada en el DataGridView
@@ -268,12 +270,41 @@ Public Class FrmMostrarInformacionCliente
             Dim form2 As New FrmEditarMascotas(idcliente, idMascota)
             form2.Show()
         Else
-            MessageBox.Show("Selecciona una fila antes de hacer clic en el botón.")
+            MessageBox.Show("Selecciona una Mascota antes de hacer clic en el botón.")
         End If
 
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub ButtonAgendar_Click(sender As Object, e As EventArgs) Handles ButtonAgendar.Click
+
+
+        ' Obtener el ID del cliente
+        Dim idClientse As Integer = TextBox1.Text
+
+        ' Abrir el formulario hijo y pasar el ID del cliente
+        Dim formularioHijo As New FrmBuscarMascotaCitas(idClientse)
+
+        formularioHijo.Show()
+
+
+
+    End Sub
+
+    Private Sub ButtonHistorai_Click(sender As Object, e As EventArgs) Handles ButtonHistorai.Click
+        ' Verificamos si hay al menos una fila seleccionada en el DataGridView
+        If DataGridView1.SelectedRows.Count > 0 Then
+            ' Obtenemos el valor de la celda en la columna que contiene el ID de la mascota
+            Dim idMascota As Integer = Convert.ToInt32(DataGridView1.SelectedRows(0).Cells("IDMascota").Value)
+            ' Creamos una instancia del formulario Form2 y le pasamos el ID de la mascota
+            Dim form2 As New FrmHistorialCitas(idMascota)
+            form2.Show()
+        Else
+            MessageBox.Show("Selecciona una Mascota antes de hacer clic en el botón.")
+        End If
 
     End Sub
 End Class

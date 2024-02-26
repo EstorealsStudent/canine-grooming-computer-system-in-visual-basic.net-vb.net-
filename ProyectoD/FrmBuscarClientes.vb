@@ -15,31 +15,26 @@ Class FrmBuscarClientes
 
     Dim userDao As New ModeloUsuario()
 
-
     Private Sub MostrarClientesEnListView()
-        Dim clientes As List(Of Clientes) = userDao.modelousuariomostrarclientes
+        Dim clientes As List(Of Clientes) = userDao.Modelousuariomostrarclientes
 
         If clientes IsNot Nothing AndAlso clientes.Count > 0 Then
             MaterialListView1.Items.Clear()
 
             For Each cliente In clientes
+                Dim nombre As String = If(cliente.Nombre, String.Empty)
+                Dim celular As String = If(cliente.Celular, String.Empty)
+
                 Dim item As New ListViewItem(cliente.IDCliente.ToString())
-
-                ' Manejar valores nulos en el cliente
-                Dim subItems() As String = {
-                If(cliente.Nombre IsNot Nothing, cliente.Nombre.ToString(), String.Empty),
-                If(cliente.Celular IsNot Nothing, cliente.Celular.ToString(), String.Empty)
-            }
-
-                item.SubItems.AddRange(subItems)
+                item.SubItems.AddRange({nombre, celular})
 
                 MaterialListView1.Items.Add(item)
             Next
         Else
-            ' Manejar el caso en que no hay clientes
             MessageBox.Show("No se encontraron clientes.")
         End If
     End Sub
+
 
 
 
@@ -105,7 +100,5 @@ Class FrmBuscarClientes
         Me.Close()
 
     End Sub
-
-
 
 End Class

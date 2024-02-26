@@ -53,7 +53,7 @@ Public Class FrmAgregarServiciovb
 
                 Dim usermodeloservicios As New ModeloServicio(tipoServicio:=MaterialComboBoxTServicio.SelectedValue,
                                                               nombre:=MaterialTextBoxPrimerNombre.Text,
-                                                              costo:=costo)
+                                                              costo:=costo, IDUsuarioCrea:=UsuarioActivo.idUser)
 
 
 

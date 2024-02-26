@@ -30,7 +30,6 @@ Partial Class FrmVerinfoMascotas
         Me.MaterialComboBoxRAZA = New MaterialSkin.Controls.MaterialComboBox()
         Me.MaterialComboboxTipo = New MaterialSkin.Controls.MaterialComboBox()
         Me.MaterialTextBoxNombreMascota = New MaterialSkin.Controls.MaterialTextBox2()
-        Me.MaterialComboBoxPesos = New MaterialSkin.Controls.MaterialComboBox()
         Me.MaterialTextBoxColor = New MaterialSkin.Controls.MaterialTextBox2()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DateTimePickerInicio = New System.Windows.Forms.DateTimePicker()
@@ -188,29 +187,6 @@ Partial Class FrmVerinfoMascotas
         Me.MaterialTextBoxNombreMascota.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.MaterialTextBoxNombreMascota.TrailingIcon = Nothing
         Me.MaterialTextBoxNombreMascota.UseSystemPasswordChar = False
-        '
-        'MaterialComboBoxPesos
-        '
-        Me.MaterialComboBoxPesos.AutoResize = False
-        Me.MaterialComboBoxPesos.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MaterialComboBoxPesos.Depth = 0
-        Me.MaterialComboBoxPesos.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable
-        Me.MaterialComboBoxPesos.DropDownHeight = 174
-        Me.MaterialComboBoxPesos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.MaterialComboBoxPesos.DropDownWidth = 121
-        Me.MaterialComboBoxPesos.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
-        Me.MaterialComboBoxPesos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialComboBoxPesos.FormattingEnabled = True
-        Me.MaterialComboBoxPesos.Hint = "Peso"
-        Me.MaterialComboBoxPesos.IntegralHeight = False
-        Me.MaterialComboBoxPesos.ItemHeight = 43
-        Me.MaterialComboBoxPesos.Location = New System.Drawing.Point(375, 74)
-        Me.MaterialComboBoxPesos.MaxDropDownItems = 4
-        Me.MaterialComboBoxPesos.MouseState = MaterialSkin.MouseState.OUT
-        Me.MaterialComboBoxPesos.Name = "MaterialComboBoxPesos"
-        Me.MaterialComboBoxPesos.Size = New System.Drawing.Size(188, 49)
-        Me.MaterialComboBoxPesos.StartIndex = 0
-        Me.MaterialComboBoxPesos.TabIndex = 23
         '
         'MaterialTextBoxColor
         '
@@ -448,7 +424,6 @@ Partial Class FrmVerinfoMascotas
         Me.Controls.Add(Me.MaterialCheckboxFALLECIDONO)
         Me.Controls.Add(Me.MaterialCheckboxVACUNADOSI)
         Me.Controls.Add(Me.MaterialCheckboxFALLECIDOSI)
-        Me.Controls.Add(Me.MaterialTextBoxpeso)
         Me.Controls.Add(Me.TextBoxIdmascotasinfo)
         Me.Controls.Add(Me.ButtonAceptar)
         Me.Controls.Add(Me.Panel3)
@@ -459,13 +434,13 @@ Partial Class FrmVerinfoMascotas
         Me.Controls.Add(Me.DateTimePickerInicio)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.MaterialTextBoxColor)
-        Me.Controls.Add(Me.MaterialComboBoxPesos)
         Me.Controls.Add(Me.MaterialTextBoxNombreMascota)
         Me.Controls.Add(Me.MaterialComboboxTipo)
         Me.Controls.Add(Me.MaterialComboBoxRAZA)
         Me.Controls.Add(Me.MaterialComboBoxSexo)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.MaterialTextBoxpeso)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmVerinfoMascotas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -486,7 +461,6 @@ Partial Class FrmVerinfoMascotas
     Friend WithEvents MaterialComboBoxRAZA As MaterialSkin.Controls.MaterialComboBox
     Friend WithEvents MaterialComboboxTipo As MaterialSkin.Controls.MaterialComboBox
     Friend WithEvents MaterialTextBoxNombreMascota As MaterialSkin.Controls.MaterialTextBox2
-    Friend WithEvents MaterialComboBoxPesos As MaterialSkin.Controls.MaterialComboBox
     Friend WithEvents MaterialTextBoxColor As MaterialSkin.Controls.MaterialTextBox2
     Friend WithEvents Label2 As Label
     Friend WithEvents DateTimePickerInicio As DateTimePicker

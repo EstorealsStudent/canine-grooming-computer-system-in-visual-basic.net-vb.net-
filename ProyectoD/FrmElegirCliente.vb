@@ -32,7 +32,4 @@
         FrmRegistrarCliente.Show()
     End Sub
 
-    Private Sub FrmElegirCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

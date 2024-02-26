@@ -30,5 +30,19 @@
     Public Property IDTMascotaRAZA
     Public Property NombreRAZA
 
+    'cargarmascotascitas
+    Public Property idmascotalista
+    Public Property nombrelista
+    Public Property colorlista
+
+    'cargarrazamasotas
+    Public Property IDRMascotalista As Integer
+    Public Property NombretipoMascotalista As String
+    Public Property NombreRazaMascotalista As String
+
+    'raza que vamos a dar
+    Public Property idrmascota2 As String
+    Public Property idtmascota2 As Integer
+    Public Property nombreraza2 As String
 
 End Class

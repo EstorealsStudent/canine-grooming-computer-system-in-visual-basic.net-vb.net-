@@ -24,8 +24,10 @@ Partial Class FrmEditarUsuarios
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmEditarUsuarios))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.LinkLabel12 = New System.Windows.Forms.LinkLabel()
+        Me.ButtonAceptar = New System.Windows.Forms.Button()
+        Me.ButtonCancelar = New System.Windows.Forms.Button()
         Me.LabelEditarInfo = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Labelmiperfil = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -38,17 +40,17 @@ Partial Class FrmEditarUsuarios
         Me.LabelEmail = New System.Windows.Forms.Label()
         Me.LabelRol = New System.Windows.Forms.Label()
         Me.LinkLabelEditar = New System.Windows.Forms.LinkLabel()
-        Me.TextBoxUsuario = New MaterialSkin.Controls.MaterialTextBox()
-        Me.MaterialTextBoxEmail = New MaterialSkin.Controls.MaterialTextBox()
-        Me.MaterialTextBoxNuevaC = New MaterialSkin.Controls.MaterialTextBox()
-        Me.MaterialTextBoxApellido = New MaterialSkin.Controls.MaterialTextBox()
-        Me.MaterialTextBoxprimernombre = New MaterialSkin.Controls.MaterialTextBox()
-        Me.MaterialTextBoxConfirmarC = New MaterialSkin.Controls.MaterialTextBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MaterialTextContraseñaA = New MaterialSkin.Controls.MaterialTextBox()
-        Me.ButtonCancelar = New System.Windows.Forms.Button()
-        Me.ButtonAceptar = New System.Windows.Forms.Button()
-        Me.LinkLabel12 = New System.Windows.Forms.LinkLabel()
+        Me.MaterialTextBoxConfirmarC = New MaterialSkin.Controls.MaterialTextBox()
+        Me.MaterialTextBoxprimernombre = New MaterialSkin.Controls.MaterialTextBox()
+        Me.MaterialTextBoxApellido = New MaterialSkin.Controls.MaterialTextBox()
+        Me.MaterialTextBoxNuevaC = New MaterialSkin.Controls.MaterialTextBox()
+        Me.MaterialTextBoxEmail = New MaterialSkin.Controls.MaterialTextBox()
+        Me.TextBoxUsuario = New MaterialSkin.Controls.MaterialTextBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -73,6 +75,50 @@ Partial Class FrmEditarUsuarios
         Me.Panel1.TabIndex = 0
         Me.Panel1.Visible = False
         '
+        'LinkLabel12
+        '
+        Me.LinkLabel12.AutoSize = True
+        Me.LinkLabel12.Font = New System.Drawing.Font("Quicksand", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel12.LinkColor = System.Drawing.Color.SteelBlue
+        Me.LinkLabel12.Location = New System.Drawing.Point(19, 297)
+        Me.LinkLabel12.Name = "LinkLabel12"
+        Me.LinkLabel12.Size = New System.Drawing.Size(73, 22)
+        Me.LinkLabel12.TabIndex = 14
+        Me.LinkLabel12.TabStop = True
+        Me.LinkLabel12.Text = "Editar "
+        '
+        'ButtonAceptar
+        '
+        Me.ButtonAceptar.BackColor = System.Drawing.Color.ForestGreen
+        Me.ButtonAceptar.FlatAppearance.BorderColor = System.Drawing.Color.ForestGreen
+        Me.ButtonAceptar.FlatAppearance.BorderSize = 2
+        Me.ButtonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonAceptar.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonAceptar.ForeColor = System.Drawing.Color.White
+        Me.ButtonAceptar.Location = New System.Drawing.Point(258, 490)
+        Me.ButtonAceptar.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
+        Me.ButtonAceptar.Name = "ButtonAceptar"
+        Me.ButtonAceptar.Size = New System.Drawing.Size(104, 42)
+        Me.ButtonAceptar.TabIndex = 24
+        Me.ButtonAceptar.Text = "Aceptar"
+        Me.ButtonAceptar.UseVisualStyleBackColor = False
+        '
+        'ButtonCancelar
+        '
+        Me.ButtonCancelar.BackColor = System.Drawing.Color.Gray
+        Me.ButtonCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Gray
+        Me.ButtonCancelar.FlatAppearance.BorderSize = 2
+        Me.ButtonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonCancelar.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonCancelar.ForeColor = System.Drawing.Color.White
+        Me.ButtonCancelar.Location = New System.Drawing.Point(70, 490)
+        Me.ButtonCancelar.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
+        Me.ButtonCancelar.Name = "ButtonCancelar"
+        Me.ButtonCancelar.Size = New System.Drawing.Size(104, 42)
+        Me.ButtonCancelar.TabIndex = 23
+        Me.ButtonCancelar.Text = "Cancelar"
+        Me.ButtonCancelar.UseVisualStyleBackColor = False
+        '
         'LabelEditarInfo
         '
         Me.LabelEditarInfo.AutoSize = True
@@ -83,16 +129,6 @@ Partial Class FrmEditarUsuarios
         Me.LabelEditarInfo.Size = New System.Drawing.Size(417, 43)
         Me.LabelEditarInfo.TabIndex = 14
         Me.LabelEditarInfo.Text = "Editar mi información"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(205, 21)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(120, 120)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
         '
         'Labelmiperfil
         '
@@ -219,119 +255,55 @@ Partial Class FrmEditarUsuarios
         '
         Me.LinkLabelEditar.AutoSize = True
         Me.LinkLabelEditar.Font = New System.Drawing.Font("Quicksand", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabelEditar.LinkColor = System.Drawing.Color.SteelBlue
-        Me.LinkLabelEditar.Location = New System.Drawing.Point(121, 468)
+        Me.LinkLabelEditar.LinkColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.LinkLabelEditar.Location = New System.Drawing.Point(123, 459)
         Me.LinkLabelEditar.Name = "LinkLabelEditar"
-        Me.LinkLabelEditar.Size = New System.Drawing.Size(214, 37)
+        Me.LinkLabelEditar.Size = New System.Drawing.Size(206, 37)
         Me.LinkLabelEditar.TabIndex = 13
         Me.LinkLabelEditar.TabStop = True
-        Me.LinkLabelEditar.Text = "Editar perfil:"
+        Me.LinkLabelEditar.Text = "Editar perfil"
         '
-        'TextBoxUsuario
+        'PictureBox2
         '
-        Me.TextBoxUsuario.AnimateReadOnly = True
-        Me.TextBoxUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.TextBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBoxUsuario.Depth = 0
-        Me.TextBoxUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.TextBoxUsuario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(137, Byte), Integer))
-        Me.TextBoxUsuario.Hint = "Usuario"
-        Me.TextBoxUsuario.LeadingIcon = CType(resources.GetObject("TextBoxUsuario.LeadingIcon"), System.Drawing.Image)
-        Me.TextBoxUsuario.LeaveOnEnterKey = True
-        Me.TextBoxUsuario.Location = New System.Drawing.Point(23, 78)
-        Me.TextBoxUsuario.MaxLength = 50
-        Me.TextBoxUsuario.MouseState = MaterialSkin.MouseState.OUT
-        Me.TextBoxUsuario.Multiline = False
-        Me.TextBoxUsuario.Name = "TextBoxUsuario"
-        Me.TextBoxUsuario.Size = New System.Drawing.Size(390, 50)
-        Me.TextBoxUsuario.TabIndex = 16
-        Me.TextBoxUsuario.Text = ""
-        Me.TextBoxUsuario.TrailingIcon = Nothing
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Image = Global.ProyectoD.My.Resources.Resources.edit_info
+        Me.PictureBox2.Location = New System.Drawing.Point(57, 443)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(70, 70)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 14
+        Me.PictureBox2.TabStop = False
         '
-        'MaterialTextBoxEmail
+        'PictureBox1
         '
-        Me.MaterialTextBoxEmail.AnimateReadOnly = True
-        Me.MaterialTextBoxEmail.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialTextBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.MaterialTextBoxEmail.Depth = 0
-        Me.MaterialTextBoxEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.MaterialTextBoxEmail.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(137, Byte), Integer))
-        Me.MaterialTextBoxEmail.Hint = "Email"
-        Me.MaterialTextBoxEmail.LeadingIcon = CType(resources.GetObject("MaterialTextBoxEmail.LeadingIcon"), System.Drawing.Image)
-        Me.MaterialTextBoxEmail.LeaveOnEnterKey = True
-        Me.MaterialTextBoxEmail.Location = New System.Drawing.Point(23, 246)
-        Me.MaterialTextBoxEmail.MaxLength = 50
-        Me.MaterialTextBoxEmail.MouseState = MaterialSkin.MouseState.OUT
-        Me.MaterialTextBoxEmail.Multiline = False
-        Me.MaterialTextBoxEmail.Name = "MaterialTextBoxEmail"
-        Me.MaterialTextBoxEmail.Size = New System.Drawing.Size(390, 50)
-        Me.MaterialTextBoxEmail.TabIndex = 17
-        Me.MaterialTextBoxEmail.Text = ""
-        Me.MaterialTextBoxEmail.TrailingIcon = Nothing
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(209, 21)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(120, 120)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
         '
-        'MaterialTextBoxNuevaC
+        'MaterialTextContraseñaA
         '
-        Me.MaterialTextBoxNuevaC.AnimateReadOnly = True
-        Me.MaterialTextBoxNuevaC.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialTextBoxNuevaC.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.MaterialTextBoxNuevaC.Depth = 0
-        Me.MaterialTextBoxNuevaC.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.MaterialTextBoxNuevaC.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(137, Byte), Integer))
-        Me.MaterialTextBoxNuevaC.Hint = "Nueva Contraseña"
-        Me.MaterialTextBoxNuevaC.LeadingIcon = CType(resources.GetObject("MaterialTextBoxNuevaC.LeadingIcon"), System.Drawing.Image)
-        Me.MaterialTextBoxNuevaC.LeaveOnEnterKey = True
-        Me.MaterialTextBoxNuevaC.Location = New System.Drawing.Point(21, 322)
-        Me.MaterialTextBoxNuevaC.MaxLength = 50
-        Me.MaterialTextBoxNuevaC.MouseState = MaterialSkin.MouseState.OUT
-        Me.MaterialTextBoxNuevaC.Multiline = False
-        Me.MaterialTextBoxNuevaC.Name = "MaterialTextBoxNuevaC"
-        Me.MaterialTextBoxNuevaC.Password = True
-        Me.MaterialTextBoxNuevaC.Size = New System.Drawing.Size(390, 50)
-        Me.MaterialTextBoxNuevaC.TabIndex = 18
-        Me.MaterialTextBoxNuevaC.Text = ""
-        Me.MaterialTextBoxNuevaC.TrailingIcon = Nothing
-        '
-        'MaterialTextBoxApellido
-        '
-        Me.MaterialTextBoxApellido.AnimateReadOnly = True
-        Me.MaterialTextBoxApellido.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialTextBoxApellido.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.MaterialTextBoxApellido.Depth = 0
-        Me.MaterialTextBoxApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.MaterialTextBoxApellido.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(137, Byte), Integer))
-        Me.MaterialTextBoxApellido.Hint = "Apellido"
-        Me.MaterialTextBoxApellido.LeadingIcon = CType(resources.GetObject("MaterialTextBoxApellido.LeadingIcon"), System.Drawing.Image)
-        Me.MaterialTextBoxApellido.LeaveOnEnterKey = True
-        Me.MaterialTextBoxApellido.Location = New System.Drawing.Point(23, 190)
-        Me.MaterialTextBoxApellido.MaxLength = 50
-        Me.MaterialTextBoxApellido.MouseState = MaterialSkin.MouseState.OUT
-        Me.MaterialTextBoxApellido.Multiline = False
-        Me.MaterialTextBoxApellido.Name = "MaterialTextBoxApellido"
-        Me.MaterialTextBoxApellido.Size = New System.Drawing.Size(390, 50)
-        Me.MaterialTextBoxApellido.TabIndex = 19
-        Me.MaterialTextBoxApellido.Text = ""
-        Me.MaterialTextBoxApellido.TrailingIcon = Nothing
-        '
-        'MaterialTextBoxprimernombre
-        '
-        Me.MaterialTextBoxprimernombre.AnimateReadOnly = True
-        Me.MaterialTextBoxprimernombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialTextBoxprimernombre.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.MaterialTextBoxprimernombre.Depth = 0
-        Me.MaterialTextBoxprimernombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.MaterialTextBoxprimernombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(137, Byte), Integer))
-        Me.MaterialTextBoxprimernombre.Hint = "Primer Nombre"
-        Me.MaterialTextBoxprimernombre.LeadingIcon = CType(resources.GetObject("MaterialTextBoxprimernombre.LeadingIcon"), System.Drawing.Image)
-        Me.MaterialTextBoxprimernombre.LeaveOnEnterKey = True
-        Me.MaterialTextBoxprimernombre.Location = New System.Drawing.Point(21, 134)
-        Me.MaterialTextBoxprimernombre.MaxLength = 50
-        Me.MaterialTextBoxprimernombre.MouseState = MaterialSkin.MouseState.OUT
-        Me.MaterialTextBoxprimernombre.Multiline = False
-        Me.MaterialTextBoxprimernombre.Name = "MaterialTextBoxprimernombre"
-        Me.MaterialTextBoxprimernombre.Size = New System.Drawing.Size(390, 50)
-        Me.MaterialTextBoxprimernombre.TabIndex = 20
-        Me.MaterialTextBoxprimernombre.Text = ""
-        Me.MaterialTextBoxprimernombre.TrailingIcon = Nothing
+        Me.MaterialTextContraseñaA.AnimateReadOnly = True
+        Me.MaterialTextContraseñaA.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialTextContraseñaA.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.MaterialTextContraseñaA.Depth = 0
+        Me.MaterialTextContraseñaA.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.MaterialTextContraseñaA.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(137, Byte), Integer))
+        Me.MaterialTextContraseñaA.Hint = "Contraseña Actual"
+        Me.MaterialTextContraseñaA.LeadingIcon = CType(resources.GetObject("MaterialTextContraseñaA.LeadingIcon"), System.Drawing.Image)
+        Me.MaterialTextContraseñaA.LeaveOnEnterKey = True
+        Me.MaterialTextContraseñaA.Location = New System.Drawing.Point(21, 434)
+        Me.MaterialTextContraseñaA.MaxLength = 50
+        Me.MaterialTextContraseñaA.MouseState = MaterialSkin.MouseState.OUT
+        Me.MaterialTextContraseñaA.Multiline = False
+        Me.MaterialTextContraseñaA.Name = "MaterialTextContraseñaA"
+        Me.MaterialTextContraseñaA.Size = New System.Drawing.Size(390, 50)
+        Me.MaterialTextContraseñaA.TabIndex = 22
+        Me.MaterialTextContraseñaA.Text = ""
+        Me.MaterialTextContraseñaA.TrailingIcon = Nothing
         '
         'MaterialTextBoxConfirmarC
         '
@@ -339,7 +311,7 @@ Partial Class FrmEditarUsuarios
         Me.MaterialTextBoxConfirmarC.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.MaterialTextBoxConfirmarC.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.MaterialTextBoxConfirmarC.Depth = 0
-        Me.MaterialTextBoxConfirmarC.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.MaterialTextBoxConfirmarC.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.MaterialTextBoxConfirmarC.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(137, Byte), Integer))
         Me.MaterialTextBoxConfirmarC.Hint = "Confirmar Contraseña"
         Me.MaterialTextBoxConfirmarC.LeadingIcon = CType(resources.GetObject("MaterialTextBoxConfirmarC.LeadingIcon"), System.Drawing.Image)
@@ -355,70 +327,111 @@ Partial Class FrmEditarUsuarios
         Me.MaterialTextBoxConfirmarC.Text = ""
         Me.MaterialTextBoxConfirmarC.TrailingIcon = Nothing
         '
-        'MaterialTextContraseñaA
+        'MaterialTextBoxprimernombre
         '
-        Me.MaterialTextContraseñaA.AnimateReadOnly = True
-        Me.MaterialTextContraseñaA.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialTextContraseñaA.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.MaterialTextContraseñaA.Depth = 0
-        Me.MaterialTextContraseñaA.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.MaterialTextContraseñaA.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(137, Byte), Integer))
-        Me.MaterialTextContraseñaA.Hint = "Contraseña Actual"
-        Me.MaterialTextContraseñaA.LeadingIcon = CType(resources.GetObject("MaterialTextContraseñaA.LeadingIcon"), System.Drawing.Image)
-        Me.MaterialTextContraseñaA.LeaveOnEnterKey = True
-        Me.MaterialTextContraseñaA.Location = New System.Drawing.Point(21, 434)
-        Me.MaterialTextContraseñaA.MaxLength = 50
-        Me.MaterialTextContraseñaA.MouseState = MaterialSkin.MouseState.OUT
-        Me.MaterialTextContraseñaA.Multiline = False
-        Me.MaterialTextContraseñaA.Name = "MaterialTextContraseñaA"
-        Me.MaterialTextContraseñaA.Size = New System.Drawing.Size(390, 50)
-        Me.MaterialTextContraseñaA.TabIndex = 22
-        Me.MaterialTextContraseñaA.Text = ""
-        Me.MaterialTextContraseñaA.TrailingIcon = Nothing
+        Me.MaterialTextBoxprimernombre.AnimateReadOnly = True
+        Me.MaterialTextBoxprimernombre.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialTextBoxprimernombre.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.MaterialTextBoxprimernombre.Depth = 0
+        Me.MaterialTextBoxprimernombre.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.MaterialTextBoxprimernombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(137, Byte), Integer))
+        Me.MaterialTextBoxprimernombre.Hint = "Primer Nombre"
+        Me.MaterialTextBoxprimernombre.LeadingIcon = CType(resources.GetObject("MaterialTextBoxprimernombre.LeadingIcon"), System.Drawing.Image)
+        Me.MaterialTextBoxprimernombre.LeaveOnEnterKey = True
+        Me.MaterialTextBoxprimernombre.Location = New System.Drawing.Point(21, 134)
+        Me.MaterialTextBoxprimernombre.MaxLength = 50
+        Me.MaterialTextBoxprimernombre.MouseState = MaterialSkin.MouseState.OUT
+        Me.MaterialTextBoxprimernombre.Multiline = False
+        Me.MaterialTextBoxprimernombre.Name = "MaterialTextBoxprimernombre"
+        Me.MaterialTextBoxprimernombre.Size = New System.Drawing.Size(390, 50)
+        Me.MaterialTextBoxprimernombre.TabIndex = 20
+        Me.MaterialTextBoxprimernombre.Text = ""
+        Me.MaterialTextBoxprimernombre.TrailingIcon = Nothing
         '
-        'ButtonCancelar
+        'MaterialTextBoxApellido
         '
-        Me.ButtonCancelar.BackColor = System.Drawing.Color.Gray
-        Me.ButtonCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Gray
-        Me.ButtonCancelar.FlatAppearance.BorderSize = 2
-        Me.ButtonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonCancelar.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonCancelar.ForeColor = System.Drawing.Color.White
-        Me.ButtonCancelar.Location = New System.Drawing.Point(70, 490)
-        Me.ButtonCancelar.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
-        Me.ButtonCancelar.Name = "ButtonCancelar"
-        Me.ButtonCancelar.Size = New System.Drawing.Size(104, 42)
-        Me.ButtonCancelar.TabIndex = 23
-        Me.ButtonCancelar.Text = "Cancelar"
-        Me.ButtonCancelar.UseVisualStyleBackColor = False
+        Me.MaterialTextBoxApellido.AnimateReadOnly = True
+        Me.MaterialTextBoxApellido.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialTextBoxApellido.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.MaterialTextBoxApellido.Depth = 0
+        Me.MaterialTextBoxApellido.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.MaterialTextBoxApellido.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(137, Byte), Integer))
+        Me.MaterialTextBoxApellido.Hint = "Apellido"
+        Me.MaterialTextBoxApellido.LeadingIcon = CType(resources.GetObject("MaterialTextBoxApellido.LeadingIcon"), System.Drawing.Image)
+        Me.MaterialTextBoxApellido.LeaveOnEnterKey = True
+        Me.MaterialTextBoxApellido.Location = New System.Drawing.Point(23, 190)
+        Me.MaterialTextBoxApellido.MaxLength = 50
+        Me.MaterialTextBoxApellido.MouseState = MaterialSkin.MouseState.OUT
+        Me.MaterialTextBoxApellido.Multiline = False
+        Me.MaterialTextBoxApellido.Name = "MaterialTextBoxApellido"
+        Me.MaterialTextBoxApellido.Size = New System.Drawing.Size(390, 50)
+        Me.MaterialTextBoxApellido.TabIndex = 19
+        Me.MaterialTextBoxApellido.Text = ""
+        Me.MaterialTextBoxApellido.TrailingIcon = Nothing
         '
-        'ButtonAceptar
+        'MaterialTextBoxNuevaC
         '
-        Me.ButtonAceptar.BackColor = System.Drawing.Color.ForestGreen
-        Me.ButtonAceptar.FlatAppearance.BorderColor = System.Drawing.Color.ForestGreen
-        Me.ButtonAceptar.FlatAppearance.BorderSize = 2
-        Me.ButtonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonAceptar.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonAceptar.ForeColor = System.Drawing.Color.White
-        Me.ButtonAceptar.Location = New System.Drawing.Point(258, 490)
-        Me.ButtonAceptar.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
-        Me.ButtonAceptar.Name = "ButtonAceptar"
-        Me.ButtonAceptar.Size = New System.Drawing.Size(104, 42)
-        Me.ButtonAceptar.TabIndex = 24
-        Me.ButtonAceptar.Text = "Aceptar"
-        Me.ButtonAceptar.UseVisualStyleBackColor = False
+        Me.MaterialTextBoxNuevaC.AnimateReadOnly = True
+        Me.MaterialTextBoxNuevaC.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialTextBoxNuevaC.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.MaterialTextBoxNuevaC.Depth = 0
+        Me.MaterialTextBoxNuevaC.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.MaterialTextBoxNuevaC.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(137, Byte), Integer))
+        Me.MaterialTextBoxNuevaC.Hint = "Nueva Contraseña"
+        Me.MaterialTextBoxNuevaC.LeadingIcon = CType(resources.GetObject("MaterialTextBoxNuevaC.LeadingIcon"), System.Drawing.Image)
+        Me.MaterialTextBoxNuevaC.LeaveOnEnterKey = True
+        Me.MaterialTextBoxNuevaC.Location = New System.Drawing.Point(21, 322)
+        Me.MaterialTextBoxNuevaC.MaxLength = 50
+        Me.MaterialTextBoxNuevaC.MouseState = MaterialSkin.MouseState.OUT
+        Me.MaterialTextBoxNuevaC.Multiline = False
+        Me.MaterialTextBoxNuevaC.Name = "MaterialTextBoxNuevaC"
+        Me.MaterialTextBoxNuevaC.Password = True
+        Me.MaterialTextBoxNuevaC.Size = New System.Drawing.Size(390, 50)
+        Me.MaterialTextBoxNuevaC.TabIndex = 18
+        Me.MaterialTextBoxNuevaC.Text = ""
+        Me.MaterialTextBoxNuevaC.TrailingIcon = Nothing
         '
-        'LinkLabel12
+        'MaterialTextBoxEmail
         '
-        Me.LinkLabel12.AutoSize = True
-        Me.LinkLabel12.Font = New System.Drawing.Font("Quicksand", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel12.LinkColor = System.Drawing.Color.SteelBlue
-        Me.LinkLabel12.Location = New System.Drawing.Point(19, 297)
-        Me.LinkLabel12.Name = "LinkLabel12"
-        Me.LinkLabel12.Size = New System.Drawing.Size(73, 22)
-        Me.LinkLabel12.TabIndex = 14
-        Me.LinkLabel12.TabStop = True
-        Me.LinkLabel12.Text = "Editar "
+        Me.MaterialTextBoxEmail.AnimateReadOnly = True
+        Me.MaterialTextBoxEmail.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialTextBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.MaterialTextBoxEmail.Depth = 0
+        Me.MaterialTextBoxEmail.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.MaterialTextBoxEmail.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(137, Byte), Integer))
+        Me.MaterialTextBoxEmail.Hint = "Email"
+        Me.MaterialTextBoxEmail.LeadingIcon = CType(resources.GetObject("MaterialTextBoxEmail.LeadingIcon"), System.Drawing.Image)
+        Me.MaterialTextBoxEmail.LeaveOnEnterKey = True
+        Me.MaterialTextBoxEmail.Location = New System.Drawing.Point(23, 246)
+        Me.MaterialTextBoxEmail.MaxLength = 50
+        Me.MaterialTextBoxEmail.MouseState = MaterialSkin.MouseState.OUT
+        Me.MaterialTextBoxEmail.Multiline = False
+        Me.MaterialTextBoxEmail.Name = "MaterialTextBoxEmail"
+        Me.MaterialTextBoxEmail.Size = New System.Drawing.Size(390, 50)
+        Me.MaterialTextBoxEmail.TabIndex = 17
+        Me.MaterialTextBoxEmail.Text = ""
+        Me.MaterialTextBoxEmail.TrailingIcon = Nothing
+        '
+        'TextBoxUsuario
+        '
+        Me.TextBoxUsuario.AnimateReadOnly = True
+        Me.TextBoxUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.TextBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBoxUsuario.Depth = 0
+        Me.TextBoxUsuario.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.TextBoxUsuario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(137, Byte), Integer))
+        Me.TextBoxUsuario.Hint = "Usuario"
+        Me.TextBoxUsuario.LeadingIcon = CType(resources.GetObject("TextBoxUsuario.LeadingIcon"), System.Drawing.Image)
+        Me.TextBoxUsuario.LeaveOnEnterKey = True
+        Me.TextBoxUsuario.Location = New System.Drawing.Point(23, 78)
+        Me.TextBoxUsuario.MaxLength = 50
+        Me.TextBoxUsuario.MouseState = MaterialSkin.MouseState.OUT
+        Me.TextBoxUsuario.Multiline = False
+        Me.TextBoxUsuario.Name = "TextBoxUsuario"
+        Me.TextBoxUsuario.Size = New System.Drawing.Size(390, 50)
+        Me.TextBoxUsuario.TabIndex = 16
+        Me.TextBoxUsuario.Text = ""
+        Me.TextBoxUsuario.TrailingIcon = Nothing
         '
         'FrmEditarUsuarios
         '
@@ -440,10 +453,12 @@ Partial Class FrmEditarUsuarios
         Me.Controls.Add(Me.Labelmiperfil)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Name = "FrmEditarUsuarios"
         Me.Text = "FrmEditarUsuarios"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -475,4 +490,5 @@ Partial Class FrmEditarUsuarios
     Friend WithEvents ButtonAceptar As Button
     Friend WithEvents ButtonCancelar As Button
     Friend WithEvents LinkLabel12 As LinkLabel
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

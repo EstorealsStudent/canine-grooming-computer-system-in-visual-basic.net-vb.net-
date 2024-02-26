@@ -22,11 +22,8 @@ Partial Class FrmAgregarMascota
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Fallecido = New System.Windows.Forms.Label()
         Me.MaterialCheckboxVACUNADONO = New MaterialSkin.Controls.MaterialCheckbox()
-        Me.MaterialCheckboxFALLECIDONO = New MaterialSkin.Controls.MaterialCheckbox()
         Me.MaterialCheckboxVACUNADOSI = New MaterialSkin.Controls.MaterialCheckbox()
-        Me.MaterialCheckboxFALLECIDOSI = New MaterialSkin.Controls.MaterialCheckbox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ButtonCambiar = New System.Windows.Forms.Button()
         Me.DateTimePickerFin = New System.Windows.Forms.DateTimePicker()
@@ -52,16 +49,6 @@ Partial Class FrmAgregarMascota
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Fallecido
-        '
-        Me.Fallecido.AutoSize = True
-        Me.Fallecido.Font = New System.Drawing.Font("Quicksand", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Fallecido.Location = New System.Drawing.Point(443, 250)
-        Me.Fallecido.Name = "Fallecido"
-        Me.Fallecido.Size = New System.Drawing.Size(81, 19)
-        Me.Fallecido.TabIndex = 59
-        Me.Fallecido.Text = "Fallecido"
-        '
         'MaterialCheckboxVACUNADONO
         '
         Me.MaterialCheckboxVACUNADONO.AutoSize = True
@@ -78,22 +65,6 @@ Partial Class FrmAgregarMascota
         Me.MaterialCheckboxVACUNADONO.Text = "No"
         Me.MaterialCheckboxVACUNADONO.UseVisualStyleBackColor = True
         '
-        'MaterialCheckboxFALLECIDONO
-        '
-        Me.MaterialCheckboxFALLECIDONO.AutoSize = True
-        Me.MaterialCheckboxFALLECIDONO.Depth = 0
-        Me.MaterialCheckboxFALLECIDONO.Location = New System.Drawing.Point(518, 269)
-        Me.MaterialCheckboxFALLECIDONO.Margin = New System.Windows.Forms.Padding(0)
-        Me.MaterialCheckboxFALLECIDONO.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.MaterialCheckboxFALLECIDONO.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialCheckboxFALLECIDONO.Name = "MaterialCheckboxFALLECIDONO"
-        Me.MaterialCheckboxFALLECIDONO.ReadOnly = False
-        Me.MaterialCheckboxFALLECIDONO.Ripple = True
-        Me.MaterialCheckboxFALLECIDONO.Size = New System.Drawing.Size(55, 37)
-        Me.MaterialCheckboxFALLECIDONO.TabIndex = 64
-        Me.MaterialCheckboxFALLECIDONO.Text = "No"
-        Me.MaterialCheckboxFALLECIDONO.UseVisualStyleBackColor = True
-        '
         'MaterialCheckboxVACUNADOSI
         '
         Me.MaterialCheckboxVACUNADOSI.AutoSize = True
@@ -109,22 +80,6 @@ Partial Class FrmAgregarMascota
         Me.MaterialCheckboxVACUNADOSI.TabIndex = 63
         Me.MaterialCheckboxVACUNADOSI.Text = "Si"
         Me.MaterialCheckboxVACUNADOSI.UseVisualStyleBackColor = True
-        '
-        'MaterialCheckboxFALLECIDOSI
-        '
-        Me.MaterialCheckboxFALLECIDOSI.AutoSize = True
-        Me.MaterialCheckboxFALLECIDOSI.Depth = 0
-        Me.MaterialCheckboxFALLECIDOSI.Location = New System.Drawing.Point(404, 269)
-        Me.MaterialCheckboxFALLECIDOSI.Margin = New System.Windows.Forms.Padding(0)
-        Me.MaterialCheckboxFALLECIDOSI.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.MaterialCheckboxFALLECIDOSI.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialCheckboxFALLECIDOSI.Name = "MaterialCheckboxFALLECIDOSI"
-        Me.MaterialCheckboxFALLECIDOSI.ReadOnly = False
-        Me.MaterialCheckboxFALLECIDOSI.Ripple = True
-        Me.MaterialCheckboxFALLECIDOSI.Size = New System.Drawing.Size(49, 37)
-        Me.MaterialCheckboxFALLECIDOSI.TabIndex = 62
-        Me.MaterialCheckboxFALLECIDOSI.Text = "Si"
-        Me.MaterialCheckboxFALLECIDOSI.UseVisualStyleBackColor = True
         '
         'Panel3
         '
@@ -430,11 +385,8 @@ Partial Class FrmAgregarMascota
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.ButtonCerrar)
         Me.Controls.Add(Me.ButtonAceptar)
-        Me.Controls.Add(Me.Fallecido)
         Me.Controls.Add(Me.MaterialCheckboxVACUNADONO)
-        Me.Controls.Add(Me.MaterialCheckboxFALLECIDONO)
         Me.Controls.Add(Me.MaterialCheckboxVACUNADOSI)
-        Me.Controls.Add(Me.MaterialCheckboxFALLECIDOSI)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.ButtonCambiar)
         Me.Controls.Add(Me.DateTimePickerFin)
@@ -462,12 +414,8 @@ Partial Class FrmAgregarMascota
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Fallecido As Label
     Friend WithEvents MaterialCheckboxVACUNADONO As MaterialSkin.Controls.MaterialCheckbox
-    Friend WithEvents MaterialCheckboxFALLECIDONO As MaterialSkin.Controls.MaterialCheckbox
     Friend WithEvents MaterialCheckboxVACUNADOSI As MaterialSkin.Controls.MaterialCheckbox
-    Friend WithEvents MaterialCheckboxFALLECIDOSI As MaterialSkin.Controls.MaterialCheckbox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents ButtonCambiar As Button
     Friend WithEvents DateTimePickerFin As DateTimePicker

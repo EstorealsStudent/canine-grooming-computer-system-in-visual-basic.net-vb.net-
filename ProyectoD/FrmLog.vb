@@ -203,7 +203,8 @@ Public Class FrmLog
         Else
             MessageBox.Show("Contraseña o Usuario incorrecto." + vbNewLine + "Intenta de nuevo.")
             TextBoxUsuario.Clear()
-            TextboxContraseña.Focus()
+            TextboxContraseña.Clear()
+            TextBoxUsuario.Focus()
         End If
 
     End Sub
@@ -218,6 +219,7 @@ Public Class FrmLog
         Dim FormularioRecuperarContraseña As New FrmRecuperarContraseña()
         FormularioRecuperarContraseña.ShowDialog()
     End Sub
+
 End Class
 
 

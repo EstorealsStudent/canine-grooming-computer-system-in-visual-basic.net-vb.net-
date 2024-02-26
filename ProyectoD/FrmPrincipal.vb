@@ -105,13 +105,16 @@ Public Class Pantalla_Principal
 
     Private Sub IconButtonCitas_Click(sender As Object, e As EventArgs) Handles IconButtonCitas.Click
         ActivateButton(sender, RGBColores.color1)
+        OpenChildForm(New FrmElejirCita)
     End Sub
 
     Private Sub IconButton3_Click(sender As Object, e As EventArgs) Handles IconButton3.Click
         ActivateButton(sender, RGBColores.color1)
+        OpenChildForm(New FrmElegirMascota)
+
     End Sub
 
-    Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
+    Private Sub IconButton4_Click(sender As Object, e As EventArgs)
         ActivateButton(sender, RGBColores.color1)
     End Sub
 
@@ -173,21 +176,30 @@ Public Class Pantalla_Principal
     Private Sub Permisos()
         If UsuarioActivo.Rol = Roles.Administrador Then
             IconButtonClientes.Enabled = True
-            IconButtonClientes.IconColor = Color.Gray
+            IconButtonClientes.IconColor = Color.White
             IconButtonServicios.Enabled = True
-            IconButtonClientes.IconColor = Color.Gray
+            IconButtonClientes.IconColor = Color.White
         End If
         If UsuarioActivo.Rol = Roles.Recepcionista Then
-            IconButton3.Enabled = False
-            IconButtonCitas.Enabled = False
+            IconButton2.Enabled = False
+        End If
+        If UsuarioActivo.Rol = Roles.Estilista Then
+            IconButton2.Enabled = False
         End If
         'más
     End Sub
 
 
 
-    Private Sub IconButton1_Click_1(sender As Object, e As EventArgs) Handles IconButton1.Click
+    Private Sub IconButton1_Click_1(sender As Object, e As EventArgs) Handles IconButtonperfil.Click
         ActivateButton(sender, RGBColores.color1)
         OpenChildForm(New FrmEditarUsuarios)
     End Sub
+
+    Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles IconButton2.Click
+        ActivateButton(sender, RGBColores.color1)
+        OpenChildForm(New FrmRegistrarte)
+    End Sub
+
+
 End Class

@@ -26,7 +26,11 @@ Public Class FrmAgregarMascota
     End Sub
 
     Private Sub FrmAgregarMascota_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        pesoscombobox()
+        Pesoscombobox()
+        actualizardatetimepicker()
+
+        DateTimePickerInicio.MaxDate = DateTime.Today
+
     End Sub
 
     Private Sub InitializeComponentmascotas()
@@ -107,23 +111,13 @@ Public Class FrmAgregarMascota
             End If
 
 
+            valorFalleció = 0
 
-
-            ' Obtener el valor para la columna falleció
-            If MaterialCheckboxFALLECIDOSI.Checked Then
-                valorFalleció = 1
-            ElseIf MaterialCheckboxFALLECIDONO.Checked Then
-                valorFalleció = 0
-            Else
-                ' Manejar el caso en que ninguna opción esté seleccionada
-                MessageBox.Show("Por favor, seleccionar el partado de falleció.")
-                Return
-            End If
 
 
             Dim pesoSeleccionado As Decimal = Convert.ToDecimal(MaterialComboBoxPesos.SelectedItem)
 
-            If MaterialTextBoxNombreMascota.Text <> "" AndAlso MaterialTextBoxColor.Text <> "" AndAlso imagenBytes IsNot Nothing Then
+            If MaterialTextBoxNombreMascota.Text <> "" AndAlso imagenBytes IsNot Nothing Then
 
                 Dim userModeldasc As New ModelosMascotas(iDCliente:=IdClienteparamascota,
                                                  iDRMascota:=MaterialComboBoxRAZA.SelectedValue,
@@ -134,7 +128,7 @@ Public Class FrmAgregarMascota
                                                  esvacunado:=valorVacunado,
                                                  vacuna:=DateTimePickerInicio.Value,
                                                  vigVacuna:=DateTimePickerFin.Value,
-                                                 foto:=imagenBytes, falleció:=valorFalleció)
+                                                 foto:=imagenBytes, falleció:=valorFalleció, IDUsuarioCrea:=UsuarioActivo.idUser)
 
 
 
@@ -142,15 +136,14 @@ Public Class FrmAgregarMascota
                 Dim result = userModeldasc.modeloinsertarMascotas()
                 MessageBox.Show(result)
 
-                reseterarcajas()
+                Reseterarcajas()
             Else
                 MsgBox("verifica los datos")
-
             End If
         Catch
-            MsgBox("Debes rellenar Nombre, Color y elegir una foto para la mascota")
-        End Try
+            MsgBox("debes ingresar una foto para la mascota")
 
+        End Try
 
 
 
@@ -190,13 +183,14 @@ Public Class FrmAgregarMascota
         End If
     End Sub
 
-    Private Sub MaterialCheckboxFALLECIDOSI_CheckedChanged(sender As Object, e As EventArgs) Handles MaterialCheckboxFALLECIDOSI.CheckedChanged
-        If MaterialCheckboxFALLECIDOSI.Checked Then
-            MaterialCheckboxFALLECIDONO.Checked = False
-        End If
-    End Sub
 
     Private Sub DateTimePickerInicio_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePickerInicio.ValueChanged
+        actualizardatetimepicker()
+        ActualizarColorDateTimePickerFin()
+
+    End Sub
+
+    Private Sub actualizardatetimepicker()
         Try
             Dim fechaInicio As DateTime = DateTimePickerInicio.Value
 
@@ -212,18 +206,14 @@ Public Class FrmAgregarMascota
 
     End Sub
 
-    Private Sub MaterialCheckboxFALLECIDONO_CheckedChanged(sender As Object, e As EventArgs) Handles MaterialCheckboxFALLECIDONO.CheckedChanged
-        If MaterialCheckboxFALLECIDONO.Checked Then
-            MaterialCheckboxFALLECIDOSI.Checked = False
-        End If
-    End Sub
+
 
     Private Sub ActualizarColorDateTimePickerFin()
         Dim fechaFin As DateTime = DateTimePickerFin.Value
         Dim fechaHoy As DateTime = DateTime.Today
 
         ' Verificar si el CheckBox está activado y la fecha de fin ha pasado
-        If MaterialCheckboxVACUNADOSI.Checked AndAlso fechaFin < fechaHoy Then
+        If MaterialCheckboxVACUNADOSI.Checked AndAlso fechaFin <= fechaHoy Then
             ' Cambiar el color a rojo
             Panel3.BackColor = Color.Red
         Else
@@ -241,12 +231,10 @@ Public Class FrmAgregarMascota
         MaterialComboBoxRAZA.Refresh()
         MaterialComboBoxPesos.Refresh()
         MaterialTextBoxColor.Clear()
-        MaterialCheckboxFALLECIDOSI.Checked = False
-        MaterialCheckboxFALLECIDONO.Checked = False
         MaterialCheckboxVACUNADONO.Checked = False
         MaterialCheckboxVACUNADOSI.Checked = False
-        DateTimePickerInicio.Value = DateTime.Now
-        DateTimePickerFin.Value = DateTime.Now
+        DateTimePickerInicio.Value = DateTime.Today
+        DateTimePickerFin.Value = DateTime.Today
         PictureBox1.Image = Nothing
 
     End Sub

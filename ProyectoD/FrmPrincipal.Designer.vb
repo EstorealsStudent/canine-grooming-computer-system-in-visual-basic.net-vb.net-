@@ -24,10 +24,9 @@ Partial Class Pantalla_Principal
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Pantalla_Principal))
         Me.PanelIzquierdo = New System.Windows.Forms.Panel()
+        Me.IconButtonperfil = New FontAwesome.Sharp.IconButton()
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.IconButton4 = New FontAwesome.Sharp.IconButton()
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.IconButtonCitas = New FontAwesome.Sharp.IconButton()
         Me.IconButtonServicios = New FontAwesome.Sharp.IconButton()
@@ -53,10 +52,9 @@ Partial Class Pantalla_Principal
         '
         Me.PanelIzquierdo.AutoScroll = True
         Me.PanelIzquierdo.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.PanelIzquierdo.Controls.Add(Me.IconButtonperfil)
         Me.PanelIzquierdo.Controls.Add(Me.IconButton2)
-        Me.PanelIzquierdo.Controls.Add(Me.IconButton1)
         Me.PanelIzquierdo.Controls.Add(Me.LinkLabel1)
-        Me.PanelIzquierdo.Controls.Add(Me.IconButton4)
         Me.PanelIzquierdo.Controls.Add(Me.IconButton3)
         Me.PanelIzquierdo.Controls.Add(Me.IconButtonCitas)
         Me.PanelIzquierdo.Controls.Add(Me.IconButtonServicios)
@@ -67,6 +65,28 @@ Partial Class Pantalla_Principal
         Me.PanelIzquierdo.Name = "PanelIzquierdo"
         Me.PanelIzquierdo.Size = New System.Drawing.Size(285, 681)
         Me.PanelIzquierdo.TabIndex = 0
+        '
+        'IconButtonperfil
+        '
+        Me.IconButtonperfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.IconButtonperfil.Dock = System.Windows.Forms.DockStyle.Top
+        Me.IconButtonperfil.FlatAppearance.BorderSize = 0
+        Me.IconButtonperfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButtonperfil.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButtonperfil.ForeColor = System.Drawing.Color.White
+        Me.IconButtonperfil.IconChar = FontAwesome.Sharp.IconChar.Play
+        Me.IconButtonperfil.IconColor = System.Drawing.Color.White
+        Me.IconButtonperfil.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButtonperfil.IconSize = 50
+        Me.IconButtonperfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButtonperfil.Location = New System.Drawing.Point(0, 425)
+        Me.IconButtonperfil.Name = "IconButtonperfil"
+        Me.IconButtonperfil.Padding = New System.Windows.Forms.Padding(10, 0, 30, 0)
+        Me.IconButtonperfil.Size = New System.Drawing.Size(285, 65)
+        Me.IconButtonperfil.TabIndex = 10
+        Me.IconButtonperfil.Text = "Perfil" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.IconButtonperfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.IconButtonperfil.UseVisualStyleBackColor = True
         '
         'IconButton2
         '
@@ -81,7 +101,7 @@ Partial Class Pantalla_Principal
         Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton2.IconSize = 50
         Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton2.Location = New System.Drawing.Point(0, 425)
+        Me.IconButton2.Location = New System.Drawing.Point(0, 360)
         Me.IconButton2.Name = "IconButton2"
         Me.IconButton2.Padding = New System.Windows.Forms.Padding(10, 0, 30, 0)
         Me.IconButton2.Size = New System.Drawing.Size(285, 65)
@@ -90,27 +110,6 @@ Partial Class Pantalla_Principal
         Me.IconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton2.UseVisualStyleBackColor = True
         '
-        'IconButton1
-        '
-        Me.IconButton1.FlatAppearance.BorderSize = 0
-        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton1.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IconButton1.ForeColor = System.Drawing.Color.White
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Play
-        Me.IconButton1.IconColor = System.Drawing.Color.White
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.IconSize = 80
-        Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton1.Location = New System.Drawing.Point(-3, 496)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Padding = New System.Windows.Forms.Padding(10, 0, 30, 0)
-        Me.IconButton1.Size = New System.Drawing.Size(285, 71)
-        Me.IconButton1.TabIndex = 9
-        Me.IconButton1.Text = "Perfil" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.IconButton1.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton1.UseVisualStyleBackColor = True
-        '
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
@@ -118,28 +117,6 @@ Partial Class Pantalla_Principal
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(0, 13)
         Me.LinkLabel1.TabIndex = 8
-        '
-        'IconButton4
-        '
-        Me.IconButton4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.IconButton4.FlatAppearance.BorderSize = 0
-        Me.IconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton4.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IconButton4.ForeColor = System.Drawing.Color.White
-        Me.IconButton4.IconChar = FontAwesome.Sharp.IconChar.UserAlt
-        Me.IconButton4.IconColor = System.Drawing.Color.White
-        Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton4.IconSize = 50
-        Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton4.Location = New System.Drawing.Point(0, 360)
-        Me.IconButton4.Name = "IconButton4"
-        Me.IconButton4.Padding = New System.Windows.Forms.Padding(10, 0, 30, 0)
-        Me.IconButton4.Size = New System.Drawing.Size(285, 65)
-        Me.IconButton4.TabIndex = 6
-        Me.IconButton4.Text = "Empleados"
-        Me.IconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton4.UseVisualStyleBackColor = True
         '
         'IconButton3
         '
@@ -357,7 +334,6 @@ Partial Class Pantalla_Principal
     Friend WithEvents PanelIzquierdo As Panel
     Friend WithEvents PanelLogo As Panel
     Friend WithEvents PictureBoxImagen As PictureBox
-    Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButtonCitas As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButtonServicios As FontAwesome.Sharp.IconButton
@@ -369,6 +345,6 @@ Partial Class Pantalla_Principal
     Friend WithEvents PanelEscritorios As Panel
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
-    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButtonperfil As FontAwesome.Sharp.IconButton
     Friend WithEvents PictureBox1 As PictureBox
 End Class

@@ -66,6 +66,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Caché\Citas.vb" />
     <Compile Include="Caché\Clientes.vb" />
     <Compile Include="Caché\Roles.vb" />
     <Compile Include="Caché\Servicios.vb" />

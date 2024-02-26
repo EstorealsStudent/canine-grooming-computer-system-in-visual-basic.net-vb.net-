@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmBienvenida
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmBienvenida
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBienvenida))
@@ -32,7 +32,7 @@ Partial Class FrmBienvenida
         Me.LabelUsuario = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.CircularProgressBar1 = New CircularProgressBar.CircularProgressBar()
+        Me.CircularProgressBar2 = New CircularProgressBar.CircularProgressBar()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,20 +85,20 @@ Partial Class FrmBienvenida
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Quicksand", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Quicksand", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(244, 85)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(325, 56)
+        Me.Label2.Size = New System.Drawing.Size(238, 41)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "BIENVENIDO"
         '
         'LabelUsuario
         '
         Me.LabelUsuario.AutoSize = True
-        Me.LabelUsuario.Font = New System.Drawing.Font("Quicksand", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelUsuario.Location = New System.Drawing.Point(318, 141)
+        Me.LabelUsuario.Font = New System.Drawing.Font("Quicksand", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelUsuario.Location = New System.Drawing.Point(304, 126)
         Me.LabelUsuario.Name = "LabelUsuario"
-        Me.LabelUsuario.Size = New System.Drawing.Size(251, 56)
+        Me.LabelUsuario.Size = New System.Drawing.Size(183, 41)
         Me.LabelUsuario.TabIndex = 3
         Me.LabelUsuario.Text = "USUARIO"
         '
@@ -110,47 +110,48 @@ Partial Class FrmBienvenida
         '
         Me.Timer2.Interval = 30
         '
-        'CircularProgressBar1
+        'CircularProgressBar2
         '
-        Me.CircularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner
-        Me.CircularProgressBar1.AnimationSpeed = 400
-        Me.CircularProgressBar1.BackColor = System.Drawing.Color.White
-        Me.CircularProgressBar1.Font = New System.Drawing.Font("Quicksand", 27.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CircularProgressBar1.ForeColor = System.Drawing.Color.White
-        Me.CircularProgressBar1.InnerColor = System.Drawing.Color.White
-        Me.CircularProgressBar1.InnerMargin = 2
-        Me.CircularProgressBar1.InnerWidth = -1
-        Me.CircularProgressBar1.Location = New System.Drawing.Point(733, 110)
-        Me.CircularProgressBar1.Margin = New System.Windows.Forms.Padding(0)
-        Me.CircularProgressBar1.MarqueeAnimationSpeed = 2000
-        Me.CircularProgressBar1.Name = "CircularProgressBar1"
-        Me.CircularProgressBar1.OuterColor = System.Drawing.Color.White
-        Me.CircularProgressBar1.OuterMargin = -25
-        Me.CircularProgressBar1.OuterWidth = 26
-        Me.CircularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(52, Byte), Integer))
-        Me.CircularProgressBar1.ProgressWidth = 20
-        Me.CircularProgressBar1.SecondaryFont = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CircularProgressBar1.Size = New System.Drawing.Size(199, 199)
-        Me.CircularProgressBar1.StartAngle = 270
-        Me.CircularProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee
-        Me.CircularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.CircularProgressBar1.SubscriptMargin = New System.Windows.Forms.Padding(10, -35, 0, 0)
-        Me.CircularProgressBar1.SubscriptText = "%"
-        Me.CircularProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.CircularProgressBar1.SuperscriptMargin = New System.Windows.Forms.Padding(10, 35, 0, 0)
-        Me.CircularProgressBar1.SuperscriptText = ""
-        Me.CircularProgressBar1.TabIndex = 4
-        Me.CircularProgressBar1.Text = "0"
-        Me.CircularProgressBar1.TextMargin = New System.Windows.Forms.Padding(0)
-        Me.CircularProgressBar1.Value = 68
+        Me.CircularProgressBar2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.CircularProgressBar2.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner
+        Me.CircularProgressBar2.AnimationSpeed = 400
+        Me.CircularProgressBar2.BackColor = System.Drawing.Color.White
+        Me.CircularProgressBar2.Font = New System.Drawing.Font("Quicksand", 27.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CircularProgressBar2.ForeColor = System.Drawing.Color.White
+        Me.CircularProgressBar2.InnerColor = System.Drawing.Color.White
+        Me.CircularProgressBar2.InnerMargin = 2
+        Me.CircularProgressBar2.InnerWidth = -1
+        Me.CircularProgressBar2.Location = New System.Drawing.Point(693, 72)
+        Me.CircularProgressBar2.Margin = New System.Windows.Forms.Padding(0)
+        Me.CircularProgressBar2.MarqueeAnimationSpeed = 2000
+        Me.CircularProgressBar2.Name = "CircularProgressBar2"
+        Me.CircularProgressBar2.OuterColor = System.Drawing.Color.White
+        Me.CircularProgressBar2.OuterMargin = 0
+        Me.CircularProgressBar2.OuterWidth = 0
+        Me.CircularProgressBar2.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.CircularProgressBar2.ProgressWidth = 20
+        Me.CircularProgressBar2.SecondaryFont = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CircularProgressBar2.Size = New System.Drawing.Size(250, 250)
+        Me.CircularProgressBar2.StartAngle = 270
+        Me.CircularProgressBar2.Style = System.Windows.Forms.ProgressBarStyle.Marquee
+        Me.CircularProgressBar2.SubscriptColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CircularProgressBar2.SubscriptMargin = New System.Windows.Forms.Padding(10, -35, 0, 0)
+        Me.CircularProgressBar2.SubscriptText = "%"
+        Me.CircularProgressBar2.SuperscriptColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CircularProgressBar2.SuperscriptMargin = New System.Windows.Forms.Padding(10, 35, 0, 0)
+        Me.CircularProgressBar2.SuperscriptText = ""
+        Me.CircularProgressBar2.TabIndex = 4
+        Me.CircularProgressBar2.Text = "0"
+        Me.CircularProgressBar2.TextMargin = New System.Windows.Forms.Padding(0)
+        Me.CircularProgressBar2.Value = 68
         '
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(781, 155)
+        Me.PictureBox3.Location = New System.Drawing.Point(752, 131)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(105, 111)
+        Me.PictureBox3.Size = New System.Drawing.Size(135, 135)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox3.TabIndex = 5
         Me.PictureBox3.TabStop = False
@@ -161,12 +162,12 @@ Partial Class FrmBienvenida
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(943, 339)
-        Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.CircularProgressBar1)
-        Me.Controls.Add(Me.LabelUsuario)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.LabelUsuario)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.CircularProgressBar2)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Cursor = System.Windows.Forms.Cursors.WaitCursor
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -191,6 +192,6 @@ Partial Class FrmBienvenida
     Friend WithEvents LabelUsuario As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
-    Friend WithEvents CircularProgressBar1 As CircularProgressBar.CircularProgressBar
+    Friend WithEvents CircularProgressBar2 As CircularProgressBar.CircularProgressBar
     Friend WithEvents PictureBox3 As PictureBox
 End Class

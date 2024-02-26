@@ -93,7 +93,7 @@ Public Class FrmMostrarInformacionServicio
             Dim userModelservicioseditados As New ModeloServicio(idservicio:=idservicioobtenido,
                                             tipoServicio:=MaterialComboBoxTServicio.SelectedValue,
                                             nombre:=MaterialTextBoxPrimerNombre.Text,
-                                            costo:=MaterialTextBox21.Text)
+                                            costo:=MaterialTextBox21.Text, IDUsuarioModifica:=UsuarioActivo.idUser)
 
             Dim result = userModelservicioseditados.ModeloEditarServicio()
             MessageBox.Show(result)
