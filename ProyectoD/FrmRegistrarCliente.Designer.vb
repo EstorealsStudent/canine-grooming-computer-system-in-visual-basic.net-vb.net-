@@ -773,6 +773,7 @@ Partial Class FrmRegistrarCliente
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmRegistrarCliente"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmRegistrarCliente"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

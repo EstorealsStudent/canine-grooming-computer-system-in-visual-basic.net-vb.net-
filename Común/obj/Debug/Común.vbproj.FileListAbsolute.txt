@@ -1,10 +1,10 @@
 C:\Users\estor\source\repos\ProyectoD\Común\bin\Debug\Común.dll
 C:\Users\estor\source\repos\ProyectoD\Común\bin\Debug\Común.pdb
 C:\Users\estor\source\repos\ProyectoD\Común\bin\Debug\Común.xml
-C:\Users\estor\source\repos\ProyectoD\Común\obj\Debug\Común.vbprojAssemblyReference.cache
 C:\Users\estor\source\repos\ProyectoD\Común\obj\Debug\Común.Resources.resources
 C:\Users\estor\source\repos\ProyectoD\Común\obj\Debug\Común.vbproj.GenerateResource.cache
 C:\Users\estor\source\repos\ProyectoD\Común\obj\Debug\Común.vbproj.CoreCompileInputs.cache
 C:\Users\estor\source\repos\ProyectoD\Común\obj\Debug\Común.dll
 C:\Users\estor\source\repos\ProyectoD\Común\obj\Debug\Común.xml
 C:\Users\estor\source\repos\ProyectoD\Común\obj\Debug\Común.pdb
+C:\Users\estor\source\repos\ProyectoD\Común\obj\Debug\Común.vbproj.AssemblyReference.cache

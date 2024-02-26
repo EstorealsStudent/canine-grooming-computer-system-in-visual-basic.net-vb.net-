@@ -202,7 +202,6 @@ Public Class FrmLog
             AddHandler frm.FormClosed, AddressOf Me.Logout
         Else
             MessageBox.Show("Contraseña o Usuario incorrecto." + vbNewLine + "Intenta de nuevo.")
-            TextBoxUsuario.Clear()
             TextboxContraseña.Clear()
             TextBoxUsuario.Focus()
         End If

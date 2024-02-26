@@ -51,8 +51,9 @@ Public Class FrmAgendarCita
 
             Dim result = userModel.insertarcitas()
             MessageBox.Show(result)
-
-            Me.Close()
+            If result = "Cita registrada corrrectamente." Then
+                Me.Close()
+            End If
 
 
 

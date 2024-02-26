@@ -7,7 +7,6 @@ C:\Users\estor\source\repos\ProyectoD\Dominio\bin\Debug\AccesoDatos.pdb
 C:\Users\estor\source\repos\ProyectoD\Dominio\bin\Debug\AccesoDatos.xml
 C:\Users\estor\source\repos\ProyectoD\Dominio\bin\Debug\Común.pdb
 C:\Users\estor\source\repos\ProyectoD\Dominio\bin\Debug\Común.xml
-C:\Users\estor\source\repos\ProyectoD\Dominio\obj\Debug\Dominio.vbprojAssemblyReference.cache
 C:\Users\estor\source\repos\ProyectoD\Dominio\obj\Debug\Dominio.Resources.resources
 C:\Users\estor\source\repos\ProyectoD\Dominio\obj\Debug\Dominio.vbproj.GenerateResource.cache
 C:\Users\estor\source\repos\ProyectoD\Dominio\obj\Debug\Dominio.vbproj.CoreCompileInputs.cache
@@ -15,3 +14,4 @@ C:\Users\estor\source\repos\ProyectoD\Dominio\obj\Debug\Dominio.vbproj.CopyCompl
 C:\Users\estor\source\repos\ProyectoD\Dominio\obj\Debug\Dominio.dll
 C:\Users\estor\source\repos\ProyectoD\Dominio\obj\Debug\Dominio.xml
 C:\Users\estor\source\repos\ProyectoD\Dominio\obj\Debug\Dominio.pdb
+C:\Users\estor\source\repos\ProyectoD\Dominio\obj\Debug\Dominio.vbproj.AssemblyReference.cache

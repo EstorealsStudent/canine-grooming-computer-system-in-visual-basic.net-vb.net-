@@ -12,19 +12,14 @@ Public Class FrmCitasPrincipal
         SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.Cyan500, Primary.BlueGrey500, Accent.Cyan700, TextShade.WHITE)
 
 
-
         DataGridView1.AllowUserToAddRows = False
-        Cargardatagrid()
         DataGridView1.ReadOnly = True
-        DataGridView1.ClearSelection()
         MonthCalendar1.SelectionStart = Date.Now
         MaterialRadioButton1.Checked = True
-    End Sub
 
-    Private Sub Cargardatagrid()
         Try
             ' Obtener datos desde la capa de lógica de negocio
-            Dim dataTable As DataTable = userdaocitas.modelousuariotraercitasdelprincipio(MonthCalendar1.SelectionStart.Date)
+            Dim dataTable As DataTable = userdaocitas.modelousuariotraercitasdelprincipio(Date.Today)
             If dataTable.Rows.Count <> 0 Then
                 DataGridView1.DataSource = dataTable
             Else
@@ -32,7 +27,10 @@ Public Class FrmCitasPrincipal
             End If
         Catch
         End Try
+
     End Sub
+
+
 
     Private Sub MonthCalendar1_DateSelected(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar1.DateSelected
 
