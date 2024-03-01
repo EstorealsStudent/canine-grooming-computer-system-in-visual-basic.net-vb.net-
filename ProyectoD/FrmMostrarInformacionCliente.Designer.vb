@@ -87,7 +87,7 @@ Partial Class FrmMostrarInformacionCliente
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1235, 56)
+        Me.Panel1.Size = New System.Drawing.Size(1231, 56)
         Me.Panel1.TabIndex = 0
         '
         'IconButton1
@@ -866,7 +866,7 @@ Partial Class FrmMostrarInformacionCliente
         Me.ButtonAceptar.Location = New System.Drawing.Point(1055, 66)
         Me.ButtonAceptar.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
         Me.ButtonAceptar.Name = "ButtonAceptar"
-        Me.ButtonAceptar.Size = New System.Drawing.Size(85, 42)
+        Me.ButtonAceptar.Size = New System.Drawing.Size(94, 42)
         Me.ButtonAceptar.TabIndex = 25
         Me.ButtonAceptar.Text = "Editar"
         Me.ButtonAceptar.UseVisualStyleBackColor = False
@@ -879,10 +879,10 @@ Partial Class FrmMostrarInformacionCliente
         Me.ButtonguardarInformacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonguardarInformacion.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonguardarInformacion.ForeColor = System.Drawing.Color.White
-        Me.ButtonguardarInformacion.Location = New System.Drawing.Point(1150, 66)
+        Me.ButtonguardarInformacion.Location = New System.Drawing.Point(1055, 117)
         Me.ButtonguardarInformacion.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
         Me.ButtonguardarInformacion.Name = "ButtonguardarInformacion"
-        Me.ButtonguardarInformacion.Size = New System.Drawing.Size(85, 42)
+        Me.ButtonguardarInformacion.Size = New System.Drawing.Size(94, 42)
         Me.ButtonguardarInformacion.TabIndex = 26
         Me.ButtonguardarInformacion.Text = "Guardar"
         Me.ButtonguardarInformacion.UseVisualStyleBackColor = False
@@ -895,10 +895,10 @@ Partial Class FrmMostrarInformacionCliente
         Me.Buttoncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Buttoncancelar.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Buttoncancelar.ForeColor = System.Drawing.Color.White
-        Me.Buttoncancelar.Location = New System.Drawing.Point(1099, 111)
+        Me.Buttoncancelar.Location = New System.Drawing.Point(1055, 165)
         Me.Buttoncancelar.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
         Me.Buttoncancelar.Name = "Buttoncancelar"
-        Me.Buttoncancelar.Size = New System.Drawing.Size(90, 42)
+        Me.Buttoncancelar.Size = New System.Drawing.Size(94, 42)
         Me.Buttoncancelar.TabIndex = 27
         Me.Buttoncancelar.Text = "Cancelar"
         Me.Buttoncancelar.UseVisualStyleBackColor = False

@@ -68,7 +68,7 @@ Public Class FrmMostrarInformacionServicio
         MaterialTextBox21.Enabled = True
         MaterialComboBoxTServicio.Enabled = True
 
-
+        Button1.Visible = False
         ButtonAceptar.Visible = True
         ButtonCerrar.Visible = True
     End Sub
@@ -84,6 +84,7 @@ Public Class FrmMostrarInformacionServicio
         Bloquearcajas()
         ButtonCerrar.Visible = False
         ButtonAceptar.Visible = False
+        Button1.Visible = True
     End Sub
 
     Private Sub ButtonAceptar_Click(sender As Object, e As EventArgs) Handles ButtonAceptar.Click
@@ -100,6 +101,7 @@ Public Class FrmMostrarInformacionServicio
             Bloquearcajas()
             ButtonAceptar.Visible = False
             ButtonCerrar.Visible = False
+            Button1.Visible = True
         Else
             MsgBox("Dbes rellnar el nombre y costo del servicio")
         End If

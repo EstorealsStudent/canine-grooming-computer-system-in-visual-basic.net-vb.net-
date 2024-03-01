@@ -9,7 +9,7 @@ Public Class UsuarioDAO
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "update Trabajador set Usuario=@user, Contraseña=EncryptByPassPhrase('petpalace', CONVERT(varbinary, @pass)), PrimerNombre=@name, ApellidoPaterno=@lastName, Email=@mail where IDTrabajador=@id"
+                command.CommandText = "update Trabajador set Usuario=@user, Clave=EncryptByPassPhrase('petpalace', CONVERT(varbinary, @pass)), PrimerNombre=@name, ApellidoPaterno=@lastName, Email=@mail where IDTrabajador=@id"
                 command.Parameters.AddWithValue("@user", user)
                 command.Parameters.AddWithValue("@pass", pass)
                 command.Parameters.AddWithValue("@name", name)
@@ -30,8 +30,8 @@ Public Class UsuarioDAO
             Using command = New SqlCommand()
 
                 command.Connection = connection
-                command.CommandText = "SELECT IDTrabajador, PrimerNombre, SegundoNombre, ApellidoPaterno, ApellidoMaterno, Email, Usuario,CONVERT(NVARCHAR(MAX), DecryptByPassPhrase('petpalace', Contraseña)) AS Contraseña, IDRol FROM Trabajador
-where Usuario=@Usuario or Email=@Email"
+                command.CommandText = "SELECT IDTrabajador, PrimerNombre, SegundoNombre, ApellidoPaterno, ApellidoMaterno, Email, Usuario,CONVERT(NVARCHAR(MAX), DecryptByPassPhrase('petpalace', Clave)) AS Contraseña, IDRol FROM Trabajador
+where (Usuario=@Usuario or Email=@Email) and Estatus=1"
                 command.Parameters.AddWithValue("@Usuario", requestingUser)
                 command.Parameters.AddWithValue("@Email", requestingUser)
                 command.CommandType = CommandType.Text
@@ -81,7 +81,8 @@ where Usuario=@Usuario or Email=@Email"
                 connection.Open()
                 Using command = New SqlCommand()
                     command.Connection = connection
-                    command.CommandText = "SELECT IDTrabajador, PrimerNombre, SegundoNombre, ApellidoPaterno, ApellidoMaterno, Email, Usuario, CONVERT(NVARCHAR(MAX), DecryptByPassPhrase('petpalace', Contraseña)) AS Contraseña, IDRol FROM Trabajador WHERE Usuario= @Usuario and CONVERT(varchar(MAX), DECRYPTBYPASSPHRASE('petpalace', Contraseña))= @Contraseña"
+                    command.CommandText = "SELECT IDTrabajador, PrimerNombre, SegundoNombre, ApellidoPaterno, ApellidoMaterno, Email, Usuario, CONVERT(NVARCHAR(MAX), DecryptByPassPhrase('petpalace', Clave)) AS Contraseña, IDRol FROM Trabajador WHERE 
+(Usuario= @Usuario and CONVERT(varchar(MAX), DECRYPTBYPASSPHRASE('petpalace', Clave))= @Contraseña) and Estatus=1"
                     command.Parameters.AddWithValue("@Usuario", user)
                     command.Parameters.AddWithValue("@Contraseña", pass)
                     command.CommandType = CommandType.Text
@@ -114,7 +115,7 @@ where Usuario=@Usuario or Email=@Email"
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "select *from Trabajador where IDTrabajador=@Usuario"
+                command.CommandText = "select *from Trabajador where (IDTrabajador=@Usuario) and Estatus=1"
                 command.Parameters.AddWithValue("@Usuario", id)
                 command.CommandType = CommandType.Text
                 Dim reader = command.ExecuteReader()
@@ -137,7 +138,7 @@ where Usuario=@Usuario or Email=@Email"
             Using command = New SqlCommand()
                 command.Connection = connection
                 command.CommandText = "SELECT IDCliente, CONCAT(PrimerNombre, ' ', ISNULL(SegundoNombre, ''), ' ', ApellidoPaterno, ' ', ISNULL(ApellidoMaterno, '')) AS Nombre, Celular
-FROM Clientes"
+FROM Cliente"
                 Dim reader = command.ExecuteReader()
 
                 If reader.HasRows Then
@@ -163,8 +164,7 @@ FROM Clientes"
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "
-SELECT
+                command.CommandText = "SELECT
     c.IDCliente,
 	c.IDGenero,
     c.PrimerNombre,
@@ -184,15 +184,14 @@ SELECT
     c.Municipio,
     c.CodigoPostal,
     c.Estado,
-    c.Descripción,
+    c.Descripcion,
 	g.NombreGenero
 FROM
-    Clientes c
+    Cliente c
 JOIN
     Genero g ON c.IDGenero = g.IDGenero
-	where c.IDCliente = @idclientes
-"
-                command.Parameters.AddWithValue("@idclientes", idclientes)
+	where c.IDCliente = @idcliente"
+                command.Parameters.AddWithValue("@idcliente", idclientes)
                 command.CommandType = CommandType.Text
 
                 Using reader As SqlDataReader = command.ExecuteReader()
@@ -246,7 +245,7 @@ JOIN
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "SELECT * FROM Genero"
+                command.CommandText = "SELECT * FROM Genero where Estatus=1"
                 command.CommandType = CommandType.Text
 
                 Using reader As SqlDataReader = command.ExecuteReader()
@@ -270,7 +269,7 @@ JOIN
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "INSERT INTO Clientes (IDGenero,PrimerNombre, segundonombre, ApellidoPaterno, ApellidoMaterno, RFC, CURP, Celular, TelCasa, TelTrabajo, TelExterno, Email, Calle, NumeroExt, Colonia, Municipio, CodigoPostal, Estado, Descripción, IdUsuarioCrea) 
+                command.CommandText = "INSERT INTO Cliente (IDGenero,PrimerNombre, segundonombre, ApellidoPaterno, ApellidoMaterno, RFC, CURP, Celular, TelCasa, TelTrabajo, TelExterno, Email, Calle, NumeroExt, Colonia, Municipio, CodigoPostal, Estado, Descripcion, IdUsuarioCrea) 
  VALUES (@IDGenero,@PrimerNombre, @SegundoNombre, @ApellidoPaterno, @ApellidoMaterno, @RFC, @CURP, @Celular, @TelCasa, @TelTrabajo, @TelExterno, @Email, @Calle, @NumeroExt, @Colonia, @Municipio, @CodigoPostal, @Estado, @Descripcion, @idusuario)"
                 ' Asegúrate de configurar los parámetros correspondientes
                 command.Parameters.AddWithValue("@IDGenero", IDGenero)
@@ -308,7 +307,7 @@ JOIN
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = " UPDATE Clientes SET IDGenero = @genero, PrimerNombre = @primerNombre,SegundoNombre = @segundoNombre,ApellidoPaterno = @ApellidoPaterno,ApellidoMaterno = @ApellidoMaterno,
+                command.CommandText = "UPDATE Cliente SET IDGenero = @genero, PrimerNombre = @primerNombre,SegundoNombre = @segundoNombre,ApellidoPaterno = @ApellidoPaterno,ApellidoMaterno = @ApellidoMaterno,
 RFC = @RFC,
 CURP = @Curp,
 Celular = @celular,
@@ -324,7 +323,7 @@ CodigoPostal = @Codigopostal,
 Estado = @estado,
 IdUsuarioModifica=@IDUsuarioModifica,
 FechaModifica=GETDATE(),
-Descripción = @Descripcion WHERE IDCliente = @IdCliente"
+Descripcion = @Descripcion WHERE IDCliente = @IdCliente"
                 ' Asegúrate de configurar los parámetros correspondientes
                 command.Parameters.AddWithValue("@genero", IDGenero)
                 command.Parameters.AddWithValue("@primerNombre", PrimerNombre)
@@ -475,7 +474,7 @@ IDMascota = @idmascota"
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "SELECT * FROM SexoMascota "
+                command.CommandText = "SELECT * FROM SexoMascota where Estatus=1"
                 command.CommandType = CommandType.Text
 
                 Using reader As SqlDataReader = command.ExecuteReader()
@@ -504,7 +503,7 @@ IDMascota = @idmascota"
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "SELECT * FROM TipoMascota order by Nombre asc"
+                command.CommandText = "SELECT * FROM TipoMascota where Estatus=1 order by Nombre asc "
                 command.CommandType = CommandType.Text
 
                 Using reader As SqlDataReader = command.ExecuteReader()
@@ -531,7 +530,7 @@ IDMascota = @idmascota"
             Using command = New SqlCommand()
                 command.Connection = connection
                 command.CommandText = "select * from RazaMascota
-where IDRMascota=@idRmascota
+where IDRMascota=@idRmascota and Estatus=1
 order by Nombre asc"
                 command.Parameters.AddWithValue("@idRmascota", razamascota)
                 command.CommandType = CommandType.Text
@@ -562,7 +561,7 @@ order by Nombre asc"
             Using command = New SqlCommand()
                 command.Connection = connection
                 command.CommandText = "select * from RazaMascota
-where IDTMascota=@idTmascota
+where IDTMascota=@idTmascota and Estatus=1
 order by Nombre asc"
                 command.Parameters.AddWithValue("@idTmascota", razamascota)
                 command.CommandType = CommandType.Text
@@ -585,14 +584,14 @@ order by Nombre asc"
 
     End Function
 
-    Public Sub Insertarmascotas(idcliente, idrazamascota, sexomascota, nombre, peso, color, esvacunado, vacunainicio, vigvacuna, foto, falleció, IDUsuariocrea)
+    Public Sub Insertarmascotas(idcliente, idrazamascota, sexomascota, nombre, peso, color, esvacunado, vacunainicio, vigvacuna, foto, IDUsuariocrea)
 
         Using connection = GetConnection()
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "INSERT INTO Mascota (IDCliente, IDRMascota, IDSeMascota, Nombre, Peso, Color, Esvacunado, Vacuna, VigVacuna, Foto, Fallecido, IdUsuarioCrea)
-VALUES (@IDCliente, @IDRMascota, @IDSeMascota, @Nombre, @Peso, @Color, @Esvacunado, @Vacuna, @VigVacuna, @Foto, @Fallecido, @idusuariocrea)"
+                command.CommandText = "INSERT INTO Mascota (IDCliente, IDRMascota, IDSeMascota, Nombre, Peso, Color, Esvacunado, Vacuna, VigVacuna, Foto, IdUsuarioCrea)
+VALUES (@IDCliente, @IDRMascota, @IDSeMascota, @Nombre, @Peso, @Color, @Esvacunado, @Vacuna, @VigVacuna, @Foto, @idusuariocrea)"
                 ' Asegúrate de configurar los parámetros correspondientes
                 command.Parameters.AddWithValue("@IDCliente", idcliente)
                 command.Parameters.AddWithValue("@IDRMascota", idrazamascota)
@@ -604,7 +603,6 @@ VALUES (@IDCliente, @IDRMascota, @IDSeMascota, @Nombre, @Peso, @Color, @Esvacuna
                 command.Parameters.AddWithValue("@Vacuna", vacunainicio)
                 command.Parameters.AddWithValue("@VigVacuna", vigvacuna)
                 command.Parameters.AddWithValue("@Foto", foto)
-                command.Parameters.AddWithValue("@Fallecido", falleció)
                 command.Parameters.AddWithValue("@idusuariocrea", IDUsuariocrea)
                 command.CommandType = CommandType.Text
                 command.ExecuteNonQuery()
@@ -666,7 +664,7 @@ WHERE IDMascota = @IDMascota"
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "select*from tipoServicio"
+                command.CommandText = "select*from tipoServicio where Estatus=1"
                 command.CommandType = CommandType.Text
 
                 Using reader As SqlDataReader = command.ExecuteReader()
@@ -694,7 +692,7 @@ WHERE IDMascota = @IDMascota"
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "INSERT INTO Servicios (TipoServicio, Nombre, Costo, IdUsuarioCrea)
+                command.CommandText = "INSERT INTO Servicio (TipoServicio, Nombre, Costo, IdUsuarioCrea)
 VALUES (@TipoServicioID, @NombreServicio, @CostoServicio, @idusuariocrea)"
                 ' Asegúrate de configurar los parámetros correspondientes
                 command.Parameters.AddWithValue("@TipoServicioID", TipoServicio)
@@ -720,7 +718,7 @@ s.IDServicio,
 t.Nombre as 'tipo de servicio',
 s.Nombre,
 s.Costo
-from Servicios s
+from Servicio s
 join
 tipoServicio T on t.TipoServicio=s.TipoServicio
 order by t.Nombre"
@@ -750,8 +748,8 @@ order by t.Nombre"
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = " select *from servicios
-where IDServicio=@idservicio  "
+                command.CommandText = " select *from servicio
+where IDServicio=@idservicio  and Estatus=1 "
                 command.Parameters.AddWithValue("@idservicio", idServicio)
                 command.CommandType = CommandType.Text
 
@@ -786,7 +784,7 @@ where IDServicio=@idservicio  "
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "update Servicios
+                command.CommandText = "update Servicio
 set
 TipoServicio= @idtiposervicio,
 Nombre= @nombre,
@@ -1101,7 +1099,7 @@ cl.TelCasa,
 cl.Celular,
 cl.TelTrabajo,
 cl.TelExterno,
-cl.Descripción,
+cl.Descripcion,
 m.Nombre,
 m.Peso,
 r.Nombre as razanombre,
@@ -1123,7 +1121,7 @@ RazaMascota r on r.IDRMascota=m.IDRMascota
 join
 TipoMascota t on t.IDTMascota=r.IDTMascota
 join
-Clientes cl on cl.IDCliente=m.IDCliente
+Cliente cl on cl.IDCliente=m.IDCliente
 where c.IDCita=@idcita"
                 command.Parameters.AddWithValue("@idcita", idcita)
                 command.CommandType = CommandType.Text
@@ -1180,7 +1178,7 @@ where c.IDCita=@idcita"
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "select *from Estadocita"
+                command.CommandText = "select *from Estadocita where Estatus=1"
                 command.CommandType = CommandType.Text
 
                 Using reader As SqlDataReader = command.ExecuteReader()
@@ -1314,7 +1312,7 @@ order by TipoMascota.Nombre,RazaMascota.Nombre"
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "select*from RazaMascota where IDRMascota=@idrmascota"
+                command.CommandText = "select*from RazaMascota where IDRMascota=@idrmascota and Estatus=1"
                 command.Parameters.AddWithValue("@idrmascota", idraza)
                 command.CommandType = CommandType.Text
 
@@ -1375,7 +1373,7 @@ where IDRMascota=@idrmascota"
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "select*from roles"
+                command.CommandText = "select*from rol"
                 command.CommandType = CommandType.Text
 
                 Using reader As SqlDataReader = command.ExecuteReader()
@@ -1426,8 +1424,8 @@ VALUES (@PrimerNombre, @SegundoNombre, @ApellidoPaterno, @ApellidoMaterno, @Emai
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "select * from Servicios
-where TipoServicio=@IdTServicios
+                command.CommandText = "select * from Servicio
+where TipoServicio=@IdTServicios and Estatus=1
 order by Nombre asc"
                 command.Parameters.AddWithValue("@IdTServicios", TipoServicio)
                 command.CommandType = CommandType.Text
@@ -1457,7 +1455,7 @@ order by Nombre asc"
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "select Costo from Servicios where IDServicio=@IdServicios"
+                command.CommandText = "select Costo from Servicio where IDServicio=@IdServicios"
                 command.Parameters.AddWithValue("@IdServicios", IdServicio)
                 command.CommandType = CommandType.Text
 
@@ -1483,7 +1481,7 @@ order by Nombre asc"
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "INSERT INTO DetallesCitaServicios (IDCita,IDServicio,IdUsuarioCrea) 
+                command.CommandText = "INSERT INTO DetallesCitaServicio (IDCita,IDServicio,IdUsuarioCrea) 
 VALUES (@Idcita,@IdServicio,@IdUsuarioCrea)"
                 ' Asegúrate de configurar los parámetros correspondientes
                 command.Parameters.AddWithValue("@Idcita", IdCita)
@@ -1504,15 +1502,15 @@ VALUES (@Idcita,@IdServicio,@IdUsuarioCrea)"
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "SELECT DetallesCitaServicios.IDDetallesCS AS Codigo,
+                command.CommandText = "SELECT DetallesCitaServicio.IDDetallesCS AS Codigo,
 tipoServicio.Nombre AS 'Tipo de Servicio',
-Servicios.Nombre AS 'Nombre de Servicio',
-ROUND(Servicios.Costo, 2) AS 'Precio'
-FROM DetallesCitaServicios
-JOIN Servicios ON Servicios.IDServicio = DetallesCitaServicios.IDServicio
-JOIN tipoServicio ON tipoServicio.TipoServicio = Servicios.TipoServicio
-JOIN Cita ON cita.IDCita = DetallesCitaServicios.IDCita
-WHERE Cita.IDCita = @idcita"
+Servicio.Nombre AS 'Nombre de Servicio',
+ROUND(Servicio.Costo, 2) AS 'Precio'
+FROM DetallesCitaServicio
+JOIN Servicio ON Servicio.IDServicio = DetallesCitaServicio.IDServicio
+JOIN tipoServicio ON tipoServicio.TipoServicio = Servicio.TipoServicio
+JOIN Cita ON cita.IDCita = DetallesCitaServicio.IDCita
+WHERE Cita.IDCita = @idcita and DetallesCitaServicio.Estatus=1"
                 command.Parameters.AddWithValue("@idcita", idcita)
                 command.CommandType = CommandType.Text
 
@@ -1573,12 +1571,12 @@ order by c.Fechacita asc"
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "SELECT ROUND(SUM(servicios.costo), 2) AS TOTAL
-FROM DetallesCitaServicios
-JOIN Servicios ON Servicios.IDServicio = DetallesCitaServicios.IDServicio
-JOIN tipoServicio ON tipoServicio.TipoServicio = Servicios.TipoServicio
-JOIN Cita ON cita.IDCita = DetallesCitaServicios.IDCita
-WHERE Cita.IDCita = @idcita"
+                command.CommandText = "SELECT ROUND(SUM(servicio.costo), 2) AS TOTAL
+FROM DetallesCitaServicio
+JOIN Servicio ON Servicio.IDServicio = DetallesCitaServicio.IDServicio
+JOIN tipoServicio ON tipoServicio.TipoServicio = Servicio.TipoServicio
+JOIN Cita ON cita.IDCita = DetallesCitaServicio.IDCita
+WHERE Cita.IDCita = @idcita and DetallesCitaServicio.Estatus=1"
                 command.Parameters.AddWithValue("@idcita", idcita)
                 command.CommandType = CommandType.Text
 
@@ -1602,15 +1600,20 @@ WHERE Cita.IDCita = @idcita"
         Return Servicio
     End Function
 
-    Public Sub EliminarServicio(idDetalleServicio)
+    Public Sub EliminarServicio(idDetalleServicio, idusuariomodifica)
         Using connection = GetConnection()
             connection.Open()
             Using command = New SqlCommand()
                 command.Connection = connection
-                command.CommandText = "DELETE FROM DetallesCitaServicios
+                command.CommandText = "update DetallesCitaServicio
+SET
+Estatus=0,
+IdUsuarioModifica=@idusuariomodifica,
+FechaModifica=GETDATE()
 WHERE IDDetallesCS = @iddetallescita"
                 ' Asegúrate de configurar los parámetros correspondientes
                 command.Parameters.AddWithValue("@iddetallescita", idDetalleServicio)
+                command.Parameters.AddWithValue("@idusuariomodifica", idusuariomodifica)
                 command.CommandType = CommandType.Text
                 command.ExecuteNonQuery()
             End Using

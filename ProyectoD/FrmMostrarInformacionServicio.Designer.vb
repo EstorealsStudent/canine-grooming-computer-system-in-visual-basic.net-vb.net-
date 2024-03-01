@@ -42,7 +42,7 @@ Partial Class FrmMostrarInformacionServicio
         Me.ButtonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonCerrar.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonCerrar.ForeColor = System.Drawing.Color.White
-        Me.ButtonCerrar.Location = New System.Drawing.Point(575, 174)
+        Me.ButtonCerrar.Location = New System.Drawing.Point(586, 192)
         Me.ButtonCerrar.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
         Me.ButtonCerrar.Name = "ButtonCerrar"
         Me.ButtonCerrar.Size = New System.Drawing.Size(90, 42)
@@ -58,7 +58,7 @@ Partial Class FrmMostrarInformacionServicio
         Me.ButtonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonAceptar.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonAceptar.ForeColor = System.Drawing.Color.White
-        Me.ButtonAceptar.Location = New System.Drawing.Point(575, 70)
+        Me.ButtonAceptar.Location = New System.Drawing.Point(685, 192)
         Me.ButtonAceptar.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
         Me.ButtonAceptar.Name = "ButtonAceptar"
         Me.ButtonAceptar.Size = New System.Drawing.Size(90, 42)

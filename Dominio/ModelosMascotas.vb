@@ -25,7 +25,7 @@ Public Class ModelosMascotas
     Private idTMascota
     Private nombreraza
 
-    Public Sub New(iDCliente As Object, iDRMascota As Object, iDSeMascota As Object, nombre As Object, peso As Object, color As Object, esvacunado As Object, vacuna As Object, vigVacuna As Object, foto As Object, falleció As Object, IDUsuarioCrea As Object)
+    Public Sub New(iDCliente As Object, iDRMascota As Object, iDSeMascota As Object, nombre As Object, peso As Object, color As Object, esvacunado As Object, vacuna As Object, vigVacuna As Object, foto As Object, IDUsuarioCrea As Object)
         Me.IDCliente1 = iDCliente
         Me.IDRMascota1 = iDRMascota
         Me.IDSeMascota1 = iDSeMascota
@@ -36,7 +36,6 @@ Public Class ModelosMascotas
         Me.Vacuna1 = vacuna
         Me.VigVacuna1 = vigVacuna
         Me.Foto1 = foto
-        Me.Falleció1 = falleció
         Me.IDUsuarioCrea1 = IDUsuarioCrea
     End Sub
 
@@ -287,7 +286,7 @@ Public Class ModelosMascotas
 
     Public Function modeloinsertarMascotas() As String
         Try
-            userDao.Insertarmascotas(IDCliente, IDRMascota, IDSeMascota, Nombre, Peso, Color, Esvacunado, Vacuna, VigVacuna, Foto, falleció, IDUsuarioCrea)
+            userDao.Insertarmascotas(IDCliente, IDRMascota, IDSeMascota, Nombre, Peso, Color, Esvacunado, Vacuna, VigVacuna, Foto, IDUsuarioCrea)
             Return "Registro exitoso."
         Catch ex As Exception
             ' Capturar la excepción y retornar un mensaje de error

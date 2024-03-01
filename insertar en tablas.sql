@@ -1,5 +1,5 @@
 
-INSERT INTO roles (Nombre, FCreacion)
+INSERT INTO rol (Nombre, FCreacion)
 VALUES
     ('Administrador', GETDATE()),  -- 1
     ('Recepcionista', GETDATE()),--2
@@ -7,7 +7,7 @@ VALUES
 GO
   -- Insertar informacion
   
-INSERT INTO Trabajador (PrimerNombre, ApellidoPaterno, Email, Usuario, Contraseña, IDRol, FCreacion)
+INSERT INTO Trabajador (PrimerNombre, ApellidoPaterno, Email, Usuario, Clave, IDRol, FCreacion)
 VALUES
     ('Nombre1', 'Apellido1', 'email1@example.com', 'Administrador', EncryptByPassPhrase('petpalace', CONVERT(nvarchar, 'admin')), 1, GETDATE());
 GO
@@ -62,8 +62,8 @@ DECLARE @Intervalo int = 1;
 -- Usar un bucle WHILE para generar intervalos de 1 hora
 WHILE @HoraInicio <= @HoraFin
 BEGIN
-    INSERT INTO Horario (HoraInicio, HoraFin, Activo, IdUsuarioCrea)
-    VALUES (@HoraInicio, DATEADD(HOUR, @Intervalo, @HoraInicio), 1, 1);
+    INSERT INTO Horario (HoraInicio, HoraFin, IdUsuarioCrea)
+    VALUES (@HoraInicio, DATEADD(HOUR, @Intervalo, @HoraInicio), 1);
 
     -- Añadir 1 hora al inicio para el próximo intervalo
     SET @HoraInicio = DATEADD(HOUR, @Intervalo, @HoraInicio);
@@ -106,7 +106,7 @@ SELECT @PremiumID = TipoServicio FROM tipoServicio WHERE Nombre = 'Premium';
 SELECT @VIPID = TipoServicio FROM tipoServicio WHERE Nombre = 'VIP';
 
 -- Insertar 5 servicios adicionales
-INSERT INTO Servicios (TipoServicio, Nombre, Costo, IdUsuarioCrea) 
+INSERT INTO Servicio (TipoServicio, Nombre, Costo, IdUsuarioCrea) 
 VALUES 
 (@AdicionalID, 'Servicio Adicional 1', 10.00, 1),
 (@AdicionalID, 'Servicio Adicional 2', 15.00, 1),
@@ -115,7 +115,7 @@ VALUES
 (@AdicionalID, 'Servicio Adicional 5', 18.75, 1);
 
 -- Insertar 5 servicios express
-INSERT INTO Servicios (TipoServicio, Nombre, Costo, IdUsuarioCrea) 
+INSERT INTO Servicio (TipoServicio, Nombre, Costo, IdUsuarioCrea) 
 VALUES 
 (@ExpressID, 'Servicio Express 1', 25.00, 1),
 (@ExpressID, 'Servicio Express 2', 30.00, 1),
@@ -124,7 +124,7 @@ VALUES
 (@ExpressID, 'Servicio Express 5', 32.75, 1);
 
 -- Insertar 5 servicios premium
-INSERT INTO Servicios (TipoServicio, Nombre, Costo, IdUsuarioCrea) 
+INSERT INTO Servicio (TipoServicio, Nombre, Costo, IdUsuarioCrea) 
 VALUES 
 (@PremiumID, 'Servicio Premium 1', 50.00, 1),
 (@PremiumID, 'Servicio Premium 2', 55.00, 1),
@@ -133,7 +133,7 @@ VALUES
 (@PremiumID, 'Servicio Premium 5', 57.25, 1);
 
 -- Insertar 5 servicios VIP
-INSERT INTO Servicios (TipoServicio, Nombre, Costo, IdUsuarioCrea) 
+INSERT INTO Servicio (TipoServicio, Nombre, Costo, IdUsuarioCrea) 
 VALUES 
 (@VIPID, 'Servicio VIP 1', 100.00,1),
 (@VIPID, 'Servicio VIP 2', 110.00, 1),
@@ -147,7 +147,7 @@ CREATE INDEX IX_Trabajador_Usuario ON Trabajador(Usuario);
 CREATE INDEX IX_Trabajador_Email ON Trabajador(Email);
 
 -- Clientes
-CREATE INDEX IX_Clientes_IDGenero ON Clientes(IDGenero);
+CREATE INDEX IX_Cliente_IDGenero ON Clientes(IDGenero);
 
 -- Mascota
 CREATE INDEX IX_Mascota_IDCliente ON Mascota(IDCliente);
@@ -160,8 +160,8 @@ CREATE INDEX IX_Cita_IDHorario ON Cita(IDHorario);
 CREATE INDEX IX_Cita_IDECita ON Cita(IDECita);
 
 -- DetallesCitaServicios
-CREATE INDEX IX_DetallesCitaServicios_IDServicio ON DetallesCitaServicios(IDServicio);
-CREATE INDEX IX_DetallesCitaServicios_IDCita ON DetallesCitaServicios(IDCita);
+CREATE INDEX IX_DetallesCitaServicio_IDServicio ON DetallesCitaServicio(IDServicio);
+CREATE INDEX IX_DetallesCitaServicio_IDCita ON DetallesCitaServicio(IDCita);
 
 -- RazaMascota
 CREATE INDEX IX_RazaMascota_IDTMascota ON RazaMascota(IDTMascota);

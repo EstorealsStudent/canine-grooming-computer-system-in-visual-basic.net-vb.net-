@@ -88,7 +88,6 @@ Public Class FrmAgregarMascota
         Try
 
             Dim valorVacunado As Integer
-            Dim valorFalleció As Integer
             Dim imagenBytes As Byte()
 
             ' Convertir la imagen a un array de bytes
@@ -110,11 +109,6 @@ Public Class FrmAgregarMascota
                 Return
             End If
 
-
-            valorFalleció = 0
-
-
-
             Dim pesoSeleccionado As Decimal = Convert.ToDecimal(MaterialComboBoxPesos.SelectedItem)
 
             If MaterialTextBoxNombreMascota.Text <> "" AndAlso imagenBytes IsNot Nothing Then
@@ -128,7 +122,7 @@ Public Class FrmAgregarMascota
                                                  esvacunado:=valorVacunado,
                                                  vacuna:=DateTimePickerInicio.Value,
                                                  vigVacuna:=DateTimePickerFin.Value,
-                                                 foto:=imagenBytes, falleció:=valorFalleció, IDUsuarioCrea:=UsuarioActivo.idUser)
+                                                 foto:=imagenBytes, IDUsuarioCrea:=UsuarioActivo.idUser)
 
 
 

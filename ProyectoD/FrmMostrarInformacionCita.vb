@@ -316,7 +316,7 @@ Public Class FrmMostrarInformacionCita
             If DataGridView1.SelectedRows.Count > 0 Then
                 ' Obtenemos el valor de la celda en la columna que contiene el ID de la mascota
                 Dim idservicioseleccionado As Integer = Convert.ToInt32(DataGridView1.SelectedRows(0).Cells("Codigo").Value)
-                Dim usermodeloservicios As New ModeloServicio(idDetallesServicios:=idservicioseleccionado)
+                Dim usermodeloservicios As New ModeloServicio(idDetallesServicios:=idservicioseleccionado, IDUsuarioModifica:=UsuarioActivo.idUser)
 
                 Dim result = usermodeloservicios.ModeloEliminarDetalleCita()
                 MessageBox.Show(result)

@@ -136,6 +136,7 @@ Public Class FrmMostrarInformacionCliente
 
         ButtonguardarInformacion.Visible = True
         Buttoncancelar.Visible = True
+        ButtonAceptar.Visible = False 'editarclientes.
     End Sub
 
     Private Sub ButtonguardarInformacion_Click(sender As Object, e As EventArgs) Handles ButtonguardarInformacion.Click
@@ -169,6 +170,7 @@ Public Class FrmMostrarInformacionCliente
             bloquearcajas()
             ButtonguardarInformacion.Visible = False
             Buttoncancelar.Visible = False
+            ButtonAceptar.Visible = True
         Catch
         End Try
 
@@ -203,9 +205,10 @@ Public Class FrmMostrarInformacionCliente
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Buttoncancelar.Click
-        bloquearcajas()
+        Bloquearcajas()
         Buttoncancelar.Visible = False
         ButtonguardarInformacion.Visible = False
+        ButtonAceptar.Visible = True
     End Sub
     'al darle click a una celda
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick

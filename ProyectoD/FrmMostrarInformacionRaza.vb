@@ -26,7 +26,7 @@ Public Class FrmMostrarInformacionRaza
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         MaterialTextBoxPrimerNombre.Enabled = True
         MaterialComboBoxTServicio.Enabled = True
-
+        Button1.Visible = False
 
         ButtonAceptar.Visible = True
         ButtonCerrar.Visible = True
@@ -42,6 +42,7 @@ Public Class FrmMostrarInformacionRaza
         Bloquearcajas()
         ButtonCerrar.Visible = False
         ButtonAceptar.Visible = False
+        Button1.Visible = True
     End Sub
 
 
@@ -87,6 +88,7 @@ Public Class FrmMostrarInformacionRaza
             Bloquearcajas()
             ButtonAceptar.Visible = False
             ButtonCerrar.Visible = False
+            Button1.Visible = True
         Else
             MsgBox("Dbes rellnar el nombre de la raza")
         End If

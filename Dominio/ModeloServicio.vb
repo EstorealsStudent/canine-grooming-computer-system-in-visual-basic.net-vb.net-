@@ -40,8 +40,9 @@ Public Class ModeloServicio
         Me.IDUsuarioCrea = IDUsuarioCrea
     End Sub
 
-    Public Sub New(idDetallesServicios As Object)
+    Public Sub New(idDetallesServicios As Object, IDUsuarioModifica As Object)
         Me.IdDetallesServicios = idDetallesServicios
+        Me.IDUsuarioModifica = IDUsuarioModifica
     End Sub
 
     Public Property TipoServicio1 As Object
@@ -211,7 +212,7 @@ Public Class ModeloServicio
 
     Public Function ModeloEliminarDetalleCita() As String
         Try
-            userDao.EliminarServicio(IdDetallesServicios)
+            userDao.EliminarServicio(IdDetallesServicios, IDUsuarioModifica)
             Return "Eliminado con exito."
         Catch ex As Exception
             ' Capturar la excepción y retornar un mensaje de error
