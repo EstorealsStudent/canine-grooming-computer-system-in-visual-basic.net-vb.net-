@@ -26,6 +26,7 @@ Partial Class FrmMostrarInformacionCliente
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMostrarInformacionCliente))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -96,7 +97,7 @@ Partial Class FrmMostrarInformacionCliente
         Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.IconButton1.ForeColor = System.Drawing.SystemColors.Control
         Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.MailReply
-        Me.IconButton1.IconColor = System.Drawing.Color.Yellow
+        Me.IconButton1.IconColor = System.Drawing.Color.Gold
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.Location = New System.Drawing.Point(0, 0)
         Me.IconButton1.Name = "IconButton1"
@@ -954,7 +955,7 @@ Partial Class FrmMostrarInformacionCliente
         'Button3
         '
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Image = Global.ProyectoD.My.Resources.Resources.AddItem_16x16
+        Me.Button3.Image = Global.Petpalace.My.Resources.Resources.AddItem_16x16
         Me.Button3.Location = New System.Drawing.Point(220, 551)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(22, 22)
@@ -964,7 +965,7 @@ Partial Class FrmMostrarInformacionCliente
         'Button5
         '
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Image = Global.ProyectoD.My.Resources.Resources.RefreshPivotTable_16x16
+        Me.Button5.Image = Global.Petpalace.My.Resources.Resources.RefreshPivotTable_16x16
         Me.Button5.Location = New System.Drawing.Point(248, 551)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(22, 22)
@@ -1011,9 +1012,10 @@ Partial Class FrmMostrarInformacionCliente
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button5)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmMostrarInformacionCliente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmMostrarInformacionCliente"
+        Me.Text = "Informacion Cliente"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.FlowLayoutPanel1.ResumeLayout(False)

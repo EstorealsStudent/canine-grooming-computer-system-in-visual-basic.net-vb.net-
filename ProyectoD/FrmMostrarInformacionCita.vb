@@ -34,7 +34,7 @@ Public Class FrmMostrarInformacionCita
 
 
 
-        Dim citass As Citas = userDaocitas.obtenercita(idcita)
+        Dim citass As Común.Citas = userDaocitas.obtenercita(idcita)
         Try
 
             'datosgeneralesclientes
@@ -86,28 +86,30 @@ Public Class FrmMostrarInformacionCita
 
             Dim IDTMascotaSeleccionado As Integer = citass.idhorariocita
 
-            If MaterialComboBoxHORARIO.Items.Cast(Of Citas)().Any(Function(t) t.idHORARIO = IDTMascotaSeleccionado) Then
+            If MaterialComboBoxHORARIO.Items.Cast(Of Común.Citas)().Any(Function(t) t.idHORARIO = IDTMascotaSeleccionado) Then
                 MaterialComboBoxHORARIO.SelectedValue = IDTMascotaSeleccionado
             Else
                 MaterialComboBoxHORARIO.SelectedIndex = -1 ' O selecciona un valor predeterminado 
             End If
 
 
-            MaterialComboBoxEstadoCita.ValueMember = citass.idecita
-
+            ' Asignar la fuente de datos al combo box
             MaterialComboBoxEstadoCita.DataSource = userDaocitas.ModeloMostrarEstadoCitaCompleto()
 
+            ' Establecer las propiedades DisplayMember y ValueMember
             MaterialComboBoxEstadoCita.DisplayMember = "ESTADOSCITASCOMPLETO"
             MaterialComboBoxEstadoCita.ValueMember = "idESTADOCITA"
 
+            ' Obtener el ID de la cita seleccionada
+            Dim IDEcita As Integer = citass.idecita ' Asegúrate de usar la propiedad correcta aquí
 
-            Dim IDEcita As Integer = citass.idecita
-
-            If MaterialComboBoxEstadoCita.Items.Cast(Of Citas)().Any(Function(t) t.idESTADOCITA = IDEcita) Then
+            ' Verificar si el ID de la cita seleccionada está en la lista
+            If MaterialComboBoxEstadoCita.Items.Cast(Of Común.Citas)().Any(Function(t) t.idESTADOCITA = IDEcita) Then
                 MaterialComboBoxEstadoCita.SelectedValue = IDEcita
             Else
                 MaterialComboBoxEstadoCita.SelectedIndex = -1 ' O selecciona un valor predeterminado 
             End If
+
 
             MaterialComboBoxTServicio.DataSource = userdaoservicios.ModelomostrarTIPOservicio()
             MaterialComboBoxTServicio.DisplayMember = "NombreTIPOServicio"
@@ -135,11 +137,14 @@ Public Class FrmMostrarInformacionCita
         Try
             ' Obtener datos desde la capa de lógica de negocio
             Dim dataTable As DataTable = userDaocitas.modelousuariotraercitasdelprincipio(FrmCitasPrincipal.DateTimePicker1.Value)
-            If dataTable.Rows.Count <> 0 Then
+
+            If dataTable IsNot Nothing AndAlso dataTable.Rows.Count > 0 Then
                 FrmCitasPrincipal.DataGridView1.DataSource = dataTable
+                FrmCitasPrincipal.DataGridView1.Refresh() ' Actualizar visualmente el DataGridView
             Else
                 FrmCitasPrincipal.DataGridView1.DataSource = Nothing
             End If
+
         Catch
         End Try
 

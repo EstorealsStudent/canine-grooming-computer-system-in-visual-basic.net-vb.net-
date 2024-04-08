@@ -22,6 +22,7 @@ Partial Class FrmBuscarCitaClientes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBuscarCitaClientes))
         Me.MaterialListView1 = New MaterialSkin.Controls.MaterialListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -89,7 +90,7 @@ Partial Class FrmBuscarCitaClientes
         Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.IconButton1.ForeColor = System.Drawing.SystemColors.Control
         Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.MailReply
-        Me.IconButton1.IconColor = System.Drawing.Color.Yellow
+        Me.IconButton1.IconColor = System.Drawing.Color.Gold
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.Location = New System.Drawing.Point(0, 0)
         Me.IconButton1.Name = "IconButton1"
@@ -125,9 +126,10 @@ Partial Class FrmBuscarCitaClientes
         Me.Controls.Add(Me.MaterialListView1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmBuscarCitaClientes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmBuscarCitaClientes"
+        Me.Text = "Buscador Cita"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)

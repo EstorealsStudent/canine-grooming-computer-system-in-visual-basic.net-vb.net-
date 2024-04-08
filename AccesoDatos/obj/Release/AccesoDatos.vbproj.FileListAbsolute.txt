@@ -1,0 +1,14 @@
+C:\Users\estor\source\repos\ProyectoD\AccesoDatos\bin\Release\AccesoDatos.dll
+C:\Users\estor\source\repos\ProyectoD\AccesoDatos\bin\Release\AccesoDatos.pdb
+C:\Users\estor\source\repos\ProyectoD\AccesoDatos\bin\Release\AccesoDatos.xml
+C:\Users\estor\source\repos\ProyectoD\AccesoDatos\bin\Release\Común.dll
+C:\Users\estor\source\repos\ProyectoD\AccesoDatos\bin\Release\Común.pdb
+C:\Users\estor\source\repos\ProyectoD\AccesoDatos\bin\Release\Común.xml
+C:\Users\estor\source\repos\ProyectoD\AccesoDatos\obj\Release\AccesoDatos.vbprojAssemblyReference.cache
+C:\Users\estor\source\repos\ProyectoD\AccesoDatos\obj\Release\AccesoDatos.Resources.resources
+C:\Users\estor\source\repos\ProyectoD\AccesoDatos\obj\Release\AccesoDatos.vbproj.GenerateResource.cache
+C:\Users\estor\source\repos\ProyectoD\AccesoDatos\obj\Release\AccesoDatos.vbproj.CoreCompileInputs.cache
+C:\Users\estor\source\repos\ProyectoD\AccesoDatos\obj\Release\AccesoDatos.vbproj.CopyComplete
+C:\Users\estor\source\repos\ProyectoD\AccesoDatos\obj\Release\AccesoDatos.dll
+C:\Users\estor\source\repos\ProyectoD\AccesoDatos\obj\Release\AccesoDatos.xml
+C:\Users\estor\source\repos\ProyectoD\AccesoDatos\obj\Release\AccesoDatos.pdb

@@ -105,7 +105,7 @@ Public Class Pantalla_Principal
 
     Private Sub IconButtonCitas_Click(sender As Object, e As EventArgs) Handles IconButtonCitas.Click
         ActivateButton(sender, RGBColores.color1)
-        OpenChildForm(New FrmElejirCita)
+        OpenChildForm(New Citas)
     End Sub
 
     Private Sub IconButton3_Click(sender As Object, e As EventArgs) Handles IconButton3.Click
@@ -198,7 +198,7 @@ Public Class Pantalla_Principal
 
     Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles IconButton2.Click
         ActivateButton(sender, RGBColores.color1)
-        OpenChildForm(New FrmRegistrarte)
+        OpenChildForm(New FrmAdm)
     End Sub
 
 

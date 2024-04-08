@@ -22,6 +22,7 @@ Partial Class FrmMostrarInformacionRaza
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMostrarInformacionRaza))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ButtonCerrar = New System.Windows.Forms.Button()
         Me.ButtonAceptar = New System.Windows.Forms.Button()
@@ -150,11 +151,11 @@ Partial Class FrmMostrarInformacionRaza
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Quicksand", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(90, 20)
+        Me.Label1.Location = New System.Drawing.Point(101, 19)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(144, 24)
+        Me.Label1.Size = New System.Drawing.Size(134, 24)
         Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Editar Razas:"
+        Me.Label1.Text = "Editar Raza:"
         '
         'IconButton1
         '
@@ -162,7 +163,7 @@ Partial Class FrmMostrarInformacionRaza
         Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.IconButton1.ForeColor = System.Drawing.SystemColors.Control
         Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.MailReply
-        Me.IconButton1.IconColor = System.Drawing.Color.Yellow
+        Me.IconButton1.IconColor = System.Drawing.Color.Gold
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.Location = New System.Drawing.Point(0, 0)
         Me.IconButton1.Name = "IconButton1"
@@ -184,9 +185,10 @@ Partial Class FrmMostrarInformacionRaza
         Me.Controls.Add(Me.MaterialTextBoxPrimerNombre)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmMostrarInformacionRaza"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmMostrarInformacionRaza"
+        Me.Text = "Editar  Raza"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)

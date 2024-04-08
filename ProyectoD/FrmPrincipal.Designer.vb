@@ -297,7 +297,7 @@ Partial Class Pantalla_Principal
         'PictureBox1
         '
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox1.Image = Global.ProyectoD.My.Resources.Resources.petpalacelogo
+        Me.PictureBox1.Image = Global.Petpalace.My.Resources.Resources.petpalacelogo
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(779, 607)
@@ -315,9 +315,10 @@ Partial Class Pantalla_Principal
         Me.Controls.Add(Me.PanelIzquierdo)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Pantalla_Principal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Pantalla_Principal"
+        Me.Text = "Pantalla Principal"
         Me.PanelIzquierdo.ResumeLayout(False)
         Me.PanelIzquierdo.PerformLayout()
         Me.PanelLogo.ResumeLayout(False)

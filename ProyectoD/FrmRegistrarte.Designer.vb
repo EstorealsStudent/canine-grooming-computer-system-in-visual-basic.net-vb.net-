@@ -23,7 +23,6 @@ Partial Class FrmRegistrarte
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmRegistrarte))
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.MaterialTextBoxContraseña = New MaterialSkin.Controls.MaterialTextBox()
         Me.MaterialTextBoxEmail = New MaterialSkin.Controls.MaterialTextBox()
         Me.MaterialTextBoxPrimerNombre = New MaterialSkin.Controls.MaterialTextBox()
@@ -35,19 +34,11 @@ Partial Class FrmRegistrarte
         Me.MaterialComboBoxRol = New MaterialSkin.Controls.MaterialComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Quicksand", 47.99999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Indigo
-        Me.Label1.Location = New System.Drawing.Point(17, 48)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(594, 75)
-        Me.Label1.TabIndex = 7
-        Me.Label1.Text = "Registra Usuarios"
         '
         'MaterialTextBoxContraseña
         '
@@ -60,7 +51,7 @@ Partial Class FrmRegistrarte
         Me.MaterialTextBoxContraseña.Hint = "Contraseña"
         Me.MaterialTextBoxContraseña.LeadingIcon = CType(resources.GetObject("MaterialTextBoxContraseña.LeadingIcon"), System.Drawing.Image)
         Me.MaterialTextBoxContraseña.LeaveOnEnterKey = True
-        Me.MaterialTextBoxContraseña.Location = New System.Drawing.Point(396, 240)
+        Me.MaterialTextBoxContraseña.Location = New System.Drawing.Point(408, 191)
         Me.MaterialTextBoxContraseña.MaxLength = 50
         Me.MaterialTextBoxContraseña.MouseState = MaterialSkin.MouseState.OUT
         Me.MaterialTextBoxContraseña.Multiline = False
@@ -82,7 +73,7 @@ Partial Class FrmRegistrarte
         Me.MaterialTextBoxEmail.Hint = "Email"
         Me.MaterialTextBoxEmail.LeadingIcon = CType(resources.GetObject("MaterialTextBoxEmail.LeadingIcon"), System.Drawing.Image)
         Me.MaterialTextBoxEmail.LeaveOnEnterKey = True
-        Me.MaterialTextBoxEmail.Location = New System.Drawing.Point(396, 126)
+        Me.MaterialTextBoxEmail.Location = New System.Drawing.Point(408, 77)
         Me.MaterialTextBoxEmail.MaxLength = 50
         Me.MaterialTextBoxEmail.MouseState = MaterialSkin.MouseState.OUT
         Me.MaterialTextBoxEmail.Multiline = False
@@ -103,7 +94,7 @@ Partial Class FrmRegistrarte
         Me.MaterialTextBoxPrimerNombre.Hint = "Primer Nombre*"
         Me.MaterialTextBoxPrimerNombre.LeadingIcon = CType(resources.GetObject("MaterialTextBoxPrimerNombre.LeadingIcon"), System.Drawing.Image)
         Me.MaterialTextBoxPrimerNombre.LeaveOnEnterKey = True
-        Me.MaterialTextBoxPrimerNombre.Location = New System.Drawing.Point(25, 128)
+        Me.MaterialTextBoxPrimerNombre.Location = New System.Drawing.Point(37, 79)
         Me.MaterialTextBoxPrimerNombre.MaxLength = 50
         Me.MaterialTextBoxPrimerNombre.MouseState = MaterialSkin.MouseState.OUT
         Me.MaterialTextBoxPrimerNombre.Multiline = False
@@ -124,7 +115,7 @@ Partial Class FrmRegistrarte
         Me.MaterialTextBoxApellidoPaterno.Hint = "Apellido Paterno*"
         Me.MaterialTextBoxApellidoPaterno.LeadingIcon = CType(resources.GetObject("MaterialTextBoxApellidoPaterno.LeadingIcon"), System.Drawing.Image)
         Me.MaterialTextBoxApellidoPaterno.LeaveOnEnterKey = True
-        Me.MaterialTextBoxApellidoPaterno.Location = New System.Drawing.Point(25, 240)
+        Me.MaterialTextBoxApellidoPaterno.Location = New System.Drawing.Point(37, 191)
         Me.MaterialTextBoxApellidoPaterno.MaxLength = 50
         Me.MaterialTextBoxApellidoPaterno.MouseState = MaterialSkin.MouseState.OUT
         Me.MaterialTextBoxApellidoPaterno.Multiline = False
@@ -145,7 +136,7 @@ Partial Class FrmRegistrarte
         Me.MaterialTextBoxConfirmarContraseña.Hint = "Confirmar Contraseña"
         Me.MaterialTextBoxConfirmarContraseña.LeadingIcon = CType(resources.GetObject("MaterialTextBoxConfirmarContraseña.LeadingIcon"), System.Drawing.Image)
         Me.MaterialTextBoxConfirmarContraseña.LeaveOnEnterKey = True
-        Me.MaterialTextBoxConfirmarContraseña.Location = New System.Drawing.Point(396, 296)
+        Me.MaterialTextBoxConfirmarContraseña.Location = New System.Drawing.Point(408, 247)
         Me.MaterialTextBoxConfirmarContraseña.MaxLength = 50
         Me.MaterialTextBoxConfirmarContraseña.MouseState = MaterialSkin.MouseState.OUT
         Me.MaterialTextBoxConfirmarContraseña.Multiline = False
@@ -167,7 +158,7 @@ Partial Class FrmRegistrarte
         Me.MaterialTextBoxUsuario.Hint = "Usuario"
         Me.MaterialTextBoxUsuario.LeadingIcon = CType(resources.GetObject("MaterialTextBoxUsuario.LeadingIcon"), System.Drawing.Image)
         Me.MaterialTextBoxUsuario.LeaveOnEnterKey = True
-        Me.MaterialTextBoxUsuario.Location = New System.Drawing.Point(396, 184)
+        Me.MaterialTextBoxUsuario.Location = New System.Drawing.Point(408, 135)
         Me.MaterialTextBoxUsuario.MaxLength = 50
         Me.MaterialTextBoxUsuario.MouseState = MaterialSkin.MouseState.OUT
         Me.MaterialTextBoxUsuario.Multiline = False
@@ -188,7 +179,7 @@ Partial Class FrmRegistrarte
         Me.MaterialTextBoxSegundoNombre.Hint = "Segundo Nombre"
         Me.MaterialTextBoxSegundoNombre.LeadingIcon = CType(resources.GetObject("MaterialTextBoxSegundoNombre.LeadingIcon"), System.Drawing.Image)
         Me.MaterialTextBoxSegundoNombre.LeaveOnEnterKey = True
-        Me.MaterialTextBoxSegundoNombre.Location = New System.Drawing.Point(25, 184)
+        Me.MaterialTextBoxSegundoNombre.Location = New System.Drawing.Point(37, 135)
         Me.MaterialTextBoxSegundoNombre.MaxLength = 50
         Me.MaterialTextBoxSegundoNombre.MouseState = MaterialSkin.MouseState.OUT
         Me.MaterialTextBoxSegundoNombre.Multiline = False
@@ -209,7 +200,7 @@ Partial Class FrmRegistrarte
         Me.MaterialTextBoxApellidoMaterno.Hint = "Apellido Materno"
         Me.MaterialTextBoxApellidoMaterno.LeadingIcon = CType(resources.GetObject("MaterialTextBoxApellidoMaterno.LeadingIcon"), System.Drawing.Image)
         Me.MaterialTextBoxApellidoMaterno.LeaveOnEnterKey = True
-        Me.MaterialTextBoxApellidoMaterno.Location = New System.Drawing.Point(25, 296)
+        Me.MaterialTextBoxApellidoMaterno.Location = New System.Drawing.Point(37, 247)
         Me.MaterialTextBoxApellidoMaterno.MaxLength = 50
         Me.MaterialTextBoxApellidoMaterno.MouseState = MaterialSkin.MouseState.OUT
         Me.MaterialTextBoxApellidoMaterno.Multiline = False
@@ -234,7 +225,7 @@ Partial Class FrmRegistrarte
         Me.MaterialComboBoxRol.Hint = "Rol"
         Me.MaterialComboBoxRol.IntegralHeight = False
         Me.MaterialComboBoxRol.ItemHeight = 43
-        Me.MaterialComboBoxRol.Location = New System.Drawing.Point(29, 398)
+        Me.MaterialComboBoxRol.Location = New System.Drawing.Point(37, 344)
         Me.MaterialComboBoxRol.MaxDropDownItems = 4
         Me.MaterialComboBoxRol.MouseState = MaterialSkin.MouseState.OUT
         Me.MaterialComboBoxRol.Name = "MaterialComboBoxRol"
@@ -250,7 +241,7 @@ Partial Class FrmRegistrarte
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(432, 405)
+        Me.Button1.Location = New System.Drawing.Point(444, 356)
         Me.Button1.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(104, 42)
@@ -266,7 +257,7 @@ Partial Class FrmRegistrarte
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Quicksand", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(571, 405)
+        Me.Button2.Location = New System.Drawing.Point(583, 356)
         Me.Button2.Margin = New System.Windows.Forms.Padding(50, 3, 50, 3)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(104, 42)
@@ -274,12 +265,51 @@ Partial Class FrmRegistrarte
         Me.Button2.Text = "Enviar"
         Me.Button2.UseVisualStyleBackColor = False
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.IconButton1)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(730, 71)
+        Me.Panel1.TabIndex = 76
+        '
+        'IconButton1
+        '
+        Me.IconButton1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.IconButton1.ForeColor = System.Drawing.SystemColors.Control
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.MailReply
+        Me.IconButton1.IconColor = System.Drawing.Color.Gold
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.Location = New System.Drawing.Point(0, 0)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(95, 71)
+        Me.IconButton1.TabIndex = 3
+        Me.IconButton1.Text = "Regresar"
+        Me.IconButton1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.IconButton1.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(101, 20)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(283, 37)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Registrar Usuario"
+        '
         'FrmRegistrarte
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(746, 474)
+        Me.ClientSize = New System.Drawing.Size(730, 405)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.MaterialComboBoxRol)
@@ -291,17 +321,16 @@ Partial Class FrmRegistrarte
         Me.Controls.Add(Me.MaterialTextBoxPrimerNombre)
         Me.Controls.Add(Me.MaterialTextBoxContraseña)
         Me.Controls.Add(Me.MaterialTextBoxEmail)
-        Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmRegistrarte"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmRegistrarte"
+        Me.Text = "Registrar Usuario"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents MaterialTextBoxContraseña As MaterialSkin.Controls.MaterialTextBox
     Friend WithEvents MaterialTextBoxEmail As MaterialSkin.Controls.MaterialTextBox
     Friend WithEvents MaterialTextBoxPrimerNombre As MaterialSkin.Controls.MaterialTextBox
@@ -313,4 +342,7 @@ Partial Class FrmRegistrarte
     Friend WithEvents MaterialComboBoxRol As MaterialSkin.Controls.MaterialComboBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents Label1 As Label
 End Class

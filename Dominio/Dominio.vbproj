@@ -66,6 +66,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reports\MejoresServicios.vb" />
     <Compile Include="ModeloCitas.vb" />
     <Compile Include="ModeloClientes.vb" />
     <Compile Include="ModeloServicio.vb" />
@@ -86,6 +87,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Reports\ReportVentas.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

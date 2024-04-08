@@ -146,9 +146,10 @@ Partial Class FrmRecuperarContraseña
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.LabelResultado)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmRecuperarContraseña"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmRecuperarContraseña"
+        Me.Text = "password Recovery"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)

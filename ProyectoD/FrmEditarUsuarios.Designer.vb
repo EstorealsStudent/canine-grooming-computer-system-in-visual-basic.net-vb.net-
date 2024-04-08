@@ -27,6 +27,13 @@ Partial Class FrmEditarUsuarios
         Me.LinkLabel12 = New System.Windows.Forms.LinkLabel()
         Me.ButtonAceptar = New System.Windows.Forms.Button()
         Me.ButtonCancelar = New System.Windows.Forms.Button()
+        Me.MaterialTextContraseñaA = New MaterialSkin.Controls.MaterialTextBox()
+        Me.MaterialTextBoxConfirmarC = New MaterialSkin.Controls.MaterialTextBox()
+        Me.MaterialTextBoxprimernombre = New MaterialSkin.Controls.MaterialTextBox()
+        Me.MaterialTextBoxApellido = New MaterialSkin.Controls.MaterialTextBox()
+        Me.MaterialTextBoxNuevaC = New MaterialSkin.Controls.MaterialTextBox()
+        Me.MaterialTextBoxEmail = New MaterialSkin.Controls.MaterialTextBox()
+        Me.TextBoxUsuario = New MaterialSkin.Controls.MaterialTextBox()
         Me.LabelEditarInfo = New System.Windows.Forms.Label()
         Me.Labelmiperfil = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -42,13 +49,6 @@ Partial Class FrmEditarUsuarios
         Me.LinkLabelEditar = New System.Windows.Forms.LinkLabel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.MaterialTextContraseñaA = New MaterialSkin.Controls.MaterialTextBox()
-        Me.MaterialTextBoxConfirmarC = New MaterialSkin.Controls.MaterialTextBox()
-        Me.MaterialTextBoxprimernombre = New MaterialSkin.Controls.MaterialTextBox()
-        Me.MaterialTextBoxApellido = New MaterialSkin.Controls.MaterialTextBox()
-        Me.MaterialTextBoxNuevaC = New MaterialSkin.Controls.MaterialTextBox()
-        Me.MaterialTextBoxEmail = New MaterialSkin.Controls.MaterialTextBox()
-        Me.TextBoxUsuario = New MaterialSkin.Controls.MaterialTextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -118,171 +118,6 @@ Partial Class FrmEditarUsuarios
         Me.ButtonCancelar.TabIndex = 23
         Me.ButtonCancelar.Text = "Cancelar"
         Me.ButtonCancelar.UseVisualStyleBackColor = False
-        '
-        'LabelEditarInfo
-        '
-        Me.LabelEditarInfo.AutoSize = True
-        Me.LabelEditarInfo.Font = New System.Drawing.Font("Quicksand", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelEditarInfo.ForeColor = System.Drawing.Color.Black
-        Me.LabelEditarInfo.Location = New System.Drawing.Point(13, 21)
-        Me.LabelEditarInfo.Name = "LabelEditarInfo"
-        Me.LabelEditarInfo.Size = New System.Drawing.Size(417, 43)
-        Me.LabelEditarInfo.TabIndex = 14
-        Me.LabelEditarInfo.Text = "Editar mi información"
-        '
-        'Labelmiperfil
-        '
-        Me.Labelmiperfil.AutoSize = True
-        Me.Labelmiperfil.Font = New System.Drawing.Font("Quicksand", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Labelmiperfil.ForeColor = System.Drawing.Color.White
-        Me.Labelmiperfil.Location = New System.Drawing.Point(12, 21)
-        Me.Labelmiperfil.Name = "Labelmiperfil"
-        Me.Labelmiperfil.Size = New System.Drawing.Size(166, 43)
-        Me.Labelmiperfil.TabIndex = 2
-        Me.Labelmiperfil.Text = "Mi perfil"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Quicksand", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(16, 138)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(135, 34)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Usuario:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Quicksand", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(14, 191)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(242, 34)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Primer nombre:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Quicksand", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(16, 244)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(137, 34)
-        Me.Label4.TabIndex = 5
-        Me.Label4.Text = "Apellido:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Quicksand", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(16, 297)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(100, 34)
-        Me.Label5.TabIndex = 6
-        Me.Label5.Text = "Email:"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Quicksand", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(18, 350)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(65, 34)
-        Me.Label6.TabIndex = 7
-        Me.Label6.Text = "Rol:"
-        '
-        'LabelUsuario
-        '
-        Me.LabelUsuario.AutoSize = True
-        Me.LabelUsuario.Font = New System.Drawing.Font("Quicksand", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelUsuario.ForeColor = System.Drawing.Color.White
-        Me.LabelUsuario.Location = New System.Drawing.Point(18, 172)
-        Me.LabelUsuario.Name = "LabelUsuario"
-        Me.LabelUsuario.Size = New System.Drawing.Size(133, 19)
-        Me.LabelUsuario.TabIndex = 8
-        Me.LabelUsuario.Text = "Primer nombre:"
-        '
-        'LabelPrimerNombre
-        '
-        Me.LabelPrimerNombre.AutoSize = True
-        Me.LabelPrimerNombre.Font = New System.Drawing.Font("Quicksand", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelPrimerNombre.ForeColor = System.Drawing.Color.White
-        Me.LabelPrimerNombre.Location = New System.Drawing.Point(18, 225)
-        Me.LabelPrimerNombre.Name = "LabelPrimerNombre"
-        Me.LabelPrimerNombre.Size = New System.Drawing.Size(133, 19)
-        Me.LabelPrimerNombre.TabIndex = 9
-        Me.LabelPrimerNombre.Text = "Primer nombre:"
-        '
-        'LabelApellido
-        '
-        Me.LabelApellido.AutoSize = True
-        Me.LabelApellido.Font = New System.Drawing.Font("Quicksand", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelApellido.ForeColor = System.Drawing.Color.White
-        Me.LabelApellido.Location = New System.Drawing.Point(18, 278)
-        Me.LabelApellido.Name = "LabelApellido"
-        Me.LabelApellido.Size = New System.Drawing.Size(133, 19)
-        Me.LabelApellido.TabIndex = 10
-        Me.LabelApellido.Text = "Primer nombre:"
-        '
-        'LabelEmail
-        '
-        Me.LabelEmail.AutoSize = True
-        Me.LabelEmail.Font = New System.Drawing.Font("Quicksand", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelEmail.ForeColor = System.Drawing.Color.White
-        Me.LabelEmail.Location = New System.Drawing.Point(18, 331)
-        Me.LabelEmail.Name = "LabelEmail"
-        Me.LabelEmail.Size = New System.Drawing.Size(133, 19)
-        Me.LabelEmail.TabIndex = 11
-        Me.LabelEmail.Text = "Primer nombre:"
-        '
-        'LabelRol
-        '
-        Me.LabelRol.AutoSize = True
-        Me.LabelRol.Font = New System.Drawing.Font("Quicksand", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelRol.ForeColor = System.Drawing.Color.White
-        Me.LabelRol.Location = New System.Drawing.Point(18, 384)
-        Me.LabelRol.Name = "LabelRol"
-        Me.LabelRol.Size = New System.Drawing.Size(133, 19)
-        Me.LabelRol.TabIndex = 12
-        Me.LabelRol.Text = "Primer nombre:"
-        '
-        'LinkLabelEditar
-        '
-        Me.LinkLabelEditar.AutoSize = True
-        Me.LinkLabelEditar.Font = New System.Drawing.Font("Quicksand", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabelEditar.LinkColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.LinkLabelEditar.Location = New System.Drawing.Point(123, 459)
-        Me.LinkLabelEditar.Name = "LinkLabelEditar"
-        Me.LinkLabelEditar.Size = New System.Drawing.Size(206, 37)
-        Me.LinkLabelEditar.TabIndex = 13
-        Me.LinkLabelEditar.TabStop = True
-        Me.LinkLabelEditar.Text = "Editar perfil"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Image = Global.ProyectoD.My.Resources.Resources.edit_info
-        Me.PictureBox2.Location = New System.Drawing.Point(57, 443)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(70, 70)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 14
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(209, 21)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(120, 120)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
         '
         'MaterialTextContraseñaA
         '
@@ -433,6 +268,171 @@ Partial Class FrmEditarUsuarios
         Me.TextBoxUsuario.Text = ""
         Me.TextBoxUsuario.TrailingIcon = Nothing
         '
+        'LabelEditarInfo
+        '
+        Me.LabelEditarInfo.AutoSize = True
+        Me.LabelEditarInfo.Font = New System.Drawing.Font("Quicksand", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelEditarInfo.ForeColor = System.Drawing.Color.Black
+        Me.LabelEditarInfo.Location = New System.Drawing.Point(13, 21)
+        Me.LabelEditarInfo.Name = "LabelEditarInfo"
+        Me.LabelEditarInfo.Size = New System.Drawing.Size(417, 43)
+        Me.LabelEditarInfo.TabIndex = 14
+        Me.LabelEditarInfo.Text = "Editar mi información"
+        '
+        'Labelmiperfil
+        '
+        Me.Labelmiperfil.AutoSize = True
+        Me.Labelmiperfil.Font = New System.Drawing.Font("Quicksand", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Labelmiperfil.ForeColor = System.Drawing.Color.White
+        Me.Labelmiperfil.Location = New System.Drawing.Point(12, 21)
+        Me.Labelmiperfil.Name = "Labelmiperfil"
+        Me.Labelmiperfil.Size = New System.Drawing.Size(166, 43)
+        Me.Labelmiperfil.TabIndex = 2
+        Me.Labelmiperfil.Text = "Mi perfil"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Quicksand", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(16, 138)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(135, 34)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Usuario:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Quicksand", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(14, 191)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(242, 34)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "Primer nombre:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Quicksand", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(16, 244)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(137, 34)
+        Me.Label4.TabIndex = 5
+        Me.Label4.Text = "Apellido:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Quicksand", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(16, 297)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(100, 34)
+        Me.Label5.TabIndex = 6
+        Me.Label5.Text = "Email:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Quicksand", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(18, 350)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(65, 34)
+        Me.Label6.TabIndex = 7
+        Me.Label6.Text = "Rol:"
+        '
+        'LabelUsuario
+        '
+        Me.LabelUsuario.AutoSize = True
+        Me.LabelUsuario.Font = New System.Drawing.Font("Quicksand", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelUsuario.ForeColor = System.Drawing.Color.White
+        Me.LabelUsuario.Location = New System.Drawing.Point(18, 172)
+        Me.LabelUsuario.Name = "LabelUsuario"
+        Me.LabelUsuario.Size = New System.Drawing.Size(133, 19)
+        Me.LabelUsuario.TabIndex = 8
+        Me.LabelUsuario.Text = "Primer nombre:"
+        '
+        'LabelPrimerNombre
+        '
+        Me.LabelPrimerNombre.AutoSize = True
+        Me.LabelPrimerNombre.Font = New System.Drawing.Font("Quicksand", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelPrimerNombre.ForeColor = System.Drawing.Color.White
+        Me.LabelPrimerNombre.Location = New System.Drawing.Point(18, 225)
+        Me.LabelPrimerNombre.Name = "LabelPrimerNombre"
+        Me.LabelPrimerNombre.Size = New System.Drawing.Size(133, 19)
+        Me.LabelPrimerNombre.TabIndex = 9
+        Me.LabelPrimerNombre.Text = "Primer nombre:"
+        '
+        'LabelApellido
+        '
+        Me.LabelApellido.AutoSize = True
+        Me.LabelApellido.Font = New System.Drawing.Font("Quicksand", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelApellido.ForeColor = System.Drawing.Color.White
+        Me.LabelApellido.Location = New System.Drawing.Point(18, 278)
+        Me.LabelApellido.Name = "LabelApellido"
+        Me.LabelApellido.Size = New System.Drawing.Size(133, 19)
+        Me.LabelApellido.TabIndex = 10
+        Me.LabelApellido.Text = "Primer nombre:"
+        '
+        'LabelEmail
+        '
+        Me.LabelEmail.AutoSize = True
+        Me.LabelEmail.Font = New System.Drawing.Font("Quicksand", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelEmail.ForeColor = System.Drawing.Color.White
+        Me.LabelEmail.Location = New System.Drawing.Point(18, 331)
+        Me.LabelEmail.Name = "LabelEmail"
+        Me.LabelEmail.Size = New System.Drawing.Size(133, 19)
+        Me.LabelEmail.TabIndex = 11
+        Me.LabelEmail.Text = "Primer nombre:"
+        '
+        'LabelRol
+        '
+        Me.LabelRol.AutoSize = True
+        Me.LabelRol.Font = New System.Drawing.Font("Quicksand", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelRol.ForeColor = System.Drawing.Color.White
+        Me.LabelRol.Location = New System.Drawing.Point(18, 384)
+        Me.LabelRol.Name = "LabelRol"
+        Me.LabelRol.Size = New System.Drawing.Size(133, 19)
+        Me.LabelRol.TabIndex = 12
+        Me.LabelRol.Text = "Primer nombre:"
+        '
+        'LinkLabelEditar
+        '
+        Me.LinkLabelEditar.AutoSize = True
+        Me.LinkLabelEditar.Font = New System.Drawing.Font("Quicksand", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabelEditar.LinkColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.LinkLabelEditar.Location = New System.Drawing.Point(123, 459)
+        Me.LinkLabelEditar.Name = "LinkLabelEditar"
+        Me.LinkLabelEditar.Size = New System.Drawing.Size(206, 37)
+        Me.LinkLabelEditar.TabIndex = 13
+        Me.LinkLabelEditar.TabStop = True
+        Me.LinkLabelEditar.Text = "Editar perfil"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Image = Global.Petpalace.My.Resources.Resources.editinfo
+        Me.PictureBox2.Location = New System.Drawing.Point(57, 443)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(70, 70)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 14
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(209, 21)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(120, 120)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
         'FrmEditarUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -454,8 +454,9 @@ Partial Class FrmEditarUsuarios
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmEditarUsuarios"
-        Me.Text = "FrmEditarUsuarios"
+        Me.Text = "Editar Usuario"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

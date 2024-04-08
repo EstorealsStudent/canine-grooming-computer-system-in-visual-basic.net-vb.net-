@@ -7,16 +7,18 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{3E8EA1AE-8918-49D9-9955-C9F062F464A0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>ProyectoD.My.MyApplication</StartupObject>
-    <RootNamespace>ProyectoD</RootNamespace>
-    <AssemblyName>ProyectoD</AssemblyName>
+    <StartupObject>Petpalace.My.MyApplication</StartupObject>
+    <RootNamespace>Petpalace</RootNamespace>
+    <AssemblyName>PetPalace</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>publish\</PublishUrl>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>F:\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -26,13 +28,11 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -41,7 +41,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>ProyectoD.xml</DocumentationFile>
+    <DocumentationFile>PetPalace.xml</DocumentationFile>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
     <WarningsAsErrors>
     </WarningsAsErrors>
@@ -53,7 +53,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>ProyectoD.xml</DocumentationFile>
+    <DocumentationFile>PetPalace.xml</DocumentationFile>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
     <WarningsAsErrors>
     </WarningsAsErrors>
@@ -71,13 +71,22 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>false</SignManifests>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Imagen-de-WhatsApp-2023-06-25-a-las-22.58.53.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2B65494418D1B9588016BACF927418D91CB16ACF</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ProyectoD_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AlphaBlendTextBox">
@@ -91,6 +100,24 @@
     </Reference>
     <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net48\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
@@ -137,6 +164,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAdm.Designer.vb">
+      <DependentUpon>FrmAdm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmAgendarCita.Designer.vb">
       <DependentUpon>FrmAgendarCita.vb</DependentUpon>
     </Compile>
@@ -294,6 +327,12 @@
     <Compile Include="FrmRegistrarte.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmReporServicios.Designer.vb">
+      <DependentUpon>FrmReporServicios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporServicios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmVerinfoMascotas.Designer.vb">
       <DependentUpon>FrmVerinfoMascotas.vb</DependentUpon>
     </Compile>
@@ -324,6 +363,9 @@
     <Compile Include="RGBColores.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmAdm.resx">
+      <DependentUpon>FrmAdm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAgendarCita.resx">
       <DependentUpon>FrmAgendarCita.vb</DependentUpon>
     </EmbeddedResource>
@@ -405,6 +447,9 @@
     <EmbeddedResource Include="FrmRegistrarte.resx">
       <DependentUpon>FrmRegistrarte.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporServicios.resx">
+      <DependentUpon>FrmReporServicios.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmVerinfoMascotas.resx">
       <DependentUpon>FrmVerinfoMascotas.vb</DependentUpon>
     </EmbeddedResource>
@@ -414,12 +459,15 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\InformeServicios.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\Dominio.MejoresServicios.datasource" />
+    <None Include="My Project\DataSources\Dominio.ReportVentas.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
@@ -440,6 +488,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Imagen-de-WhatsApp-2023-06-25-a-las-22.58.53.ico" />
+    <None Include="Resources\add-friend.png" />
+    <None Include="ProyectoD_TemporaryKey.pfx" />
     <None Include="Resources\edit-info.png" />
     <None Include="Resources\edit-user-48.gif" />
     <None Include="Resources\labrador-retriever.png" />
@@ -463,6 +513,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

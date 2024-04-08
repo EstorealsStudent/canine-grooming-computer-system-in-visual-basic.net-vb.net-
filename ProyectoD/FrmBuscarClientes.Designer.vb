@@ -22,6 +22,7 @@ Partial Class FrmBuscarClientes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBuscarClientes))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -51,7 +52,7 @@ Partial Class FrmBuscarClientes
         Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.IconButton1.ForeColor = System.Drawing.SystemColors.Control
         Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.MailReply
-        Me.IconButton1.IconColor = System.Drawing.Color.Yellow
+        Me.IconButton1.IconColor = System.Drawing.Color.Gold
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.Location = New System.Drawing.Point(0, 0)
         Me.IconButton1.Name = "IconButton1"
@@ -86,6 +87,7 @@ Partial Class FrmBuscarClientes
         Me.MaterialListView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.MaterialListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
         Me.MaterialListView1.Depth = 0
+        Me.MaterialListView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MaterialListView1.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MaterialListView1.ForeColor = System.Drawing.SystemColors.WindowText
         Me.MaterialListView1.FullRowSelect = True
@@ -129,9 +131,10 @@ Partial Class FrmBuscarClientes
         Me.Controls.Add(Me.Panel1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmBuscarClientes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmBuscarClientes"
+        Me.Text = "Buscador Clientes"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)

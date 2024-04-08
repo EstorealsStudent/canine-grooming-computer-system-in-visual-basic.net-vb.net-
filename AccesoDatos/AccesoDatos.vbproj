@@ -64,6 +64,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="sqlserver\OrderDao.vb" />
     <Compile Include="ServicioDeEmail\EnviadorDeCorrecoPrincipal.vb" />
     <Compile Include="ServicioDeEmail\SupportDeEmail.vb" />
     <Compile Include="sqlserver\Conexionsql2.vb" />

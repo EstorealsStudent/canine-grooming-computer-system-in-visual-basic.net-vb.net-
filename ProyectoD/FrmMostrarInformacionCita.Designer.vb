@@ -26,6 +26,7 @@ Partial Class FrmMostrarInformacionCita
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMostrarInformacionCita))
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.MaterialTextBoxCasa = New MaterialSkin.Controls.MaterialTextBox2()
         Me.MaterialMultiLineTextBoxDescripcion = New MaterialSkin.Controls.MaterialMultiLineTextBox2()
@@ -57,6 +58,7 @@ Partial Class FrmMostrarInformacionCita
         Me.MaterialTextBoxNombreMascota = New MaterialSkin.Controls.MaterialTextBox2()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.LabelCostototal = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ButtonEliminar = New System.Windows.Forms.Button()
@@ -74,7 +76,6 @@ Partial Class FrmMostrarInformacionCita
         Me.ButtonGuardar = New System.Windows.Forms.Button()
         Me.Buttoncancelar = New System.Windows.Forms.Button()
         Me.MaterialComboBoxEstadoCita = New MaterialSkin.Controls.MaterialComboBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -737,6 +738,16 @@ Partial Class FrmMostrarInformacionCita
         Me.Panel5.Size = New System.Drawing.Size(1160, 241)
         Me.Panel5.TabIndex = 38
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Quicksand", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(823, 182)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(176, 31)
+        Me.Label10.TabIndex = 84
+        Me.Label10.Text = "Costo Total:"
+        '
         'LabelCostototal
         '
         Me.LabelCostototal.AutoSize = True
@@ -1061,16 +1072,6 @@ Partial Class FrmMostrarInformacionCita
         Me.MaterialComboBoxEstadoCita.StartIndex = 0
         Me.MaterialComboBoxEstadoCita.TabIndex = 73
         '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Quicksand", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(823, 182)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(176, 31)
-        Me.Label10.TabIndex = 84
-        Me.Label10.Text = "Costo Total:"
-        '
         'FrmMostrarInformacionCita
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1087,9 +1088,10 @@ Partial Class FrmMostrarInformacionCita
         Me.Controls.Add(Me.Buttoncancelar)
         Me.Controls.Add(Me.ButtonGuardar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmMostrarInformacionCita"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmMostrarInformacionCita"
+        Me.Text = "Informacion Cita"
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel2.ResumeLayout(False)

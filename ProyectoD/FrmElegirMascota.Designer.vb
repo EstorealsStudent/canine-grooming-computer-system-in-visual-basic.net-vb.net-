@@ -22,6 +22,7 @@ Partial Class FrmElegirMascota
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmElegirMascota))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -65,7 +66,7 @@ Partial Class FrmElegirMascota
         'PictureBox2
         '
         Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Image = Global.ProyectoD.My.Resources.Resources.yorkshire_terrier
+        Me.PictureBox2.Image = Global.Petpalace.My.Resources.Resources.yorkshireterrier
         Me.PictureBox2.Location = New System.Drawing.Point(24, 45)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(200, 200)
@@ -86,7 +87,7 @@ Partial Class FrmElegirMascota
         'PictureBox1
         '
         Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox1.Image = Global.ProyectoD.My.Resources.Resources.labrador_retriever
+        Me.PictureBox1.Image = Global.Petpalace.My.Resources.Resources.labradorretriever
         Me.PictureBox1.Location = New System.Drawing.Point(123, 197)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(200, 200)
@@ -103,8 +104,9 @@ Partial Class FrmElegirMascota
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmElegirMascota"
-        Me.Text = "FrmElegirMascota"
+        Me.Text = "Mascotas"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)

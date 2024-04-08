@@ -1,0 +1,9 @@
+C:\Users\estor\source\repos\ProyectoD\Común\bin\Release\Común.dll
+C:\Users\estor\source\repos\ProyectoD\Común\bin\Release\Común.pdb
+C:\Users\estor\source\repos\ProyectoD\Común\bin\Release\Común.xml
+C:\Users\estor\source\repos\ProyectoD\Común\obj\Release\Común.Resources.resources
+C:\Users\estor\source\repos\ProyectoD\Común\obj\Release\Común.vbproj.GenerateResource.cache
+C:\Users\estor\source\repos\ProyectoD\Común\obj\Release\Común.vbproj.CoreCompileInputs.cache
+C:\Users\estor\source\repos\ProyectoD\Común\obj\Release\Común.dll
+C:\Users\estor\source\repos\ProyectoD\Común\obj\Release\Común.xml
+C:\Users\estor\source\repos\ProyectoD\Común\obj\Release\Común.pdb
